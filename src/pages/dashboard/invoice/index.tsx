@@ -71,7 +71,7 @@ const InvoicePage = () => {
             </div>
 
             <div className="py-6">
-                <Table data={data} headers={headers} showAdditionalContent={true} />
+                <Table data={data} headers={headers} showAdditionalContent={true} color={""} extraTableRow={false} />
             </div>
 
         </div>

@@ -3,7 +3,7 @@ import {orderHistoryTableData} from "../../../constants"
 import { Button } from "@/components/ui/button";
 
 const OrdersPage = () => {
-    const {data, headers, color, searchBy} = orderHistoryTableData
+    const {data, headers,searchBy} = orderHistoryTableData
     return (
         <div className="p-6">
             <div className="flex space-x-10 items-center py-4">
@@ -20,7 +20,7 @@ const OrdersPage = () => {
           
             </div>
             <div>
-                <Table data={data} headers={headers} color={color} extraTableRow={true}/>
+                <Table data={data} headers={headers} color={''} extraTableRow={true} showAdditionalContent={false}/>
             </div>
         </div>
 

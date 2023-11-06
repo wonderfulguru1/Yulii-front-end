@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DealsCard from './DealsCard'
 import { productsData } from "../../../constants/index"
 
@@ -17,7 +17,7 @@ import { productsData } from "../../../constants/index"
 
 
 const ProductFilter = () =>  {
-  const [products, setProducts] = useState(productsData);
+  const [products] = useState(productsData);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const uniqueCategories = Array.from(
     new Set(products.map((product) => product.category))

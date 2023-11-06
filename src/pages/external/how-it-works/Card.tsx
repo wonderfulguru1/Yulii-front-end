@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Image1 from "../../../assets/createLogin.png"
 import Image2 from "../../../assets/picstore.png"
@@ -6,17 +6,17 @@ import Image3 from "../../../assets/payment.png"
 import Image4 from "../../../assets/gift.png"
 
 
-interface CardProps {
-    imageSrc: string;
-    content: string;
-    label: string;
-    subtext: string;
-    bgColor?: string,
-    textColor?: string
-    order: string
-    order2: string
-    labelColor: string
-}
+// interface CardProps {
+//     imageSrc: string;
+//     content: string;
+//     label: string;
+//     subtext: string;
+//     bgColor?: string,
+//     textColor?: string
+//     order: string
+//     order2: string
+//     labelColor: string
+// }
 
 
 const Card = () => {

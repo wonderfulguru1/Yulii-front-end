@@ -1,5 +1,4 @@
 import Table from "@/components/dashboard/table";
-import OrderTable from "@/components/dashboard";
 import { StatOverview } from "@/components/dashboard/stat-overview";
 import StatWidget from "@/components/dashboard/stat-widget";
 import { storeOverviewTableData, overviewCardItems } from "../../../constants"
@@ -45,7 +44,7 @@ export default function Home() {
             See all
           </button>
         </div>
-        <Table data={data} headers={headers} extraTableRow={true}/>
+        <Table data={data} headers={headers} extraTableRow={true} color={""} showAdditionalContent={false}/>
       </div>
 
     </div>

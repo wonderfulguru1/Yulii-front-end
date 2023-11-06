@@ -2,16 +2,16 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Button from './Button';
 import Shape from './Shapes';
 import Shape2 from './Shape2';
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
 import Toggle from './Toggle';
 import HeroImg from "../../assets/hero.png"
 
 const HeroSection = () => {
 
 
-    const navigate = useNavigate();
-  const [isChecked, setIsChecked] = useState(false);
+//     const navigate = useNavigate();
+//   const [isChecked, setIsChecked] = useState(false);
 
 //   const handleToggle = () => {
 //     setIsChecked(!isChecked);

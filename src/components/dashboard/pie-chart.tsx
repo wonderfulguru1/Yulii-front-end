@@ -27,7 +27,7 @@ export function PieChartss() {
                     paddingAngle={0}
                     dataKey="value"
                 >
-                    {data.map((entry, index) => (
+                    {data.map((_entry, index) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                 </Pie>

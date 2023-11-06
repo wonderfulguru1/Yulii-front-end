@@ -2,8 +2,7 @@
 "use client"
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import React, { useState } from 'react';
-import { FormDescription } from '@/components/ui/form';
+
 import {Link} from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,7 +33,7 @@ const CreatePromotion = () => {
             <h3 className='font-semibold text-lg '>Create a new offer</h3>
             <form className='py-4'>
                 <div className='flex gap-6 flex-wrap'>
-                    {formField.map((item, index) => (
+                    {formField.map((item, _index) => (
                         <div className='flex flex-col w-1/3'>
                             <Label htmlFor="email" className='py-4'>{item.label}</Label>
                             <Input placeholder={item.placeholder} />

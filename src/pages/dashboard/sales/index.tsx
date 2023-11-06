@@ -34,7 +34,7 @@ const CustomersPage = () => {
                             />
                         ))}
                     </div>
-                    <Table data={data} headers={headers} showAdditionalContent={true} extraTableRow={false}/>
+                    <Table data={data} headers={headers} showAdditionalContent={true} extraTableRow={false} color={""}/>
                 </div>
                 <div className="w-1/4 py-6 ">
                     <div className="shadow-lg p-6 flex flex-col">

@@ -1,6 +1,3 @@
-"use client"
-
-import { useState } from 'react'
 
 import OrderDetail from './order-details';
 
@@ -12,8 +9,8 @@ interface TableProbs {
     showAdditionalContent: boolean
     extraTableRow: boolean
 }
-const Table: React.FC<TableProbs> = ({ data, headers, color, showAdditionalContent, extraTableRow }) => {
-    const [selectedRow, setSelectedRow] = useState<number | null>(null);
+const Table: React.FC<TableProbs> = ({ data, headers, extraTableRow }) => {
+    // const [selectedRow, setSelectedRow] = useState<number | null>(null);
     // const [modelContent, setModalContent] = useState<string | null>(null)
     // const handleRowClick = (index: number) => {
     //     setSelectedRow(index === selectedRow ? null : index);
