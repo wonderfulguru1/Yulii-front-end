@@ -1,8 +1,10 @@
 import { Logo } from "./logo"
 import { SidebarRoutes } from "./sidebar-routes"
-import Image from "next/image";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { ChevronDown } from "lucide-react"
-import Link from "next/link";
+import {Link} from "react-router-dom";
+import Logo2 from "../../assets/Logo2.png"
+import Logout from "../../assets/logout.png"
 
 export const Sidebar = () => {
     return (
@@ -16,8 +18,8 @@ export const Sidebar = () => {
 
             <div className="mt-auto py-20 px-6 flex-col flex-end ">
                 <div className="flex items-center">
-                    <Image
-                        src="/Logo2.png"
+                    <LazyLoadImage
+                        src={Logo2}
                         width={50}
                         height={100}
                         alt="logo"
@@ -33,10 +35,10 @@ export const Sidebar = () => {
                     </div>
 
                 </div>
-                <Link href="/">
+                <Link to="/">
                     <div className="flex gap-4 py-6 ">
-                        <Image
-                            src="/logout.png"
+                        <LazyLoadImage
+                            src={Logout}
                             width={20}
                             height={20}
                             alt="logo"

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react"
-import {usePathname, useRouter} from "next/navigation"
+import {useLocation, useNavigate} from "react-router-dom"
 
 interface SidebarItemProps {
     icon: LucideIcon;
@@ -12,16 +12,16 @@ interface SidebarItemProps {
 };
 
 export const SidebarItem = ({icon: Icon, label, href}:SidebarItemProps) => {
-    const pathname = usePathname();
-    const router = useRouter();
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const isActive = 
-    (pathname === "/" && href === "/customer") ||
-    pathname === href || 
-    pathname?.startsWith(`${href}/merchant`);
+    (location.pathname === "/" && href === "/customer") ||
+    location.pathname === href || 
+    location.pathname?.startsWith(`${href}/merchant`);
 
     const onClick = () => {
-        router.push(href)
+        navigate(href)
     }
 
     

@@ -1,8 +1,6 @@
-"use client"
-
 import { Layout, Compass, List, BarChart } from "lucide-react"
 import { SidebarItem } from "./sidebar-item";
-import { usePathname } from "next/navigation";
+import { useLocation } from "react-router-dom";
 
 const merchantRoutes = [
     {
@@ -28,7 +26,7 @@ const merchantRoutes = [
     {
         icon: Compass,
         label: "Invoice",
-        href: "/merchant/invoice"
+        href: "/merchant/invoices"
     },
     {
         icon: Compass,
@@ -63,9 +61,9 @@ const customerRoutes = [
 
 
 export const SidebarRoutes = () => {
-const pathname = usePathname();
+const location = useLocation();
 
-const isCustomerPage = pathname?.includes("/customer");
+const isCustomerPage = location.pathname?.includes("/customer");
 
 const routes = isCustomerPage ? customerRoutes : merchantRoutes
 

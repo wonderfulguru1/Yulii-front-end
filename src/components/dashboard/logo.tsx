@@ -1,12 +1,13 @@
-import Image from "next/image"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Logo1 from "../../assets/logo.svg"
 
 export const Logo = () => {
     return (
-        <Image 
+        <LazyLoadImage 
             height={150}
             width={120}
             alt="logo"
-            src="/logo.svg"
+            src={Logo1}
         />
     )
 }
