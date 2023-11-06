@@ -12,7 +12,9 @@ const externalRoute = [
         path: '',
     },
     {
-        element: <DealsPage/>,
+        element: <DealsPage options={[]} onSelect={function (): void {
+            throw new Error("Function not implemented.");
+        } }/>,
         path: 'deals',
     },
     {
