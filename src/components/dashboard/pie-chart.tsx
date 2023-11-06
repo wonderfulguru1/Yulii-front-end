@@ -1,6 +1,6 @@
 
 "use client"
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 export function PieChartss() {
 

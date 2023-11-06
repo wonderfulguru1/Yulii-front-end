@@ -13,16 +13,16 @@ const HeroSection = () => {
     const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleToggle = () => {
-    setIsChecked(!isChecked);
+//   const handleToggle = () => {
+//     setIsChecked(!isChecked);
 
-    // Change the route based on the toggle state
-    if (isChecked) {
-        navigate("/home");
-    } else {
-        navigate("/merchants");
-    }
-  };
+//     // Change the route based on the toggle state
+//     if (isChecked) {
+//         navigate("/home");
+//     } else {
+//         navigate("/merchants");
+//     }
+//   };
 
 //   const [isChecked, setIsChecked] = useState(false);
 

@@ -14,7 +14,7 @@ interface SectionProps {
     labelColor: string
 }
 
-const GenericSection: React.FC<SectionProps> = ({imageSrc, bgColor, labelColor, textColor, content, label, subtext, order, order2}) => {
+const GenericSection: React.FC<SectionProps> = ({imageSrc, bgColor, labelColor, content, label, subtext, order, order2}) => {
 
     return (
         <div className='container md:px-10 justify-center lg:px-0 flex lg:flex-row gap-32 items-center flex-col-reverse  md:flex-row   mx-auto pb-10 pt-20 '>

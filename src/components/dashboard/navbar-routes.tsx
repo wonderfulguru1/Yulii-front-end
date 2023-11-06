@@ -10,7 +10,7 @@ export const NavbarRoutes = () => {
     const location = useLocation();
 
     const isCustomerPage = location.pathname?.startsWith("/customer");
-    const isMerchantPage = location.pathname?.includes("/dashboard");
+    // const isMerchantPage = location.pathname?.includes("/dashboard");
     return (
         <div className="flex gap-x-2 ml-auto">
             <div className="block relative">

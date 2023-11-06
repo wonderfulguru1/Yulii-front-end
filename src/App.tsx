@@ -3,7 +3,7 @@ import ExternalLayout from './layouts/external-layout';
 import externalRoute from './routes/external'
 import dashboardRoute from './routes/dashboard';
 import DashboardLayout from './layouts/dashboard-layout';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 

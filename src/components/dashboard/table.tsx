@@ -1,18 +1,7 @@
 "use client"
 
 import { useState } from 'react'
-import { cn } from "@/lib/utils";
-import { Button } from "../../components/ui/button";
-import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
-import { ChevronDownIcon, PlusIcon, StarIcon } from "lucide-react";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
+
 import OrderDetail from './order-details';
 
 
@@ -25,18 +14,18 @@ interface TableProbs {
 }
 const Table: React.FC<TableProbs> = ({ data, headers, color, showAdditionalContent, extraTableRow }) => {
     const [selectedRow, setSelectedRow] = useState<number | null>(null);
-    const [modelContent, setModalContent] = useState<string | null>(null)
-    const handleRowClick = (index: number) => {
-        setSelectedRow(index === selectedRow ? null : index);
-    }
+    // const [modelContent, setModalContent] = useState<string | null>(null)
+    // const handleRowClick = (index: number) => {
+    //     setSelectedRow(index === selectedRow ? null : index);
+    // }
 
-    const openModal = (content: string) => {
-        setModalContent(content)
-    }
+    // const openModal = (content: string) => {
+    //     setModalContent(content)
+    // }
 
-    const closeModal = () => {
-        setModalContent(null)
-    }
+    // const closeModal = () => {
+    //     setModalContent(null)
+    // }
 
     return (
 

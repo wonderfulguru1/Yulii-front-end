@@ -8,7 +8,7 @@ interface DropdownProps {
   options: string[];
   onSelect: (selectedOption: string) => void;
 }
-const page : React.FC<DropdownProps> = ({ options, onSelect }) => {
+const page : React.FC<DropdownProps> = ({  onSelect }) => {
   const [products, setProducts] = useState(productsData);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const filteredProducts = selectedCategory === 'All'

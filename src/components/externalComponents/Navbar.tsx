@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {Link} from "react-router-dom";
 import { BiMenu } from "react-icons/bi"
