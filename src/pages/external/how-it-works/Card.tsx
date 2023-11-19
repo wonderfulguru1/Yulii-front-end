@@ -23,9 +23,9 @@ const Card = () => {
     return (
         <div className=''>
 
-            <div className='flex items-center justify-between' data-aos="fade-up-right">
+            <div className='flex flex-col lg:flex-row items-center justify-between' data-aos="fade-up-right">
 
-                <div className=' justify-center w-1/3 '>
+                <div className=' justify-center lg:w-1/3 '>
                     <div className='h-12 w-12 border-dashed border-[#d88a5f] text-[#d88a5f] border-b-4 py-2 item-center text-center rounded-full font-semibold '>1</div>
                     <div className='px-4 border-l-4 border-b-4 border-[#fef5f0] border-dashed mt-4'>
                         <h3 className='font-semibold'>Sign up and get rewarded every time you shop</h3>
@@ -41,13 +41,13 @@ const Card = () => {
                     width={550}
                     height={200}
                     alt="logo"
-                    className='w-1/2 '
+                    className='lg:w-1/2 '
                     data-aos="fade-up-left"
                 />
             </div>
 
-            <div className='flex items-center justify-between py-8'>
-                <div className='w-1/2'>
+            <div className='flex  flex-col-reverse lg:flex-row items-center justify-between py-8'>
+                <div className='lg:w-1/2'>
                     <LazyLoadImage
                          src={Image2}
                         width={550}
@@ -56,7 +56,7 @@ const Card = () => {
                         className=' '
                     />
                 </div>
-                <div className=' justify-center w-1/2 '>
+                <div className=' justify-center lg:w-1/2 '>
                     <div className='h-12 w-12 border-dashed border-[#d88a5f] text-[#d88a5f] border-b-4 py-2 item-center text-center rounded-full font-semibold '>2</div>
                     <div className='px-4 border-l-4 border-b-4 border-[#fef5f0] border-dashed mt-4'>
                         <h3 className='font-semibold'> Pick Your Favorites stores so you can see  their offers first.</h3>
@@ -69,9 +69,9 @@ const Card = () => {
                 </div>
             </div>
 
-            <div className='flex items-center justify-between' data-aos="flip-left">
+            <div className='flex flex-col lg:flex-row items-center justify-between' data-aos="flip-left">
 
-                <div className=' justify-center w-1/3 '>
+                <div className=' justify-center lg:w-1/3 '>
                     <div className='h-12 w-12 border-dashed border-[#d88a5f] text-[#d88a5f] border-b-4 py-2 item-center text-center rounded-full font-semibold '>3</div>
                     <div className='px-4 border-l-4 border-b-4 border-[#fef5f0] border-dashed mt-4'>
                         <h3 className='font-semibold'> Explore our offers, select a deal that suits your needs.</h3>
@@ -87,12 +87,12 @@ const Card = () => {
                     width={250}
                     height={200}
                     alt="logo"
-                    className='w-1/3 data-aos="flip-right"'
+                    className='lg:w-1/3 data-aos="flip-right"'
                 />
             </div>
 
-            <div className='flex items-center justify-between py-8'>
-                <div className='w-1/2 ' data-aos="zoom-in">
+            <div className='flex flex-col-reverse lg:flex-row items-center justify-between py-8'>
+                <div className='lg:w-1/2 ' data-aos="zoom-in">
                     <LazyLoadImage
                          src={Image4}
                         width={550}
@@ -101,7 +101,7 @@ const Card = () => {
                         className=' '
                     />
                 </div>
-                <div className=' justify-center w-1/2 ' data-aos="zoom-in-up">
+                <div className=' justify-center lg:w-1/2 ' data-aos="zoom-in-up">
                     <div className='h-12 w-12 border-dashed border-[#d88a5f] text-[#d88a5f] border-b-4 py-2 item-center text-center rounded-full font-semibold '>4</div>
                     <div className='px-4 border-l-4 border-b-4 border-[#fef5f0] border-dashed mt-4'>
                         <h3 className='font-semibold'> Pick Your Favorites stores so you can see  their offers first.</h3>

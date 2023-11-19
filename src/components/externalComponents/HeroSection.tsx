@@ -28,14 +28,14 @@ const HeroSection = () => {
 
 
     return (
-        <div className='flexCenter px-4 md:px-0'>
+        <div className='flexCenter px-4 md:px-0 bg-[#fffdfd]'>
 
 
-            <div className='flex text-center  container mx-auto items-center flex-col py-12'>
+            <div className='flex text-center  container mx-auto items-center flex-col lg:py-12'>
               
               
-                <div className="flex items-center justify-center w-full mb-12">
-                    <Toggle/>
+                <div className="flex items-center justify-center  mb-12">
+                    {/* <Toggle/> */}
                     {/* <div className="flex items-center space-x-2">
                     <Label htmlFor="airplane-mode">Airplane Mode</Label>
       <Switch id="airplane-mode" />
@@ -63,28 +63,28 @@ const HeroSection = () => {
                         </div>
                     </label> */}
                 </div>
-                <div className='flex md:flex-row flex-col justify-between'>
-                    <div>
+                <div className='flex md:flex-row flex-col justify-between lg:px-28'>
+                    <div className='hidden lg:block'>
                     <Shape />
                     </div>
                    
                     <div>
-                        <h1 className='lg:text-5xl text-3xl font-medium' data-aos="fade-right" >Create a free account to start <span className='text-primary'>shopping, earning loyalty points & cashbacks </span>at your favorite stores.</h1>
+                        <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" >Have <span className='text-[#67c7c0]'>fun organizing </span>daily activities with your <span className='text-[#67c7c0]'>loved ones</span></h1>
                         <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">Get rewarded every time you shop, Plenti Africa is designed to bring you incredible deals, amazing rewards, and a seamless shopping experience.</p>
                     </div>
                    
-                    <div>
+                    <div className='hidden lg:block'>
                     <Shape2 />
                     </div>
                 </div>
 
-                <Button title="Join for free" />
+                <Button title="Join for free" bgColor='bg-button1'/>
                 <LazyLoadImage
                     src={HeroImg}
-                    width={800}
-                    height={600}
+                    // width={800}
+                    // height={600}
                     alt="logo"
-                    className='py-20'
+                    className='pt-20'
                     data-aos="zoom-out-right"
                 />
 

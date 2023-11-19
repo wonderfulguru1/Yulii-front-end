@@ -1,5 +1,8 @@
 import HeroSection from './HeroSection'
 import Card from './Card'
+import Faq from '@/components/externalComponents/Faq'
+import { moreWays } from '@/constants'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const HowItWorks = () => {
   return (
@@ -14,7 +17,36 @@ const HowItWorks = () => {
       <div className='container mx-auto'>
         <Card />
       </div>
+      <section className='container mx-auto px-4 lg:px-0 flex flex-col py-4'>
+        <div className='flex justify-between md:py-6 lg:w-1/4'>
+          <h3 className='text-xl font-semibold'>More ways to earn points and cash back with your Plenti account. </h3>
+       
+        </div>
+        <div className='container mx-auto my-6 '>
+          <div className='flex flex-col md:flex-row  md:px-0 gap-4'>
+            {moreWays.items.map((item) => (
+              <div className={`flex p-4 border rounded-md flex-col ${item.backgroundColor}`}>
+                <LazyLoadImage
+                  src={item.icon}
+                  width={50}
+                  height={50}
+                  alt="logo"
+                  className=''
+                />
+                <h3 className='py-4 font-semibold'>{item.caption}</h3>
+                <p className='text-base'>{item.text}</p>
 
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <div className='flex container mx-auto items-center px-6 lg:px-0 lg:w-1/3 flex-col py-12'>
+        <h3 className='lg:text-3xl text-xl font-semibold text-center p-10'>
+        Frequently asked question about Plenti Africa
+        </h3>
+          <Faq/>
+      </div>
     </div>
   )
 }

@@ -9,13 +9,13 @@ import Register from "../../pages/external/register";
 const externalRoute = [
     {
         element: <HomePage/>,
-        path: '',
+        path: '/',
     },
     {
         element: <DealsPage options={[]} onSelect={function (): void {
             throw new Error("Function not implemented.");
         } }/>,
-        path: 'deals',
+        path: 'socials',
     },
     {
         element: <HowItWorks/>,
@@ -23,20 +23,20 @@ const externalRoute = [
     },
     {
         element: <Merchants/>,
-        path: 'merchants',
+        path: 'pro-users',
     },
     {
         element: <Contact/>,
         path: 'contact',
     },
-    {
-        element: <Login/>,
-        path: 'login',
-    },
-    {
-        element: <Register/>,
-        path: 'register',
-    },
+    // {
+    //     element: <Login/>,
+    //     path: 'login',
+    // },
+    // {
+    //     element: <Register/>,
+    //     path: 'register',
+    // },
 ]
 
 export default externalRoute;

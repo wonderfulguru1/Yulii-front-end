@@ -4,6 +4,7 @@ import { FaqLinks, contact } from "../.../../../../constants/index";
 import { Link } from 'react-router-dom';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+
 const Contact = () => {
   return (
     <div className=''>
@@ -30,7 +31,7 @@ const Contact = () => {
         <h3 className='text-bold text-3xl'>{contact.title}</h3>
         <p className='text-lg py-6'>{contact.subtext}</p>
       </div>
-      <div className='container mx-auto my-6 px-4 md:px-0 '>
+      <div className='container mx-auto my-6 px-4 md:px-0 py-10'>
         <div className='flex md:flex-row gap-4 lg:gap-0 lg:space-x-6 flex-col'>
           {contact.items.map((item) => (
             <div className='flex p-4 border rounded-md flex-col '>

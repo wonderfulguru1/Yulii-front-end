@@ -9,7 +9,7 @@ const HeroSection = () => {
 const {heroSection} = merchantItems
  
     return (
-        <div className='flexCenter px-4 md:px-0'>
+        <div className='flexCenter px-4 md:px-0 bg-[#fef8fb]'>
 
 
             <div className='flex text-center  container mx-auto items-center flex-col py-12'>
@@ -27,7 +27,7 @@ const {heroSection} = merchantItems
                  
                 </div>
 
-                <Button title="Join for free" />
+                {/* <Button title="Join for free" /> */}
                 <LazyLoadImage
                     src={MerchantImg1}
                     width={800}

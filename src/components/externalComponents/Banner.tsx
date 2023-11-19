@@ -5,17 +5,17 @@ import {BiLogoPlayStore} from "react-icons/bi"
 
 const Banner = () => {
   return (
-    <div className='bg-[#3f1e2a] container items-center  justify-between px-28 space-x-20 flex flex-row mx-auto rounded-tl-[80px] rounded-tr-[80px]  '>
+    <div className='bg-[#4a9bdd] container my-10 items-center justify-center space-x-28 hidden lg:flex flex-row mx-auto rounded-tl-[80px] rounded-tr-[80px]  '>
         <div>
         <LazyLoadImage
                     src={bannerSection.image}
-                    width={250}
+                    width={350}
                     height={250}
                     alt="logo"
                     className='py-8'
                 />
         </div>
-        <div className='space-y-10 py-4 w-2/4  items-center content-center'>
+        <div className='space-y-10 py-4 w-1/3  items-center content-center'>
             <h3 className='text-3xl text-white'>{bannerSection.title}</h3>
             <p className='text-lg w-3/4 text-white'>{bannerSection.text}</p>
             <div className='flex flex-row space-x-6'>

@@ -2,7 +2,9 @@ import HeroSection from "../../../components/externalComponents/HeroSection"
 import GenericSection from '../../../components/externalComponents/GenericSection'
 import { section1, section2, section3, section4 } from "../../../constants";
 import React from 'react'
+import '../../../index.css'
 import Faq from '../../../components/externalComponents/Faq';
+
 
 const HomePage: React.FC = () => {
   return (
@@ -10,7 +12,7 @@ const HomePage: React.FC = () => {
     <div className="pt-28">
       <HeroSection />
       </div>
-      <div className='bg-secondary footer'>
+      <div className='bg-[#f3fffe]'>
         <GenericSection
           imageSrc={section1.Image}
           content={section1.title}
@@ -18,13 +20,13 @@ const HomePage: React.FC = () => {
           subtext={section1.subtext}
           order2='order-last'
           order='order-first'
-          bgColor="bg-section1Button"
-          labelColor="bg-section1Lable"
+          bgColor="bg-button1"
+          labelColor="bg-[#a4eee9]"
         />
         
        
       </div>
-      <div>
+      <div >
         <GenericSection
           imageSrc={section2.Image}
           content={section2.title}
@@ -36,7 +38,7 @@ const HomePage: React.FC = () => {
           labelColor="bg-section2Label"
         />
       </div>
-      <div className='bg-secondary footer'>
+      <div className='bg-secondary footer lg:pt-0 pt-8'>
         <GenericSection
           imageSrc={section3.Image}
           content={section3.title}
@@ -60,10 +62,11 @@ const HomePage: React.FC = () => {
           labelColor="bg-section2Label"
         />
       </div>
-      <div className='flex flex-col container mx-auto px-4 md:px-0 md:w-1/3 items-center'>
+
+      {/* <div className='flex flex-col container mx-auto px-4 md:px-0 md:w-1/3 items-center'>
          <h2 className='text-center font-semibold text-3xl w-2/3 py-8 mx-auto'>Frequently asked questions about Plenti Africa</h2>
       <Faq />
-      </div>
+      </div> */}
       {/* <Card /> */}
 
     </>

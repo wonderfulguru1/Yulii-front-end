@@ -3,7 +3,7 @@ import Footer from "@/components/externalComponents/Footer";
 import Navbar from "@/components/externalComponents/Navbar";
 import { useOutlet } from 'react-router-dom';
 
-const ExternalLayout = () => {
+const LoginLayout = () => {
     const outlet = useOutlet();
     return ( 
         <div>
@@ -11,10 +11,9 @@ const ExternalLayout = () => {
                 <main>
                     {outlet}
                 </main>
-                <Banner/>
             <Footer/>
         </div>
      );
 }
  
-export default ExternalLayout;
+export default LoginLayout;

@@ -10,15 +10,13 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      // padding: "2rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
       colors: {
-      
-       
       
         'nav-border': '#EBEAEA',
         'section1Button': '#bd5a81',
@@ -34,7 +32,10 @@ module.exports = {
         'black-100': '#252525',
         'primary': '#EA1C24',
         'secondary': '#fff4f9',
+        'secondary2': '#4A9BDD',
         'bg-dark': '#3E1F2A',
+        'button1' : '#555555'
+
       },
       keyframes: {
         "accordion-down": {

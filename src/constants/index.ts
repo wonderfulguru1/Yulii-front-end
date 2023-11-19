@@ -3,12 +3,13 @@ import Section2 from "../assets/loan.svg"
 import Section3 from "../assets/section3.svg"
 import Section4 from "../assets/section4.svg"
 import detailsImg from "../assets/deal.png"
+import bannerImage from "../assets/bannerImage.svg"
 import merchantLogo from "../assets/storeimg.png"
 import dealsImg from "../assets/dealsimg.png"
 import faq from "../assets/FAQ.png"
-import chat from "../assets/chat.svg"
+import chat from "../assets/sms.png"
 import call from "../assets/call.png"
-import sms from "../assets/sms.png"
+import sms from "../assets/messages.png"
 import gift from "../assets/gift.png"
 import airtime from "../assets/airtime.png"
 import credit from "../assets/credit.png"
@@ -18,8 +19,9 @@ import msg from "../assets/msg.svg"
 
 
 export const NavLinks = [
-  { href: '/merchants', key: 'For Merchants', text: 'For Merchants' },
-  { href: '/deals', key: 'Deals', text: 'Deals' },
+  { href: '/home', key: '/home', text: '' },
+  { href: '/pro-users', key: 'Pro Users', text: 'Pro Users' },
+  { href: '/socials', key: 'Socials', text: 'Socials' },
   { href: '/how-it-works', key: 'How it works', text: 'How it works' },
   { href: '/contact', key: 'Contact', text: 'Contact' },
 ];
@@ -27,7 +29,7 @@ export const NavLinks = [
 
 export const footerLinks = [
   {
-    title: 'COMPANY',
+    title: 'Company',
     links: [
       'Deals',
       'For Merchant',
@@ -45,7 +47,7 @@ export const footerLinks = [
     ],
   },
   {
-    title: 'ADDRESS',
+    title: 'Location',
     links: [
       'Olugbosi Street, Off Bishop Oluwole Street Victoria Island Lagos',
 
@@ -100,7 +102,7 @@ export const aboutUs = {
 export const bannerSection = {
   title: "Elevate your shopping experience with the Plenti Africa app",
   text: "Your gateway to unbeatable deals, rewards, and convenience right at your fingertips",
-  image: Section1
+  image: bannerImage
 }
 
 export const dealSection = {
@@ -233,7 +235,7 @@ export const contact = {
       id: 3,
       icon: sms,
       caption: 'Chat with Us',
-      text: "Have a question or need assistance? We're just an email away. Drop us a message, and our dedicated support team will get back to you promptly help.plenti.africa@gmail.com"
+      text: "Have a question or need assistance? We're just an email away. Drop us a message, and our dedicated support team will get back to you promptly help.yulligames.com"
     },
   ]
 };
@@ -259,14 +261,14 @@ export const moreWays = {
     {
       id: 3,
       icon: refer,
-      "backgroundColor": "bg-black-100",
+      "backgroundColor": "bg-[#efefff]",
       caption: 'Refer your buddies',
       text: "Everytime you pay your bills using plenti you earn plenti points that can convert to cash"
     },
     {
       id: 4,
       icon: credit,
-      "backgroundColor": "bg-customBlue",
+      "backgroundColor": "bg-[#effef0]",
       caption: 'Take plenti credit',
       text: "Everytime you pay your bills using plenti you earn plenti points that can convert to cash"
     },

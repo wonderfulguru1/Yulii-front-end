@@ -4,9 +4,17 @@ import externalRoute from './routes/external'
 import dashboardRoute from './routes/dashboard';
 import DashboardLayout from './layouts/dashboard-layout';
 import { Routes, Route } from 'react-router-dom';
+import "aos/dist/aos.css"
+import Aos from "aos"
+import Login from './pages/external/login';
+import LoginLayout from './layouts/login-layout';
+import Register from './pages/external/register';
 
 function App() {
-
+  Aos.init({
+    duration: 3000,
+    offset: 100,
+  })
   return (
     <>
       <Routes>
@@ -22,6 +30,10 @@ function App() {
           </Route>
         ))}
 
+        <Route element={<LoginLayout />}>
+          <Route path={`/login`} element={<Login />} />
+          <Route path={`/register`} element={<Register/>} />
+        </Route>
       </Routes>
 
     </>
