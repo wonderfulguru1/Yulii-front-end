@@ -31,28 +31,26 @@ export const footerLinks = [
   {
     title: 'Company',
     links: [
-      'Deals',
-      'For Merchant',
-      'For Buyer',
-      'How it works',
-      'Contact Us',
+      { href: '/pro-users', key: 'Pro Users', text: 'Pro Users' },
+      { href: '/how-it-works', key: 'How it works', text: 'How it works' },
+      { href: '/contact', key: 'Contact', text: 'Contact' },
     ],
   },
   {
     title: 'Help',
     links: [
-      'Contact Us',
-      'Terms of Use',
-      'Privacy Policy',
+      { href: '/contact', key: 'Contact', text: 'Contact' },
+      { href: '/terms-and-condition', key: 'Terms of uSE', text: 'Terms of Use' },
+      { href: '/privacy-policy', key: 'Privacy Policy', text: 'Privacy Policy' },
     ],
   },
-  {
-    title: 'Location',
-    links: [
-      'Olugbosi Street, Off Bishop Oluwole Street Victoria Island Lagos',
+  // {
+  //   title: 'Location',
+  //   links: [
+  //     'Olugbosi Street, Off Bishop Oluwole Street Victoria Island Lagos',
 
-    ],
-  },
+  //   ],
+  // },
 ]
 
 export const section1 = {

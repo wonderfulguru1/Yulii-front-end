@@ -10,6 +10,7 @@ import Login from './pages/external/login';
 import LoginLayout from './layouts/login-layout';
 import Register from './pages/external/register';
 
+
 function App() {
   Aos.init({
     duration: 3000,
@@ -33,6 +34,7 @@ function App() {
         <Route element={<LoginLayout />}>
           <Route path={`/login`} element={<Login />} />
           <Route path={`/register`} element={<Register/>} />
+        
         </Route>
       </Routes>
 

@@ -3,6 +3,8 @@ import HowItWorks from "../../pages/external/how-it-works";
 import Merchants from "../../pages/external/merchants";
 import Contact from "../../pages/external/contact";
 import HomePage from "../../pages/external/home";
+import TermsAndCondition from "@/pages/external/terms-and-condition";
+import PrivacyPolicy from "@/pages/external/privacy-policy";
 
 
 const externalRoute = [
@@ -27,6 +29,14 @@ const externalRoute = [
     {
         element: <Contact/>,
         path: 'contact',
+    },
+    {
+        element: <TermsAndCondition/>,
+        path: 'terms-and-condition',
+    },
+    {
+        element: <PrivacyPolicy/>,
+        path: 'privacy-policy',
     },
 ]
 
