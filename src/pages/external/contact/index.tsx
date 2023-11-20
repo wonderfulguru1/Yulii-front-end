@@ -11,7 +11,7 @@ const Contact = () => {
       <HeroSection />
       <div className='container mx-auto flex my-20 px-4 md:px-o'>
         <div className='w-1/3 hidden md:block'>
-          <h3 className='text-primary text-lg font-semibold'>Account and Registration</h3>
+          <h3 className=' text-lg font-semibold'>Account and Registration</h3>
           <ul className='flex flex-col '>
             {FaqLinks.map((link) => (
               <Link to={link.href} key={link.name} className="text-base">

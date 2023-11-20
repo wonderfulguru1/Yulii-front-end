@@ -73,7 +73,7 @@ const Merchant = () => {
       </div>
       <div className='flex container mx-auto items-center lg:w-1/3 px-6 lg:px-0 flex-col'>
         <h3 className='lg:text-3xl font-semibold text-center p-10'>
-        Frequently asked question about Plenti Africa
+        Frequently asked question about Yulli
         </h3>
           <Faq/>
       </div>

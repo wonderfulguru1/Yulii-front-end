@@ -18,8 +18,8 @@ const HowItWorks = () => {
         <Card />
       </div>
       <section className='container mx-auto px-4 lg:px-0 flex flex-col py-4'>
-        <div className='flex justify-between md:py-6 lg:w-1/4'>
-          <h3 className='text-xl font-semibold'>More ways to earn points and cash back with your Plenti account. </h3>
+        <div className='flex justify-center md:py-6 '>
+          <h3 className='text-xl font-semibold'>More ways to to interact with the Yulii app  </h3>
        
         </div>
         <div className='container mx-auto my-6 '>
@@ -43,7 +43,7 @@ const HowItWorks = () => {
       </section>
       <div className='flex container mx-auto items-center px-6 lg:px-0 lg:w-1/3 flex-col py-12'>
         <h3 className='lg:text-3xl text-xl font-semibold text-center p-10'>
-        Frequently asked question about Plenti Africa
+        Frequently asked question about Yulli
         </h3>
           <Faq/>
       </div>

@@ -199,12 +199,12 @@ body {
 }
 input:checked ~ .dot {
   transform: translateX(100%);
-  background-color: #ea1d24;
+  background-color: #4A9BDD;
 }
 /* Toggle B */
 input:checked ~ .dot {
   transform: translateX(100%);
-  background-color: #ea1d24;
+  background-color: #4A9BDD;
 }
 
 /* Modal */

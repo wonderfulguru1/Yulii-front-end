@@ -12,7 +12,7 @@ const Toggle = () => {
         if (isChecked) {
             navigate("/");
         } else {
-            navigate("/merchants");
+            navigate("/pro-users");
         }
     };
 
@@ -20,23 +20,23 @@ const Toggle = () => {
         <div>
             <label htmlFor="toggleB" className="flex items-center cursor-pointer">
                 <div className="mr-6  font-semibold">
-                    FOR BUYERS
+                    USERS
                 </div>
                 <div className="relative">
 
                     <input type="checkbox" id="toggleB" className="sr-only" checked={isChecked} onChange={handleToggle} />
 
 
-                    <div className="block border border-[#ea1d24] w-16 h-8 rounded-full bg-sec"></div>
+                    <div className="block border border-[#4A9BDD] w-16 h-8 rounded-full bg-sec"></div>
 
-                    <div className="dot absolute left-1 top-1 bg-primary w-6 h-6 rounded-full transition"></div>
+                    <div className="dot absolute left-1 top-1 bg-[#4A9BDD] w-6 h-6 rounded-full transition"></div>
 
 
                 </div>
 
 
                 <div className="ml-6  font-semibold">
-                    FOR MERCHANTS
+                   PRO-USERS
                 </div>
             </label>
         </div>

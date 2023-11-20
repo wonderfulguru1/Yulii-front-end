@@ -70,7 +70,8 @@ const HeroSection = () => {
                    
                     <div>
                         <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" >Have <span className='text-[#67c7c0]'>fun organizing </span>daily activities with your <span className='text-[#67c7c0]'>loved ones</span></h1>
-                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">Get rewarded every time you shop, Plenti Africa is designed to bring you incredible deals, amazing rewards, and a seamless shopping experience.</p>
+                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">Yulii is the mobile application that allows you to organize daily activities with your loved ones. With a point awarded task allocation system, you can motivate your family and friends to deserve your attention, and greet them with gifts and vice versa
+</p>
                     </div>
                    
                     <div className='hidden lg:block'>
