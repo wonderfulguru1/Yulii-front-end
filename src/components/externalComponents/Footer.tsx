@@ -1,7 +1,7 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from "react-router-dom";
 import YuliLogo from "../../assets/yulilogo.svg"
-import { footerLinks, items } from "../../constants/index";
+import { footerLinks } from "../../constants/index";
 
 // type ColumnProps = {
 //     title: string;
