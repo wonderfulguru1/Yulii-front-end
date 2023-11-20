@@ -5,18 +5,13 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {Link, useLocation} from "react-router-dom";
 import { BiMenu } from "react-icons/bi"
 import { MdClose } from "react-icons/md"
-import { NavLinks } from "../../constants/index";
 import MobileNav from './MobileNav';
 import Button from "./Button";
 import YuliLogo from "../../assets/yulilogo.svg"
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
-  const [activeLink, setActiveLink] = useState<string>('/');
   const location = useLocation();
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
-  };
   return (
 
     <nav className="z-10  w-full  bg-white fixed px-10 md:px-0">

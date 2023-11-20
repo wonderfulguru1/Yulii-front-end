@@ -3,8 +3,7 @@ import HowItWorks from "../../pages/external/how-it-works";
 import Merchants from "../../pages/external/merchants";
 import Contact from "../../pages/external/contact";
 import HomePage from "../../pages/external/home";
-import Login from "../../pages/external/login";
-import Register from "../../pages/external/register";
+
 
 const externalRoute = [
     {
@@ -29,14 +28,6 @@ const externalRoute = [
         element: <Contact/>,
         path: 'contact',
     },
-    // {
-    //     element: <Login/>,
-    //     path: 'login',
-    // },
-    // {
-    //     element: <Register/>,
-    //     path: 'register',
-    // },
 ]
 
 export default externalRoute;

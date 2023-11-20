@@ -1,5 +1,4 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import HeroImg from "../../assets/hero.png"
+
 import { MoreVertical } from 'lucide-react';
 
 

@@ -1,19 +1,11 @@
 "use client"
-
-import { useState, ChangeEvent } from "react"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { moreWays, dealSection, productsData } from "../../../constants/index"
-import MerchantCard from './MerchantCard';
-
-import {Link} from 'react-router-dom';
-import Label from '../../../components/externalComponents/Label';
 import InstaCard from "@/components/externalComponents/InstaCard";
 
 interface DropdownProps {
   options: string[];
   onSelect: (selectedOption: string) => void;
 }
-const DealsPage: React.FC<DropdownProps> = ({ onSelect }) => {
+const DealsPage: React.FC<DropdownProps> = () => {
   // const divData = Array.from({ length: 4 }, (_, index) => index);
   // const [products] = useState(productsData);
   // const [selectedCategory, setSelectedCategory] = useState("All");

@@ -3,7 +3,6 @@ import GenericSection from '../../../components/externalComponents/GenericSectio
 import { section1, section2, section3, section4 } from "../../../constants";
 import React from 'react'
 import '../../../index.css'
-import Faq from '../../../components/externalComponents/Faq';
 
 
 const HomePage: React.FC = () => {

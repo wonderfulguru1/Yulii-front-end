@@ -4,7 +4,7 @@ import Shape from './Shapes';
 import Shape2 from './Shape2';
 // import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
-import Toggle from './Toggle';
+// import Toggle from './Toggle';
 import HeroImg from "../../assets/hero.png"
 
 const HeroSection = () => {

@@ -1,5 +1,4 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import Button from '../../../components/externalComponents/Button';
 import {merchantItems} from "../../../constants/index"
 import Toggle from '../../../components/externalComponents/Toggle';
 import MerchantImg1 from "../../../assets/merchant1.png"
