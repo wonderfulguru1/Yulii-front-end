@@ -8,10 +8,14 @@ import { MdClose } from "react-icons/md"
 import MobileNav from './MobileNav';
 import Button from "./Button";
 import YuliLogo from "../../assets/yulilogo.svg"
+import LanguageSwitcher from './LanguageSwitcher';
+import Me from './LanguageSwitcher';
 
 const Navbar = () => {
   const [mobileNav, setMobileNav] = useState(false);
   const location = useLocation();
+
+  const dropdownItems = ['en', 'fr'];
   return (
 
     <nav className="z-10  w-full  bg-white fixed px-10 md:px-0">
@@ -59,6 +63,7 @@ const Navbar = () => {
         </div>
 
         <div className=" gap-6 hidden lg:flex">
+        <LanguageSwitcher lngs={dropdownItems}/>
           <Link to="/login">
             <Button title="Login" bgColor="bg-button1"  />
           </Link>

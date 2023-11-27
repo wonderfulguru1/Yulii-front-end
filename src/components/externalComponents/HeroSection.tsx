@@ -6,9 +6,34 @@ import Shape2 from './Shape2';
 // import { useState } from "react";
 // import Toggle from './Toggle';
 import HeroImg from "../../assets/hero.png"
+import { Translations } from '@/interface';
+import { useTranslation } from 'react-i18next';
 
-const HeroSection = () => {
+interface HeroProps {
+    sectionName: keyof Translations['homepage'];
+}
 
+
+// function splitAndColorSentence(sentence:string): string {
+//     const words = sentence.split("")
+//     if(words.length >= 8) {
+//         words[0] = `<span style=color:#67c7c0 ;">${words[0]}</span>`;
+//         words[0] = `<span style=color:#67c7c0 ;">${words[0]}</span>`;
+//         words[0] = `<span style=color:#67c7c0 ;">${words[0]}</span>`;
+//     }
+
+//     const coloredSentence = words.join("")
+
+//     return coloredSentence;
+// }
+
+// const sentence = {t(`homepage.title`)}
+// const coloredSentence = splitAndColorSentence(sentence);
+const HeroSection: React.FC<HeroProps> = ({ sectionName }) => {
+    const { t } = useTranslation();
+   
+//   const coloredSentence = splitAndColorSentence(sentence);
+    // const imagePath = t(`homepage.sections.${sectionNa`)
 
 //     const navigate = useNavigate();
 //   const [isChecked, setIsChecked] = useState(false);
@@ -69,8 +94,8 @@ const HeroSection = () => {
                     </div>
                    
                     <div>
-                        <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" >Have <span className='text-[#67c7c0]'>fun organizing </span>daily activities with your <span className='text-[#67c7c0]'>loved ones</span></h1>
-                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">Yulii is the mobile application that allows you to organize daily activities with your loved ones. With a point awarded task allocation system, you can motivate your family and friends to deserve your attention, and greet them with gifts and vice versa
+                        <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" > Have <span className='text-[#67c7c0]'>fun organizing </span>daily activities with your <span className='text-[#67c7c0]'>loved ones</span></h1>
+                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">{t(`homepage.subtitle`)}
 </p>
                     </div>
                    
@@ -95,3 +120,5 @@ const HeroSection = () => {
 }
 
 export default HeroSection
+
+

@@ -16,9 +16,13 @@ function App() {
     duration: 3000,
     offset: 100,
   })
+
+
   return (
     <>
+       
       <Routes>
+     
         {externalRoute?.map((i, idx) => (
           <Route key={`${idx}${i?.path}`} element={<ExternalLayout />}>
             <Route path={`/${i.path}`} element={i.element} />

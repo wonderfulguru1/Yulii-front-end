@@ -7,7 +7,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const HowItWorks = () => {
   return (
     <div>
-      <HeroSection />
+      <HeroSection sectionName={'howitworks'} />
       {/* <Section/> */}
       <div>
         <svg width="108" height="81" viewBox="0 0 108 81" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,7 +15,10 @@ const HowItWorks = () => {
         </svg>
       </div>
       <div className='container mx-auto'>
-        <Card />
+        <Card sectionName='section1' order={'order-first'} order2={'order-last'}/>
+        <Card sectionName='section2'    order2='order-first' order='order-last'/>
+        <Card sectionName='section3' order={'order-first'} order2={'order-last'}/>
+        <Card sectionName='section4'    order2='order-first' order='order-last'/>
       </div>
       <section className='container mx-auto px-4 lg:px-0 flex flex-col py-4'>
         <div className='flex justify-center md:py-6 '>
