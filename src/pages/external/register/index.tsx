@@ -1,6 +1,6 @@
 import Button from '../../../components/externalComponents/Button'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import LoginImg from "../../../assets/loginImg.svg"
+import LoginImg from "../../../assets/logindesign.png"
 
 
 
@@ -48,8 +48,6 @@ const Register = () => {
                 <div className='w-4/6 '>
                     <LazyLoadImage
                         src={LoginImg}
-                        width={800}
-                        height={600}
                         alt="logo"
                         className='md:py-10' />
                 </div>
