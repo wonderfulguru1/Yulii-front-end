@@ -8,8 +8,9 @@ import { useTranslation } from "react-i18next";
 // }
 
 interface SocialItem {
-  title: string;
-  text: string;
+  name: string;
+  heading: string;
+  image:string
 }
 
 interface SocialProps {
@@ -18,13 +19,7 @@ interface SocialProps {
 
 const DealsPage: React.FC<SocialProps> = () => {
   const { t } = useTranslation();
-  // const socials = t('socials', { returnObjects: true }) as { title: string; text: string }[];
-  // const socialsSocials = t('socials', { returnObjects: true }) as { title: string; text: string }[];
-  
-  const numberOfCards = 5;
-  const cards = Array.from({ length: numberOfCards }, (_, index) => (
-    <InstaCard key={index} />
-  ));
+  const socialData = t('socials.section', { returnObjects: true }) as { name: string; heading: string, image:string }[];
 
   return (
     <div className='pt-28 bg-[#fffdfd]'>
@@ -44,8 +39,10 @@ const DealsPage: React.FC<SocialProps> = () => {
       </section>
   
 <div>
+{socialData?.map((item) => (
+  <InstaCard name={t(`${item.name}`)} heading={t(`${item.heading}`)} image={t(`${item.image}`)} />
+))}
 
-  {cards}
 </div>
     </div>
   )

@@ -343,7 +343,35 @@
     "socials": {
         "heading": "Socials",
         "title": "Welcome to Yulii Socials, the vibrant hub where our community comes to life! Join the conversation, stay informed, and be inspired by the latest happenings in the world of Yulii.",
-        "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres."
+        "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
+        "section" : [
+            {
+              "name": "david",
+              "heading": "Elevate your style, one outfit at a time. ✨ #FashionForward #OOTD",
+              "image":"../src/assets/7.jpeg"
+              
+            },
+            {
+              "name": "rosa92",
+              "heading": "Embarking on a journey is not just about changing locations; it's about evolving perspectives. Every destination holds a piece of the extraordinary, and each step fuels my wanderlust. From bustling cityscapes to serene landscapes, I'm on a constant quest for the profound beauty that this world has to offer. Join me in exploring the wonders that ignite our curiosity and inspire us to embrace the richness of diverse cultures. 🌍✈️ #Wanderlust #TravelDiaries ",
+              "image":"../src/assets/6.jpeg"
+            },
+            {
+              "name": "Kingston",
+              "heading": "Fitness is not just a routine; it's a commitment to my well-being. Each drop of sweat, every sore muscle — they're all part of a transformative journey towards a stronger, healthier version of myself. Through the highs and lows, I find joy in the progress, not perfection. Join me in embracing the empowerment that comes from self-care and the pursuit of a fit, balanced life. 💪✨ #FitLife #WorkoutMotivation #WellnessJourney",
+              "image":"../src/assets/4.jpeg"
+            },
+            {
+              "name": "marvella75",
+              "heading": "Savoring every bite because life is too short for bad food. 🍔🥑 #FoodieAdventures #FoodLove",
+              "image":"../src/assets/5.jpeg"
+            },
+            {
+              "name": "Bella_zoe",
+              "heading": "In the realm of technology, every innovation is a step into the future. From cutting-edge gadgets to the latest advancements, I'm on a perpetual journey to explore the ever-evolving world of tech. Join me in unraveling the mysteries of artificial intelligence, marveling at the intricacies of coding, and embracing the digital transformations that shape our world. Let's navigate the future together, one byte at a time. 🚀💻 #TechExplorer #GeekLife #DigitalFrontiers",
+              "image":"../src/assets/2.jpeg"
+            }
+          ]
     },
     "prousers": {
         "title": "The ultimate platform for enjoyable activities",

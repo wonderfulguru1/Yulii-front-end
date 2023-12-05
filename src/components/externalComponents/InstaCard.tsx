@@ -1,8 +1,13 @@
 
 import { MoreVertical } from 'lucide-react';
 
+interface SocialItem {
+    name: string;
+    heading: string;
+    image: string
+  }
 
-const InstaCard = () => {
+const InstaCard: React.FC<SocialItem> = ({name, heading, image}) => {
     return (
         <div>
 
@@ -47,15 +52,15 @@ const InstaCard = () => {
                         <div className="flex justify-between items-center py-2">
                             <div className="relative mt-1 flex">
                                 <div className="mr-2">
-                                    <img src="https://avatars.githubusercontent.com/u/68494287?v=4" alt="adebayor"
+                                    <img src={image} alt="adebayor"
                                         className="w-10 h-10 rounded-full object-cover" />
                                 </div>
                                 <div className="ml-3 flex justify-start flex-col items-start">
-                                    <p className="text-gray-900 text-sm">
-                                        Adebayor
+                                    <p className="text-gray-900 text-sm font-bold capitalize">
+                                        {name}
                                     </p>
                                     <p className="text-gray-600 text-xs">
-                                        Adebayor
+                                    {name}
                                     </p>
                                 </div>
                                 <span className="text-xs mx-2">•</span>
@@ -68,7 +73,7 @@ const InstaCard = () => {
                         </div>
                     </div>
                     <div className="relative w-full h-full">
-                        <img src="https://wallpaperaccess.com/full/345330.jpg" alt="saman" className="rounded-lg w-full h-full object-cover" />
+                        <img src={image} alt="saman" className="rounded-lg w-full h-full object-cover" />
                     </div>
                     <div className="">
 
@@ -85,8 +90,8 @@ const InstaCard = () => {
                         </div>
                         <div className="p-2 flex flex-col space-y-3">
                             <div className="text-sm">
-                                <span className="font-semibold">David</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <span className="font-semibold">     {name}</span>      {heading}
+                                
                             </div>
 
                             <div className="text-gray-500 text-sm">
