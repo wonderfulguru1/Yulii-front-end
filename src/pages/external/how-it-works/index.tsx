@@ -1,10 +1,25 @@
 import HeroSection from './HeroSection'
 import Card from './Card'
 import Faq from '@/components/externalComponents/Faq'
-import { moreWays } from '@/constants'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useTranslation } from 'react-i18next';
 
-const HowItWorks = () => {
+
+interface HowItWorksItem {
+  title: string;
+  text: string;
+  color: string;
+  icon: string
+}
+
+interface WorksProps {
+  howItWorks?: HowItWorksItem[];
+}
+
+
+const HowItWorks: React.FC<WorksProps> = () => {
+  const { t } = useTranslation();
+  const howItWorks = t('howitworks.items', { returnObjects: true }) as { title: string; text: string; color: string; icon: string}[];
   return (
     <div>
       <HeroSection sectionName={'howitworks'} />
@@ -22,22 +37,22 @@ const HowItWorks = () => {
       </div>
       <section className='container mx-auto px-4 lg:px-0 flex flex-col py-4'>
         <div className='flex justify-center md:py-6 '>
-          <h3 className='text-xl font-semibold'>More ways to to interact with the Yulii app  </h3>
+          <h3 className='text-xl font-semibold'>{t(`howitworks.heading`)}</h3>
        
         </div>
         <div className='container mx-auto my-6 '>
           <div className='flex flex-col md:flex-row  md:px-0 gap-4'>
-            {moreWays.items.map((item) => (
-              <div className={`flex p-4 border rounded-md flex-col ${item.backgroundColor}`}>
+            {howItWorks.map((item) => (
+              <div className={`flex w-1/4 p-4 border rounded-md flex-col ${t(`${item.color}`)}`}>
                 <LazyLoadImage
-                  src={item.icon}
+                  src={t(`${item.icon}`)}
                   width={50}
                   height={50}
                   alt="logo"
                   className=''
                 />
-                <h3 className='py-4 font-semibold'>{item.caption}</h3>
-                <p className='text-base'>{item.text}</p>
+                <h3 className='py-4 font-semibold'>{t(`${item.title}`)}</h3>
+                <p className='text-base'>{t(`${item.text}`)}</p>
 
               </div>
             ))}
@@ -45,9 +60,6 @@ const HowItWorks = () => {
         </div>
       </section>
       <div className='flex container mx-auto items-center px-6 lg:px-0 lg:w-1/3 flex-col py-12'>
-        <h3 className='lg:text-3xl text-xl font-semibold text-center p-10'>
-        Frequently asked question about Yulli
-        </h3>
           <Faq/>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { dealSection } from "../../../constants/index"
+
 import Shape from '../../../components/externalComponents/Shapes'
 import Shape2 from "@/components/externalComponents/Shape2"
 import { Translations } from '@/interface';
@@ -10,7 +10,7 @@ interface SectionProps {
 }
 
 
-const HeroSection: React.FC<SectionProps> = ({ sectionName}) => {
+const HeroSection: React.FC<SectionProps> = () => {
   const { t } = useTranslation();
   return (
 

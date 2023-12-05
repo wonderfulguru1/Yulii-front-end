@@ -68,7 +68,7 @@ const isCustomerPage = location.pathname?.includes("/customer");
 const routes = isCustomerPage ? customerRoutes : merchantRoutes
 
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex  w-full">
             {routes.map((route) => (
                 <SidebarItem 
                 key={route.href}

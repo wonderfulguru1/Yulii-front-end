@@ -1,14 +1,14 @@
 import Button from '../../../components/externalComponents/Button'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Link } from 'react-router-dom'
-import LoginImg from "../../../assets/loginImg.svg"
+import LoginImg from "../../../assets/logindesign.png"
 
 const Login = () => {
     return (
-        <div className=' container mx-auto  items-center justify-center pt-16'>
+        <div className=' container mx-auto   pt-32'>
            
-            <div className='flex  items-center justify-center'>
-                <div className='w-3/6'>
+            <div className='flex gap-10 items-center justify-between'>
+                <div className='w-1/2'>
                 <h2 className='font-semibold text-2xl'>Log In</h2>
                     <div className='my-6'>
                         <div className="mb-6">
@@ -44,13 +44,13 @@ const Login = () => {
                         </a>
                     </div>
                 </div>
-                <div className='w-4/6 '>
+                <div className='w-1/2 flex justify-center'>
                     <LazyLoadImage
                         src={LoginImg}
-                        // width={600}
-                        // height={600}
+                        // width={300}
+                        // height={100}
                         alt="logo"
-                        className='md:py-10 ' />
+                        className='' />
                 </div>
             </div>
         </div>

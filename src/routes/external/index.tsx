@@ -1,6 +1,6 @@
-import DealsPage from "../../pages/external/deals";
+import DealsPage from "../../pages/external/socials";
 import HowItWorks from "../../pages/external/how-it-works";
-import Merchants from "../../pages/external/merchants";
+import Merchants from "../../pages/external/prousers";
 import Contact from "../../pages/external/contact";
 import HomePage from "../../pages/external/home";
 import TermsAndCondition from "@/pages/external/terms-and-condition";
@@ -13,9 +13,7 @@ const externalRoute = [
         path: '/',
     },
     {
-        element: <DealsPage options={[]} onSelect={function (): void {
-            throw new Error("Function not implemented.");
-        } }/>,
+        element: <DealsPage />,
         path: 'socials',
     },
     {

@@ -39,6 +39,8 @@ export interface HowItWorksTranslations {
     };
   }
 
+  
+
 export interface Translations {
     homepage: HomepageTranslations;
     howitworks: HowItWorksTranslations;

@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
       </div>
 
       <div className='flex flex-col container mx-auto px-4 md:px-0 md:w-1/3 items-center'>
-         <h2 className='text-center font-semibold text-3xl w-2/3 py-8 mx-auto'>Frequently Asked Questions</h2>
+        
       <Faq />
       </div> 
       {/* <Card /> */}

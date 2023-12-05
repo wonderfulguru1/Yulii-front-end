@@ -9,16 +9,29 @@ import MobileNav from './MobileNav';
 import Button from "./Button";
 import YuliLogo from "../../assets/yulilogo.svg"
 import LanguageSwitcher from './LanguageSwitcher';
-import Me from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
-const Navbar = () => {
+
+interface NavigationItem {
+  key: string;
+  text: string;
+  href: string;
+}
+
+interface NavigationProps {
+    navigationItems?: NavigationItem[];
+}
+
+const Navbar: React.FC<NavigationProps> = () => {
+  const { t } = useTranslation();
+  const navigationItems = t('navigationItems', { returnObjects: true }) as { key: string; text: string, href: string }[];
   const [mobileNav, setMobileNav] = useState(false);
   const location = useLocation();
 
   const dropdownItems = ['en', 'fr'];
   return (
 
-    <nav className="z-10  w-full  bg-white fixed px-10 md:px-0">
+    <nav className="z-10  w-full  bg-white fixed px-10 md:px-0 shadow-sm">
       <div className="flex z-10 justify-between py-4 container mx-auto items-center top-0 left-0 right-0">
         <div className="">
           <Link to="/">
@@ -31,24 +44,30 @@ const Navbar = () => {
           </Link>
 
         </div>
-
+        {/* {t(`${item.text}`)} */}
         <div className="space-x-10 hidden lg:flex" >
         <ul className='flex space-x-16  text-xl'>
-        <li>
+        {navigationItems.map((item) => (
+
+            <li className='' key={item.key}>
+            <Link to={t(`${item.href}`)} className={location.pathname === `${t(`${item.href}`)}` ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>{t(`${item.text}`)}</Link>
+          </li>
+        ))}
+        {/* <li>
           <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}></Link>
         </li>
         <li>
           <Link to="/pro-users" className={location.pathname === '/pro-users' ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>Pro-Users</Link>
         </li>
         <li>
-          <Link to="/socials" className={location.pathname === '/socials' ? 'border-b-4 border-b-[#4A9BDD] py-2  ' : ''}>Socials</Link>
+          <Link to="/socials" className={location.pathname === `{t(navigationItems.href)}` ? 'border-b-4 border-b-[#4A9BDD] py-2  ' : ''}>Socials</Link> 
         </li> 
         <li>
           <Link to="/how-it-works" className={location.pathname === '/how-it-works' ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>How it Works</Link>
         </li>
         <li>
           <Link to="/contact" className={location.pathname === '/contact' ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>Contact</Link>
-        </li>
+        </li> */}
         {/* Add more navigation links as needed */}
       </ul>
           {/* {NavLinks.map((link) => (

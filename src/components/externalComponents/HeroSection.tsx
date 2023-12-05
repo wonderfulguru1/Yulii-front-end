@@ -5,7 +5,7 @@ import Shape2 from './Shape2';
 // import { useNavigate } from "react-router-dom";
 // import { useState } from "react";
 // import Toggle from './Toggle';
-import HeroImg from "../../assets/hero.png"
+import HeroImg from "../../assets/hero1.png"
 import { Translations } from '@/interface';
 import { useTranslation } from 'react-i18next';
 
@@ -29,7 +29,7 @@ interface HeroProps {
 
 // const sentence = {t(`homepage.title`)}
 // const coloredSentence = splitAndColorSentence(sentence);
-const HeroSection: React.FC<HeroProps> = ({ sectionName }) => {
+const HeroSection: React.FC<HeroProps> = () => {
     const { t } = useTranslation();
    
 //   const coloredSentence = splitAndColorSentence(sentence);
@@ -94,7 +94,7 @@ const HeroSection: React.FC<HeroProps> = ({ sectionName }) => {
                     </div>
                    
                     <div>
-                        <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" > Have <span className='text-[#67c7c0]'>fun organizing </span>daily activities with your <span className='text-[#67c7c0]'>loved ones</span></h1>
+                        <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" > {t(`homepage.title1`)} <span className='text-[#67c7c0]'>{t(`homepage.title2`)} </span>{t(`homepage.title3`)} <span className='text-[#67c7c0]'>{t(`homepage.title4`)}</span></h1>
                         <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">{t(`homepage.subtitle`)}
 </p>
                     </div>

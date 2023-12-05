@@ -1,14 +1,24 @@
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { bannerSection } from "../../constants/index";
-import { BsApple } from "react-icons/bs"
-import { BiLogoPlayStore } from "react-icons/bi"
+import { useTranslation } from 'react-i18next';
+interface BannerItem {
+    title: string;
+    text: string;
+    image: string
+  }
+  
+  interface BannerProps {
+    faqData?: BannerItem[];
+  }
+  
 
-const Banner = () => {
+const Banner: React.FC<BannerProps> = () => {
+    const { t } = useTranslation();
+    // const banner = t('banner', { returnObjects: true }) as { title: string; text: string, image:string }[];
     return (
         <div className='bg-[#4a9bdd] container my-10 items-center justify-center space-x-28 hidden lg:flex flex-row mx-auto rounded-tl-[80px] rounded-tr-[80px]  '>
             <div>
                 <LazyLoadImage
-                    src={bannerSection.image}
+                    src={t(`banner.image`)}
                     width={350}
                     height={250}
                     alt="logo"
@@ -16,8 +26,8 @@ const Banner = () => {
                 />
             </div>
             <div className='space-y-10 py-4 w-1/3  items-center content-center'>
-                <h3 className='text-3xl text-white'>{bannerSection.title}</h3>
-                <p className='text-lg w-3/4 text-white'>{bannerSection.text}</p>
+                <h3 className='text-3xl text-white'>{t(`banner.title`)}</h3>
+                <p className='text-lg w-3/4 text-white'>{t(`banner.text`)}</p>
                 <div className='flex flex-row space-x-6'>
                     <div
                         className="w-full sm:w-auto cursor-pointer  flex bg-white hover:bg-[#122f46] hover:text-white focus:ring-4 focus:ring-gray-300 text-black rounded-full inline-flex items-center justify-center px-4 py-2.5 ">

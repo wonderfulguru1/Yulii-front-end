@@ -1,6 +1,9 @@
 {
   "homepage": {
-    "title": "mee",
+    "title1": "Amusez-vous à",
+    "title2": "organiser des activités",
+    "title3": "quotidiennes avec",
+    "title4": "vos proches",
     "subtitle": "Yulii est l’application mobile qui vous permet d’organiser vos activités quotidiennes avec vos proches. Avec un système d’attribution de tâches avec des points, vous pouvez motiver votre famille et vos amis à mériter votre attention, et les récompenser avec des cadeaux et vice versa.",
     "sections": {
       "section1": {
@@ -32,36 +35,63 @@
       }
     }
   },
-
   "howitworks": {
     "title": "Découvrez des offres, gagnez des points et soyez récompensé.",
     "subtitle": "Vos enfants peuvent effectuer des tâches quotidiennes de base et les récompenser avec des points. Avec les points qu'ils accumulent en aidant à la maison, ils peuvent obtenir un cadeau, parmi une large liste d'articles de leur choix.",
-"sections": {
-"section1": {
-    "title": "Inscrivez-vous et soyez récompensé chaque fois que vous terminez une tâche",
-    "text": "Sur Yulii, vous pourrez vous connecter de la manière la plus simple avec uniquement votre adresse e-mail et votre mot de passe. Même si vous avez oublié votre mot de passe, Yulii s’en occupera et vous enverra un lien unique avec des instructions. C’est votre porte vers un nouveau monde d’offres et de plaisir avec vos amis.",
-    "Image": "../src/assets/image11.png"
-},
-"section2": {
-    "title": "Invitez un ami sur l'application et assurez-vous qu'il accepte votre demande d'ami",
-    "text": "Après le processus d'intégration qui prend moins d'une minute, la prochaine chose à faire est d'inviter vos amis et votre famille à vous rejoindre, puis vous pourrez leur attribuer des offres et des récompenses.",
-    "Image": "../src/assets/image22.png"
-},
-"section3": {
-    "title": "Créez un accord et attachez-le à un ami, une famille ou un groupe de personnes",
-    "text": "Consultez toutes les offres de votre groupe d'amis. Chaque transaction est associée à la photo de votre ami ou même de la vôtre, qui représente le cessionnaire de la transaction. De cette façon, vous pouvez suivre ce qui se passe chez tout le monde. Souviens-toi ! Gardez toujours une trace de ce que font vos amis et votre famille, de cette façon vous savez que vous pouvez accomplir vos tâches avant eux !",
-    "Image": "../src/assets/33.png"
-},
-"section4": {
-    "title": "Offrez des récompenses à la famille et aux amis qui ont accompli leur tâche avec succès",
-    "text": " Téléchargez une photo d'un élément qui sera remis à la personne qui termine avec succès une tâche. Alternativement, le cadeau peut être acheté à un prix très réduit dans la boutique Yulii.",
-    "Image": "../src/assets/payment.png"
-}
-}
-},
-
+    "heading": "Plus de façons d'interagir avec l'application Yulii.",
+    "sections": {
+      "section1": {
+        "title": "Inscrivez-vous et soyez récompensé chaque fois que vous terminez une tâche",
+        "text": "Sur Yulii, vous pourrez vous connecter de la manière la plus simple avec uniquement votre adresse e-mail et votre mot de passe. Même si vous avez oublié votre mot de passe, Yulii s’en occupera et vous enverra un lien unique avec des instructions. C’est votre porte vers un nouveau monde d’offres et de plaisir avec vos amis.",
+        "Image": "../src/assets/image11.png"
+      },
+      "section2": {
+        "title": "Invitez un ami sur l'application et assurez-vous qu'il accepte votre demande d'ami",
+        "text": "Après le processus d'intégration qui prend moins d'une minute, la prochaine chose à faire est d'inviter vos amis et votre famille à vous rejoindre, puis vous pourrez leur attribuer des offres et des récompenses.",
+        "Image": "../src/assets/image22.png"
+      },
+      "section3": {
+        "title": "Créez un accord et attachez-le à un ami, une famille ou un groupe de personnes",
+        "text": "Consultez toutes les offres de votre groupe d'amis. Chaque transaction est associée à la photo de votre ami ou même de la vôtre, qui représente le cessionnaire de la transaction. De cette façon, vous pouvez suivre ce qui se passe chez tout le monde. Souviens-toi ! Gardez toujours une trace de ce que font vos amis et votre famille, de cette façon vous savez que vous pouvez accomplir vos tâches avant eux !",
+        "Image": "../src/assets/33.png"
+      },
+      "section4": {
+        "title": "Offrez des récompenses à la famille et aux amis qui ont accompli leur tâche avec succès",
+        "text": " Téléchargez une photo d'un élément qui sera remis à la personne qui termine avec succès une tâche. Alternativement, le cadeau peut être acheté à un prix très réduit dans la boutique Yulii.",
+        "Image": "../src/assets/payment.png"
+      }
+    },
+    "items": [
+    
+      {
+          "title": "Publier votre produit dans la boutique Yulii",
+          "text": "Vous êtes prêt à donner une nouvelle dimension à vos produits ? Publiez-les sur Yulii Store, où un monde de clients potentiels est à portée de clic. Profitez de notre vaste plateforme pour présenter vos créations à un public diversifié et engagé.",
+          "color": "bg-section2Label",
+          "icon": "../src/assets/airtime.png"
+      },
+      {
+          "title": "Publiez des événements, des spectacles et des histoires sur les réseaux sociaux de Yulii",
+          "text": "Préparez-vous à vous immerger dans le monde vibrant de Yulii Socials, votre plateforme de référence pour les post-événements, les spectacles sensationnels et les histoires captivantes.",
+          "color": "bg-secondary",
+          "icon": "../src/assets/voucher.png"
+      },
+      {
+          "title": "Devenez un compte pro et obtenez beaucoup plus de yulli",
+          "text": "Prêt à passer à l'étape suivante de votre voyage sur Yulii ? Passez à Yulii Pro et ouvrez la porte à une multitude d'avantages et de fonctionnalités exclusives qui redéfinissent votre expérience d'utilisateur.",
+          "color": "bg-[#efefff]",
+          "icon": "../src/assets/refer.png"
+      },
+      {
+          "title": "Parrainez vos amis et obtenez des points et des récompenses",
+          "text": "Appel à tous les passionnés de Yulii ! Répandez la joie en recommandant à vos amis l'expérience ultime de l'application mobile. Tout le monde y gagne !Bientôt, vous pourrez gagner des points chaque fois que vous partagerez Yulii avec un membre de votre cercle.",
+          "color": "bg-[#effef0]",
+          "icon": "../src/assets/credit.png"
+      }
+  ]
+  },
   "faq": {
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "Questions Fréquemment Posées",
+    "question": "C’est quoi Yulii ?",
     "questions": [
       {
         "question": "C’est quoi Yulii ?",
@@ -77,7 +107,7 @@
       },
       {
         "question": "C’est quoi la différence entre une récompense et une récompense pro ?",
-        "answer": "Pour réclamer une récompense, tu dois avoir le nombre de points total requis. Pour réclamer une récompense pro, tu dois obligatoirement avoir fini et validé les deals qui sont liés à cette récompense.",
+        "answer": "Pour réclamer une récompense, tu dois avoir le nombre de points total requis.Pour réclamer une récompense pro, tu dois obligatoirement avoir fini et validé les deals qui sont liés à cette récompense.",
         "answer2": "Faites l’expérience de la flexibilité de Yulli Credit. Achetez maintenant et payez plus tard avec notre fonction pratique de crédit Yulli. Plus d’attente - profitez de vos achats tout en gérant votre budget"
       },
       {
@@ -120,107 +150,339 @@
     ]
   },
   "privacy": {
-    "privacyTitle": "Frequently Asked Questions",
+    "privacyTitle": "Politique De Confidentialité",
     "privacySubtext": "Cette politique de confidentialité ('Politique') décrit comment les informations personnellement identifiables ('Informations personnelles') que vous pouvez fournir dans l'application mobile 'Yulii' ('Application mobile' ou 'Service') et l'un de ses produits et services connexes (collectivement, 'Services') est collecté, protégé et utilisé. Il décrit également les choix dont vous disposez concernant notre utilisation de vos informations personnelles et comment vous pouvez accéder et mettre à jour ces informations. Cette politique est un accord juridiquement contraignant entre vous ('Utilisateur', 'vous' ou 'votre') et RASERS TECH VENTURES LIMITED ('RASERS TECH VENTURES LIMITED', 'nous', 'nous' ou 'notre'). En accédant et en utilisant l'application et les services mobiles, vous reconnaissez avoir lu, compris et accepté d'être lié par les termes de cette politique. Cette politique ne s'applique pas aux pratiques des entreprises que nous ne possédons ni ne contrôlons, ni aux particuliers que nous n'employons ni ne gérons.",
     "headings": [
-        {
-            "title": "Collecte automatique d'informations",
-            "subtext": "Notre priorité absolue est la sécurité des données client et, à ce titre, nous exerçons la politique de non-journal. Nous ne pouvons traiter que des données utilisateur minimales, autant qu'il est absolument nécessaire de maintenir l'application et les services mobiles. Les informations collectées automatiquement sont utilisées uniquement pour identifier les cas potentiels d'abus et établir des informations statistiques concernant l'utilisation de l'application et des services mobiles. Ces informations statistiques ne sont pas agrégées de manière à identifier un utilisateur particulier du système."
-        },
-        {
-            "question": "Collecte d'informations personnelles",
-            "answer": "You can access and use the Mobile Application and Services without telling us who you are or revealing any information by which someone could identify you as a specific, identifiable individual. If, however, you wish to use some of the features in the Mobile Application, you may be asked to provide certain Personal Information (for example, your name and e-mail address). We receive and store any information you knowingly provide to us when you create an account, publish content, make a purchase, or fill any online forms in the Mobile Application. When required, this information may include the following:"
-        },
-        {
-            "question": "Informations de contact telles que l'adresse e-mail, l'adresse, etc.",
-            "answer": "Détails du compte tels que nom d'utilisateur, ID utilisateur unique, mot de passe, etc. Certaines fonctionnalités de l'appareil mobile telles que les contacts, le calendrier, la galerie, etc. Tout autre matériel que vous nous soumettez volontiers, comme des articles, des images, des commentaires, etc. Certaines des informations que nous collectons proviennent directement de vous via l'application et les services mobiles. Cependant, nous pouvons également collecter des informations personnelles vous concernant auprès d'autres sources telles que les bases de données publiques et nos partenaires marketing conjoints. Vous pouvez choisir de ne pas nous fournir vos informations personnelles, mais vous ne pourrez peut-être pas profiter de certaines des fonctionnalités de l'application mobile. Les utilisateurs qui ne savent pas quelles informations sont obligatoires sont invités à nous contacter."
-        },
-        {
-            "question": "Use and processing of collected information",
-            "answer": "In order to make the Mobile Application and Services available to you, or to meet a legal obligation, we may need to collect and use certain Personal Information. If you do not provide the information that we request, we may not be able to provide you with the requested products or services. Any of the information we collect from you may be used for the following purposes:"
-        },
-        {
-            "question": "Create and manage user accounts",
-            "answer": "Improve user experience Protect from abuse and malicious users Run and operate the Mobile Application and Services Processing your Personal Information depends on how you interact with the Mobile Application and Services, where you are located in the world and if one of the following applies: (i) you have given your consent for one or more specific purposes; this, however, does not apply, whenever the processing of Personal Information is subject to California Consumer Privacy Act or European data protection law; (ii) provision of information is necessary for the performance of an agreement with you and/or for any pre-contractual obligations thereof; (iii) processing is necessary for compliance with a legal obligation to which you are subject; (iv) processing is related to a task that is carried out in the public interest or in the exercise of official authority vested in us; (v) processing is necessary for the purposes of the legitimate interests pursued by us or by a third party.",
-            "answer1": "Note that under some legislations we may be allowed to process information until you object to such processing (by opting out), without having to rely on consent or any other of the following legal bases below. In any case, we will be happy to clarify the specific legal basis that applies to the processing, and in particular whether the provision of Personal Information is a statutory or contractual requirement, or a requirement necessary to enter into a contract."
-        },
-        {
-            "question": "Billing and payments",
-            "answer": "In case of services requiring payment, we request credit card or other payment account information, which will be used solely for processing payments. Your purchase transaction data is stored only as long as is necessary to complete your purchase transaction. After that is complete, your purchase transaction information is deleted. Where necessary for processing future payments and subject to your prior consent, your financial information will be stored in encrypted form on secure servers of our reputed payment gateway service provider who is beholden to treating your Personal Information in accordance with this Policy. All direct payment gateways adhere to the latest security standards as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, MasterCard, American Express and Discover. Sensitive and private data exchange happens over a SSL secured communication channel and is encrypted and protected with digital signatures, and the Mobile Application and Services are also in compliance with PCI vulnerability standards in order to create as secure of an environment as possible for Users. Scans for malware are performed on a regular basis for additional security and protection."
-        },
-        {
-            "question": "Managing information",
-            "answer": "You are able to delete certain Personal Information we have about you. The Personal Information you can delete may change as the Mobile Application and Services change. When you delete Personal Information, however, we may maintain a copy of the unrevised Personal Information in our records for the duration necessary to comply with our obligations to our affiliates and partners, and for the purposes described below."
-        },
-        {
-            "question": "Disclosure of information ",
-            "answer": "Depending on the requested Services or as necessary to complete any transaction or provide any service you have requested, we may share your information with your consent with our trusted third parties that work with us, any other affiliates and subsidiaries we rely upon to assist in the operation of the Mobile Application and Services available to you. We do not share Personal Information with unaffiliated third parties. These service providers are not authorized to use or disclose your information except as necessary to perform services on our behalf or comply with legal requirements. We may share your Personal Information for these purposes only with third parties whose privacy policies are consistent with ours or who agree to abide by our policies with respect to Personal Information. These third parties are given Personal Information they need only in order to perform their designated functions, and we do not authorize them to use or disclose Personal Information for their own marketing or other purposes.",
-            "answer1": "We will disclose any Personal Information we collect, use or receive if required or permitted by law, such as to comply with a subpoena, or similar legal process, and when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.",
-            "answer2": "In the event we go through a business transition, such as a merger or acquisition by another company, or sale of all or a portion of its assets, your user account, and Personal Information will likely be among the assets transferred."
-        },
-        {
-            "question": "Retention of information",
-            "answer": "We will retain and use your Personal Information for the period necessary to comply with our legal obligations, resolve disputes, and enforce our agreements unless a longer retention period is required or permitted by law. We may use any aggregated data derived from or incorporating your Personal Information after you update or delete it, but not in a manner that would identify you personally. Once the retention period expires, Personal Information shall be deleted. Therefore, the right to access, the right to erasure, the right to rectification and the right to data portability cannot be enforced after the expiration of the retention period."
-        },
-        {
-            "question": "Transfer of information",
-            "answer": "Depending on your location, data transfers may involve transferring and storing your information in a country other than your own. You are entitled to learn about the legal basis of information transfers to a country outside the European Union or to any international organization governed by public international law or set up by two or more countries, such as the UN, and about the security measures taken by us to safeguard your information. If any such transfer takes place, you can find out more by checking the relevant sections of this Policy or inquire with us using the information provided in the contact section."
-        },
-        {
-            "question": "The rights of users",
-            "answer": "You may exercise certain rights regarding your information processed by us. In particular, you have the right to do the following: (i) you have the right to withdraw consent where you have previously given your consent to the processing of your information; (ii) you have the right to object to the processing of your information if the processing is carried out on a legal basis other than consent; (iii) you have the right to learn if information is being processed by us, obtain disclosure regarding certain aspects of the processing and obtain a copy of the information undergoing processing; (iv) you have the right to verify the accuracy of your information and ask for it to be updated or corrected; (v) you have the right, under certain circumstances, to restrict the processing of your information, in which case, we will not process your information for any purpose other than storing it; (vi) you have the right, under certain circumstances, to obtain the erasure of your Personal Information from us; (vii) you have the right to receive your information in a structured, commonly used and machine readable format and, if technically feasible, to have it transmitted to another controller without any hindrance. This provision is applicable provided that your information is processed by automated means and that the processing is based on your consent, on a contract which you are part of or on pre-contractual obligations thereof."
-        },
-        {
-            "question": "The right to object to processing",
-            "answer": "Where Personal Information is processed for the public interest, in the exercise of an official authority vested in us or for the purposes of the legitimate interests pursued by us, you may object to such processing by providing a ground related to your particular situation to justify the objection. You must know that, however, should your Personal Information be processed for direct marketing purposes, you can object to that processing at any time without providing any justification. To learn whether we are processing Personal Information for direct marketing purposes, you may refer to the relevant sections of this document."
-        },
-        {
-            "question": "Data protection rights under GDPR",
-            "answer": "If you are a resident of the European Economic Area (EEA), you have certain data protection rights and RASERS TECH VENTURES LIMITED aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Information. If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems, please contact us. In certain circumstances, you have the following data protection rights:",
-            "answer1": "You have the right to request access to your Personal Information that we store and have the ability to access your Personal Information. You have the right to request that we correct any Personal Information you believe is inaccurate. You also have the right to request us to complete the Personal Information you believe is incomplete. You have the right to request the erase your Personal Information under certain conditions of this Policy. You have the right to object to our processing of your Personal Information. You have the right to seek restrictions on the processing of your Personal Information. When you restrict the processing of your Personal Information, we may store it but will not process it further. You have the right to be provided with a copy of the information we have on you in a structured, machine-readable and commonly used format.",
-            "answer2": "You also have the right to withdraw your consent at any time where RASERS TECH VENTURES LIMITED relied on your consent to process your Personal Information. You have the right to complain to a Data Protection Authority about our collection and use of your Personal Information. For more information, please contact your local data protection authority in the European Economic Area (EEA)."
-        },
-        {
-            "question": "California privacy rights",
-            "answer": "In addition to the rights as explained in this Policy, California residents who provide Personal Information (as defined in the statute) to obtain products or services for personal, family, or household use are entitled to request and obtain from us, once a calendar year, information about the Personal Information we shared, if any, with other businesses for marketing uses. If applicable, this information would include the categories of Personal Information and the names and addresses of those businesses with which we shared such personal information for the immediately prior calendar year (e.g., requests made in the current year will receive information about the prior year). To obtain this information please contact us."
-        },
-        {
-            "question": "How to exercise these rights",
-            "answer": "Any requests to exercise your rights can be directed to RASERS TECH VENTURES LIMITED through the contact details provided in this document. Please note that we may ask you to verify your identity before responding to such requests. Your request must provide sufficient information that allows us to verify that you are the person you are claiming to be or that you are the authorized representative of such person. You must include sufficient details to allow us to properly understand the request and respond to it. We cannot respond to your request or provide you with Personal Information unless we first verify your identity or authority to make such a request and confirm that the Personal Information relates to you."
-        },
-        {
-            "question": "Privacy of children",
-            "answer": "We recognize the need to provide further privacy protections with respect to Personal Information we may collect from children and take many special precautions to protect the privacy of children. We do not require any Personal Information from them at any time. We encourage children to consult with their parents before submitting any information to any online resource . We believe parents should be involved in the online activities of their children and suggest that parents do their best to provide their children with a safe and friendly online environment."
-        },
-        {
-            "question": "Advertisements",
-            "answer": "We may display online advertisements and we may share aggregated and non-identifying information about our customers that we or our advertisers collect through your use of the Mobile Application and Services. We do not share personally identifiable information about individual customers with advertisers. In some instances, we may use this aggregated and non-identifying information to deliver tailored advertisements to the intended audience."
-        },
-        {
-            "question": "Links to other resources",
-            "answer": "The Mobile Application and Services contain links to other resources that are not owned or controlled by us. Please be aware that we are not responsible for the privacy practices of such other resources or third parties. We encourage you to be aware when you leave the Mobile Application and Services and to read the privacy statements of each and every resource that may collect Personal Information."
-        },
-        {
-            "question": "Information security",
-            "answer": "We secure information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use, or disclosure. We maintain reasonable administrative, technical, and physical safeguards in an effort to protect against unauthorized access, use, modification, and disclosure of Personal Information in its control and custody. However, no data transmission over the Internet or wireless network can be guaranteed. Therefore, while we strive to protect your Personal Information, you acknowledge that (i) there are security and privacy limitations of the Internet which are beyond our control; (ii) the security, integrity, and privacy of any and all information and data exchanged between you and the Mobile Application and Services cannot be guaranteed; and (iii) any such information and data may be viewed or tampered with in transit by a third party, despite best efforts."
-        },
-        {
-            "question": "Data breach",
-            "answer": "In the event we become aware that the security of the Mobile Application and Services has been compromised or users Personal Information has been disclosed to unrelated third parties as a result of external activity, including, but not limited to, security attacks or fraud, we reserve the right to take reasonably appropriate measures, including, but not limited to, investigation and reporting, as well as notification to and cooperation with law enforcement authorities. In the event of a data breach, we will make reasonable efforts to notify affected individuals if we believe that there is a reasonable risk of harm to the user as a result of the breach or if notice is otherwise required by law. When we do, we will post a notice in the Mobile Application, send you an email."
-        },
-        {
-            "question": "Changes and amendments",
-            "answer": "We reserve the right to modify this Policy or its terms relating to the Mobile Application and Services from time to time in our discretion and will notify you of any material changes to the way in which we treat Personal Information. When we do, we will send you an email to notify you. We may also provide notice to you in other ways in our discretion, such as through contact information you have provided. Any updated version of this Policy will be effective immediately upon the posting of the revised Policy unless otherwise specified. Your continued use of the Mobile Application and Services after the effective date of the revised Policy (or such other act specified at that time) will constitute your consent to those changes. However, we will not, without your consent, use your Personal Information in a manner materially different than what was stated at the time your Personal Information was collected."
-        },
-        {
-            "question": "Acceptance of this policy",
-            "answer": "You acknowledge that you have read this Policy and agree to all its terms and conditions. By accessing and using the Mobile Application and Services you agree to be bound by this Policy. If you do not agree to abide by the terms of this Policy, you are not authorized to access or use the Mobile Application and Services."
-        },
-        {
-            "question": "Contacting us",
-            "answer":"If you would like to contact us to understand more about this Policy or wish to contact us concerning any matter relating to individual rights and your Personal Information, you may send an email to contact@yuliigames.com."
-        }
-        ]
+      {
+        "question": "Collecte automatique d'informations",
+        "answer": "Notre priorité absolue est la sécurité des données client et, à ce titre, nous exerçons la politique de non-journal. Nous ne pouvons traiter que des données utilisateur minimales, autant qu'il est absolument nécessaire de maintenir l'application et les services mobiles. Les informations collectées automatiquement sont utilisées uniquement pour identifier les cas potentiels d'abus et établir des informations statistiques concernant l'utilisation de l'application et des services mobiles. Ces informations statistiques ne sont pas agrégées de manière à identifier un utilisateur particulier du système."
+      },
+      {
+        "question": "Collecte d'informations personnelles",
+        "answer": "Vous pouvez accéder et utiliser l'application et les services mobiles sans nous dire qui vous êtes ni révéler aucune information permettant à quelqu'un de vous identifier en tant que personne spécifique et identifiable. Si, toutefois, vous souhaitez utiliser certaines des fonctionnalités de l'application mobile, il peut vous être demandé de fournir certaines informations personnelles (par exemple, votre nom et votre adresse e-mail). Nous recevons et stockons toute information que vous nous fournissez sciemment lorsque vous créez un compte, publiez du contenu, effectuez un achat ou remplissez des formulaires en ligne dans l'application mobile. Au besoin, ces informations peuvent inclure les éléments suivants:"
+      },
+      {
+        "question": "Informations de contact telles que l'adresse e-mail, l'adresse, etc.",
+        "answer": "Détails du compte tels que nom d'utilisateur, ID utilisateur unique, mot de passe, etc. Certaines fonctionnalités de l'appareil mobile telles que les contacts, le calendrier, la galerie, etc. Tout autre matériel que vous nous soumettez volontiers, comme des articles, des images, des commentaires, etc. Certaines des informations que nous collectons proviennent directement de vous via l'application et les services mobiles. Cependant, nous pouvons également collecter des informations personnelles vous concernant auprès d'autres sources telles que les bases de données publiques et nos partenaires marketing conjoints. Vous pouvez choisir de ne pas nous fournir vos informations personnelles, mais vous ne pourrez peut-être pas profiter de certaines des fonctionnalités de l'application mobile. Les utilisateurs qui ne savent pas quelles informations sont obligatoires sont invités à nous contacter."
+      },
+      {
+        "question": "Use and processing of collected information",
+        "answer": "In order to make the Mobile Application and Services available to you, or to meet a legal obligation, we may need to collect and use certain Personal Information. If you do not provide the information that we request, we may not be able to provide you with the requested products or services. Any of the information we collect from you may be used for the following purposes:"
+      },
+      {
+        "question": "Utilisation et traitement des informations collectées",
+        "answer": "Afin de mettre l'application et les services mobiles à votre disposition ou de respecter une obligation légale, nous devrons peut-être collecter et utiliser certaines informations personnelles. Si vous ne fournissez pas les informations que nous demandons, nous ne pourrons peut-être pas vous fournir les produits ou services demandés. Toute information que nous recueillons auprès de vous peut être utilisée aux fins suivantes:",
+        "answer1": "Créez et gérez des comptes d'utilisateurs Améliorez l'expérience utilisateur Protéger contre les abus et les utilisateurs malveillants Exécutez et utilisez l'application et les services mobiles Le traitement de vos informations personnelles dépend de la façon dont vous interagissez avec l'application et les services mobiles, où vous êtes situé dans le monde et si l'une des situations suivantes s'applique: (je) vous avez donné votre consentement à une ou plusieurs fins spécifiques; cette, cependant, ne s'applique pas, chaque fois que le traitement des informations personnelles est soumis à la California Consumer Privacy Act ou à la loi européenne sur la protection des données; (ii) la fourniture d'informations est nécessaire à l'exécution d'un accord avec vous et / ou à toute obligation précontractuelle de celui-ci; (iii) le traitement est nécessaire au respect d'une obligation légale à laquelle vous êtes soumis; (iv) le traitement est lié à une tâche qui est effectuée dans l'intérêt public ou dans l'exercice de l'autorité officielle qui nous est confiée; (v) le traitement est nécessaire aux fins des intérêts légitimes poursuivis par nous ou par un tiers.",
+        "answer3": "Notez qu'en vertu de certaines législations, nous pouvons être autorisés à traiter les informations jusqu'à ce que vous vous opposiez à un tel traitement (en vous désengageant), sans avoir à vous fier au consentement ou à toute autre base juridique suivante ci-dessous. Dans tous les cas, nous serons heureux de clarifier la base juridique spécifique qui s'applique au traitement, et en particulier si la fourniture de renseignements personnels est une exigence légale ou contractuelle, ou une exigence nécessaire pour conclure un contrat."
+      },
+      {
+        "question": "Facturation et paiements ",
+        "answer": "Dans le cas de services nécessitant un paiement, nous demandons des informations sur la carte de crédit ou tout autre compte de paiement, qui seront utilisées uniquement pour le traitement des paiements. Vos données de transaction d'achat ne sont stockées que le temps nécessaire pour effectuer votre transaction d'achat. Une fois cela terminé, les informations de votre transaction d'achat sont supprimées. Lorsque cela est nécessaire pour traiter les paiements futurs et sous réserve de votre consentement préalable, vos informations financières seront stockées sous forme cryptée sur des serveurs sécurisés de notre fournisseur de services de passerelle de paiement réputé qui est tenu de traiter vos informations personnelles conformément à la présente politique. Toutes les passerelles de paiement direct respectent les dernières normes de sécurité gérées par le PCI Security Standards Council, qui est un effort conjoint de marques telles que Visa, MasterCard, American Express et Discover. L'échange de données sensibles et privées se fait sur un canal de communication sécurisé SSL et est crypté et protégé avec des signatures numériques, et les applications et services mobiles sont également conformes aux normes de vulnérabilité PCI afin de créer un environnement aussi sécurisé que possible pour les utilisateurs. Les analyses des logiciels malveillants sont effectuées régulièrement pour une sécurité et une protection supplémentaires."
+      },
+      {
+        "question": "Gestion de l'information",
+        "answer": "Vous pouvez supprimer certaines informations personnelles que nous avons sur vous. Les informations personnelles que vous pouvez supprimer peuvent changer à mesure que l'application mobile et les services changent. Cependant, lorsque vous supprimez des informations personnelles, nous pouvons conserver une copie des informations personnelles non révisées dans nos dossiers pendant la durée nécessaire pour respecter nos obligations envers nos sociétés affiliées et partenaires, et aux fins décrites ci-dessous."
+      },
+      {
+        "question": "Divulgation d'informations",
+        "answer": "Selon les services demandés ou si nécessaire pour effectuer toute transaction ou fournir tout service que vous avez demandé, nous pouvons partager vos informations avec votre consentement avec nos tiers de confiance qui travaillent avec nous, toutes autres sociétés affiliées et filiales sur lesquelles nous comptons pour aider au fonctionnement de l'application et des services mobiles à votre disposition. Nous ne partageons pas de renseignements personnels avec des tiers non affiliés. Ces fournisseurs de services ne sont pas autorisés à utiliser ou à divulguer vos informations, sauf si nécessaire pour fournir des services en notre nom ou pour se conformer aux exigences légales. Nous ne pouvons partager vos informations personnelles à ces fins qu'avec des tiers dont les politiques de confidentialité sont conformes aux nôtres ou qui acceptent de respecter nos politiques en matière de renseignements personnels. Ces tiers reçoivent des informations personnelles dont ils ont besoin uniquement pour exercer leurs fonctions désignées, et nous ne les autorisons pas à utiliser ou à divulguer des informations personnelles à leurs propres fins de marketing ou à d'autres fins.",
+        "answer1": "Nous divulguerons toutes les informations personnelles que nous collectons, utiliser ou recevoir si la loi l'exige ou le permet, de nature à respecter une assignation, ou un processus juridique similaire, et quand nous croyons de bonne foi que la divulgation est nécessaire pour protéger nos droits, protéger votre sécurité ou celle des autres, enquêter sur la fraude, ou répondre à une demande du gouvernement.",
+        "answer2": "Dans le cas où nous traversons une transition commerciale, comme une fusion ou une acquisition par une autre société, ou la vente de tout ou partie de ses actifs, de votre compte d'utilisateur et des informations personnelles figurera probablement parmi les actifs transférés."
+      },
+      {
+        "question": "Conservation des informations",
+        "answer": "Nous conserverons et utiliserons vos informations personnelles pendant la période nécessaire pour respecter nos obligations légales, résoudre les litiges et faire respecter nos accords, sauf si une période de conservation plus longue est requise ou autorisée par la loi. Nous pouvons utiliser toutes les données agrégées dérivées ou incorporant vos informations personnelles après les avoir mises à jour ou supprimées, mais pas d'une manière qui vous identifierait personnellement. Une fois la période de conservation expirée, les informations personnelles sont supprimées. Par conséquent, le droit d'accès, le droit d'effacement, le droit de rectification et le droit à la portabilité des données ne peuvent pas être appliqués après l'expiration de la période de conservation."
+      },
+      {
+        "question": "Transfert d'informations",
+        "answer": "Selon votre emplacement, les transferts de données peuvent impliquer le transfert et le stockage de vos informations dans un pays autre que le vôtre. Vous avez le droit de vous renseigner sur la base juridique des transferts d'informations vers un pays hors Union européenne ou vers toute organisation internationale régie par le droit international public ou mise en place par deux ou plusieurs pays, comme l'ONU, et sur les mesures de sécurité que nous avons prises pour protéger vos informations. Si un tel transfert a lieu, vous pouvez en savoir plus en vérifiant les sections pertinentes de la présente politique ou en nous renseignant en utilisant les informations fournies dans la section contact."
+      },
+      {
+        "question": "Les droits des utilisateurs",
+        "answer": "Vous pouvez exercer certains droits concernant vos informations traitées par nous. En particulier, vous avez le droit de faire ce qui suit: (je) vous avez le droit de retirer votre consentement lorsque vous avez déjà donné votre consentement au traitement de vos informations; (ii) vous avez le droit de vous opposer au traitement de vos informations si le traitement est effectué sur une base juridique autre que le consentement; (iii) vous avez le droit d'apprendre si les informations sont traitées par nous, obtenir des informations sur certains aspects du traitement et obtenir une copie des informations en cours de traitement; (iv) vous avez le droit de vérifier l'exactitude de vos informations et de demander leur mise à jour ou leur correction; (v) tu as le droit, dans certaines circonstances, restreindre le traitement de vos informations, dans ce cas, nous ne traiterons pas vos informations à d'autres fins que leur stockage; (vi) tu as le droit, dans certaines circonstances, pour obtenir l'effacement de vos informations personnelles de notre part; (vii) vous avez le droit de recevoir vos informations dans une structure, format couramment utilisé et lisible par machine et, si techniquement faisable, de le faire transmettre à un autre contrôleur sans aucune entrave. Cette disposition est applicable à condition que vos informations soient traitées par des moyens automatisés et que le traitement soit basé sur votre consentement, sur un contrat dont vous faites partie ou sur ses obligations précontractuelles."
+      },
+      {
+        "question": "Droit de s'opposer au traitement",
+        "answer": "Lorsque des informations personnelles sont traitées dans l'intérêt public, dans l'exercice d'une autorité officielle qui nous est conférée ou aux fins des intérêts légitimes que nous poursuivons, vous pouvez vous opposer à ce traitement en fournissant un motif lié à votre situation particulière pour justifier la objection. Vous devez savoir que, cependant, si vos informations personnelles sont traitées à des fins de marketing direct, vous pouvez vous opposer à ce traitement à tout moment sans fournir de justification. Pour savoir si nous traitons des informations personnelles à des fins de marketing direct, vous pouvez vous référer aux sections pertinentes de ce document."
+      },
+      {
+        "question": "Droits de protection des données dans le cadre du RGPD",
+        "answer": "Vous avez le droit de demander l'accès à vos informations personnelles que nous stockons et avez la possibilité d'accéder à vos informations personnelles. Vous avez le droit de demander que nous corrigions tout renseignement personnel que vous jugez inexact. Vous avez également le droit de nous demander de compléter les informations personnelles que vous jugez incomplètes. Vous avez le droit de demander l'effacement de vos informations personnelles dans certaines conditions de la présente politique. Vous avez le droit de vous opposer à notre traitement de vos informations personnelles. Vous avez le droit de demander des restrictions sur le traitement de vos informations personnelles. Lorsque vous limitez le traitement de vos informations personnelles, nous pouvons les stocker mais ne les traiterons pas davantage. Vous avez le droit de recevoir une copie des informations que nous avons sur vous dans un format structuré, lisible par machine et couramment utilisé.",
+        "answer2": "Vous avez également le droit de retirer votre consentement à tout moment où RASERS TECH VENTURES LIMITED s'est appuyé sur votre consentement pour traiter vos informations personnelles. Vous avez le droit de vous plaindre auprès d'une autorité de protection des données de notre collecte et de l'utilisation de vos informations personnelles. Pour plus d'informations, veuillez contacter votre autorité locale de protection des données dans l'Espace économique européen (EEE)."
+      },
+      {
+        "question": "Droit à la vie privée en Californie",
+        "answer": "En plus des droits expliqués dans cette politique, Résidents californiens qui fournissent des informations personnelles (tel que défini dans la loi) pour obtenir des produits ou des services personnels, famille, ou l'usage domestique a le droit de demander et d'obtenir de nous, une fois par année civile, des informations sur les informations personnelles que nous avons partagées, le cas échéant, avec d'autres entreprises à usage marketing. Le cas échéant, ces informations incluraient les catégories de renseignements personnels et les noms et adresses des entreprises avec lesquelles nous avons partagé ces informations personnelles pour l'année civile immédiatement précédente (par ex., les demandes faites au cours de l'année en cours recevront des informations sur l'année précédente). Pour obtenir ces informations, veuillez nous contacter."
+      },
+      {
+        "question": "Comment exercer ces droits",
+        "answer": "Toute demande d'exercice de vos droits peut être adressée à RASERS TECH VENTURES LIMITED via les coordonnées fournies dans ce document. Veuillez noter que nous pouvons vous demander de vérifier votre identité avant de répondre à ces demandes. Votre demande doit fournir des informations suffisantes qui nous permettent de vérifier que vous êtes la personne que vous prétendez être ou que vous êtes le représentant autorisé de cette personne. Vous devez inclure suffisamment de détails pour nous permettre de bien comprendre la demande et d'y répondre. Nous ne pouvons pas répondre à votre demande ou vous fournir des informations personnelles à moins que nous vérifions d'abord votre identité ou votre autorité pour faire une telle demande et confirmions que les informations personnelles vous concernent."
+      },
+      {
+        "question": "Confidentialité des enfants",
+        "answer": "Nous reconnaissons la nécessité de fournir de nouvelles protections de la vie privée en ce qui concerne les informations personnelles que nous pouvons collecter auprès des enfants et de prendre de nombreuses précautions spéciales pour protéger la vie privée des enfants. Nous n'avons besoin d'aucune information personnelle de leur part à tout moment. Nous encourageons les enfants à consulter leurs parents avant de soumettre des informations à toute ressource en ligne . Nous pensons que les parents devraient être impliqués dans les activités en ligne de leurs enfants et suggérer que les parents fassent de leur mieux pour offrir à leurs enfants un environnement en ligne sûr et convivial."
+      },
+      {
+        "question": "Publicités",
+        "answer": "L'application et les services mobiles contiennent des liens vers d'autres ressources qui ne sont pas détenues ou contrôlées par nous. Sachez que nous ne sommes pas responsables des pratiques de confidentialité de ces autres ressources ou de tiers. Nous vous encourageons à être au courant lorsque vous quittez l'application et les services mobiles et à lire les déclarations de confidentialité de chaque ressource qui peut collecter des informations personnelles."
+      },
+      {
+        "question": "Sécurité de l'information",
+        "answer": "Nous sécurisons les informations que vous fournissez sur les serveurs informatiques dans un environnement contrôlé et sécurisé, protégé contre tout accès, utilisation ou divulgation non autorisés. Nous maintenons des garanties administratives, techniques et physiques raisonnables dans le but de nous protéger contre tout accès, utilisation, modification et divulgation non autorisés de renseignements personnels sous son contrôle et sa garde. Cependant, aucune transmission de données sur Internet ou le réseau sans fil ne peut être garantie. Par conséquent, pendant que nous nous efforçons de protéger vos informations personnelles, vous reconnaissez cela (je) il existe des limitations de sécurité et de confidentialité d'Internet qui échappent à notre contrôle; (ii) la sécurité, intégrité, et la confidentialité de toutes les informations et données échangées entre vous et l'application mobile et les services ne peut être garantie; et (iii) ces informations et données peuvent être consultées ou falsifiées en transit par un tiers, malgré tous les efforts."
+      },
+      {
+        "question": "Violation des données",
+        "answer": "Si nous apprenons que la sécurité de l'application et des services mobiles a été compromise ou que les informations personnelles des utilisateurs ont été divulguées à des tiers non liés à la suite d'une activité externe, y compris, mais sans s'y limiter, attaques de sécurité ou fraude, nous nous réservons le droit de prendre des mesures raisonnablement appropriées, y compris, mais sans s'y limiter, enquête et rapports, ainsi que la notification et la coopération avec les autorités répressives. En cas de violation de données, nous ferons des efforts raisonnables pour informer les personnes concernées si nous pensons qu'il existe un risque raisonnable de préjudice pour l'utilisateur à la suite de la violation ou si un avis est autrement requis par la loi. Lorsque nous le ferons, nous publierons un avis dans l'application mobile, vous enverrons un e-mail."
+      },
+      {
+        "question": "Changements et modifications",
+        "answer": "Nous nous réservons le droit de modifier cette politique ou ses conditions relatives à l'application et aux services mobiles de temps à autre à notre discrétion et vous informerons de tout changement important dans la façon dont nous traitons les informations personnelles. Lorsque nous le ferons, nous vous enverrons un e-mail pour vous en informer. Nous pouvons également vous fournir un avis par d'autres moyens à notre discrétion, par exemple par le biais des coordonnées que vous avez fournies. Toute version mise à jour de cette politique entrera en vigueur immédiatement après la publication de la politique révisée, sauf indication contraire. Votre utilisation continue de l'application et des services mobiles après la date d'entrée en vigueur de la politique révisée (ou de tout autre acte spécifié à ce moment) constituera votre consentement à ces changements. Cependant, nous n'utiliserons pas, sans votre consentement, vos informations personnelles d'une manière sensiblement différente de ce qui a été déclaré au moment de la collecte de vos informations personnelles."
+      },
+      {
+        "question": "Changes and amendments",
+        "answer": "We reserve the right to modify this Policy or its terms relating to the Mobile Application and Services from time to time in our discretion and will notify you of any material changes to the way in which we treat Personal Information. When we do, we will send you an email to notify you. We may also provide notice to you in other ways in our discretion, such as through contact information you have provided. Any updated version of this Policy will be effective immediately upon the posting of the revised Policy unless otherwise specified. Your continued use of the Mobile Application and Services after the effective date of the revised Policy (or such other act specified at that time) will constitute your consent to those changes. However, we will not, without your consent, use your Personal Information in a manner materially different than what was stated at the time your Personal Information was collected."
+      },
+      {
+        "question": "Acceptation de cette politique",
+        "answer": "Vous reconnaissez avoir lu cette politique et acceptez toutes ses conditions générales. En accédant et en utilisant l'application et les services mobiles, vous acceptez d'être lié par cette politique. Si vous n'acceptez pas de respecter les termes de cette politique, vous n'êtes pas autorisé à accéder ou à utiliser l'application et les services mobiles."
+      },
+      {
+        "question": "Nous contacter",
+        "answer": "Si vous souhaitez nous contacter pour en savoir plus sur cette politique ou si vous souhaitez nous contacter concernant toute question relative aux droits individuels et à vos informations personnelles, vous pouvez envoyer un e-mail à contact@yuliigames.com Ce document a été mis à jour pour la dernière fois le 28 avril 2023"
+      }
+    ]
+  },
+  "termsAndCondition": {
+    "heading": "Conditions Générales d'Utilisation",
+    "title": "Ces termes et conditions ('Accord') énoncent les conditions générales de votre utilisation de l'application mobile 'Yulii' ('Application mobile' ou 'Service') et de l'un de ses produits et services connexes (collectivement, les 'Services' ). Cet accord est juridiquement contraignant entre vous ('Utilisateur', 'vous' ou 'votre') et RASERS TECH VENTURES LIMITED ('RASERS TECH VENTURES LIMITED', 'nous', 'nous' ou 'notre'). En accédant et en utilisant l'application et les services mobiles, vous reconnaissez avoir lu, compris et accepté d'être lié par les termes du présent accord. Si vous concluez le présent accord pour le compte d'une entreprise ou d'une autre entité juridique, vous déclarez que vous avez le pouvoir de lier cette entité au présent accord, auquel cas les termes 'utilisateur', 'vous' ou 'votre' doivent se référer à cette entité. Si vous n'avez pas une telle autorité, ou si vous n'êtes pas d'accord avec les termes du présent accord, vous ne devez pas accepter le présent accord et ne pouvez pas accéder et utiliser l'application et les services mobiles. Vous reconnaissez que cet accord est un contrat entre vous et RASERS TECH VENTURES LIMITED, même s'il est électronique et n'est pas physiquement signé par vous, et il régit votre utilisation de l'application et des services mobiles.",
+    "questions": [
+      {
+        "title": "Comptes et adhésion",
+        "text": "Si vous créez un compte dans l'application mobile, vous êtes responsable du maintien de la sécurité de votre compte et vous êtes entièrement responsable de toutes les activités qui se produisent sous le compte et de toute autre action prise à cet égard. Nous pouvons surveiller et examiner de nouveaux comptes avant de vous connecter et commencer à utiliser les Services. La fourniture de fausses informations de contact de toute nature peut entraîner la résiliation de votre compte. Vous devez immédiatement nous informer de toute utilisation non autorisée de votre compte ou de toute autre violation de la sécurité. Nous ne serons pas responsables des actes ou omissions de votre part, y compris les dommages de toute nature résultant de ces actes ou omissions. Nous pouvons suspendre, désactiver ou supprimer votre compte (ou toute partie de celui-ci) si nous déterminons que vous avez violé une disposition du présent accord ou que votre conduite ou votre contenu aurait tendance à nuire à notre réputation et à notre bonne volonté. Si nous supprimons votre compte pour les raisons qui précèdent, vous ne pouvez pas vous réinscrire à nos Services. Nous pouvons bloquer votre adresse e-mail et votre adresse de protocole Internet pour empêcher toute inscription ultérieure."
+      },
+      {
+        "title": "Contenu utilisateu",
+        "text": "Nous ne possédons aucune donnée, information ou matériel (collectivement, 'Contenu') que vous soumettez dans l'Application Mobile au cours de l'utilisation du Service. Vous serez seul responsable de l'exactitude, de la qualité, de l'intégrité, de la légalité, de la fiabilité, de la pertinence et de la propriété intellectuelle ou du droit d'utiliser tout le contenu soumis. Nous pouvons surveiller et examiner le contenu de l'application mobile soumis ou créé à l'aide de nos services par vous. Vous nous accordez la permission d'accéder, de copier, de distribuer, de stocker, de transmettre, de formater, d'afficher et d'exécuter le contenu de votre compte d'utilisateur uniquement si nécessaire dans le but de vous fournir les services. Sans limiter aucune de ces représentations ou garanties, nous avons le droit, mais non l'obligation, de, à notre seule discrétion, refuser ou supprimer tout Contenu qui, à notre avis raisonnable, viole l'une de nos politiques ou est de quelque manière que ce soit nuisible ou répréhensible. Sauf autorisation expresse de votre part, votre utilisation de l'application et des services mobiles ne nous accorde pas la licence d'utilisation, de reproduction, d'adaptation, de modification, de publication ou de distribution du contenu créé par vous ou stocké dans votre compte d'utilisateur à des fins commerciales, marketing ou similaires. objectif."
+      },
+      {
+        "title": "Facturation et paiements",
+        "text": "Vous devez payer tous les frais ou frais sur votre compte conformément aux frais, frais et conditions de facturation en vigueur au moment où des frais ou des frais sont dus et payables. L'échange de données sensibles et privées se fait sur un canal de communication sécurisé SSL et est crypté et protégé avec des signatures numériques, et les applications et services mobiles sont également conformes aux normes de vulnérabilité PCI afin de créer un environnement aussi sécurisé que possible pour les utilisateurs. Les analyses des logiciels malveillants sont effectuées régulièrement pour une sécurité et une protection supplémentaires. Si, à notre avis, votre achat constitue une transaction à haut risque, nous vous demanderons de nous fournir une copie de votre pièce d'identité valide avec photo émise par le gouvernement, et éventuellement une copie d'un relevé bancaire récent pour la carte de crédit ou de débit utilisée pour l'achat. Nous nous réservons le droit de modifier les produits et la tarification des produits à tout moment. Nous nous réservons également le droit de refuser toute commande que vous passez chez nous. Nous pouvons, à notre seule discrétion, limiter ou annuler les quantités achetées par personne, par ménage ou par commande. Ces restrictions peuvent inclure les commandes passées par ou sous le même compte client, la même carte de crédit et / ou les commandes qui utilisent la même adresse de facturation et / ou d'expédition. Si nous apportons une modification ou annulons une commande, nous pouvons tenter de vous en informer en contactant l'adresse e-mail et / ou la facturation / le numéro de téléphone fourni au moment de la commande."
+      },
+      {
+        "title": "Précision de l'information",
+        "text": "Parfois, il peut y avoir des informations dans l'application mobile qui contiennent des erreurs typographiques, des inexactitudes ou des omissions qui peuvent concerner des promotions et des offres. Nous nous réservons le droit de corriger toute erreur, inexactitude ou omission, et de modifier ou mettre à jour les informations ou d'annuler les commandes si des informations contenues dans l'application ou les services mobiles sont inexactes à tout moment sans préavis (y compris après avoir soumis votre commande). Nous n'assumons aucune obligation de mettre à jour, de modifier ou de clarifier les informations contenues dans l'application mobile, y compris, sans limitation, les informations sur les prix, sauf si la loi l'exige. Aucune date de mise à jour ou d'actualisation spécifiée appliquée dans l'application mobile ne doit être prise pour indiquer que toutes les informations de l'application ou des services mobiles ont été modifiées ou mises à jour."
+      },
+      {
+        "title": "Services tiers",
+        "text": "Si vous décidez d'activer, accéder ou utiliser des services tiers, sachez que votre accès et votre utilisation de ces autres services sont régis uniquement par les termes et conditions de ces autres services, et nous n'approuvons pas, ne sont pas responsables ou responsables, et ne faire aucune représentation quant à aucun aspect de ces autres services, y compris, sans limitation, leur contenu ou la manière dont ils gèrent les données (y compris vos données) ou toute interaction entre vous et le fournisseur de ces autres services. Vous renoncez irrévocablement à toute réclamation contre RASERS TECH VENTURES LIMITED concernant ces autres services. RASERS TECH VENTURES LIMITED n'est pas responsable des dommages ou pertes causés ou qui auraient été causés par ou en relation avec votre activation, l'accès ou l'utilisation de ces autres services, ou votre confiance dans les pratiques de confidentialité, processus de sécurité des données ou autres politiques de ces autres services. Vous devrez peut-être vous inscrire ou vous connecter à ces autres services sur leurs plates-formes respectives. En activant tout autre service, vous autorisez expressément RASERS TECH VENTURES LIMITED à divulguer vos données si nécessaire pour faciliter l'utilisation ou l'activation de cet autre service."
+      },
+      {
+        "title": "Garantie de disponibilité",
+        "text": "Nous offrons une garantie de disponibilité du service de 99% du temps disponible par mois. La garantie de disponibilité du service ne s'applique pas aux interruptions de service causées par: (1) entretien ou réparations périodiques programmés que nous pouvons entreprendre de temps en temps; (2) les interruptions causées par vous ou vos activités; (3) les pannes qui n'affectent pas la fonctionnalité de service de base; (4) des causes indépendantes de notre volonté ou qui ne sont pas raisonnablement prévisibles; et (5) pannes liées à la fiabilité de certains environnements de programmation."
+      },
+      {
+        "title": "Sauvegardes",
+        "text": "Nous effectuons des sauvegardes régulières du Contenu et ferons de notre mieux pour garantir l'exhaustivité et l'exactitude de ces sauvegardes. En cas de panne matérielle ou de perte de données, nous restaurons automatiquement les sauvegardes pour minimiser l'impact et les temps d'arrêt."
+      },
+      {
+        "title": "Publicités",
+        "text": "Pendant votre utilisation de l'application et des services mobiles, vous pouvez entrer en correspondance avec ou participer à des promotions d'annonceurs ou de sponsors montrant leurs produits ou services via l'application et les services mobiles. Une telle activité, ainsi que les termes, conditions, garanties ou représentations associés à une telle activité, se fait uniquement entre vous et le tiers applicable. Nous n'aurons aucune responsabilité, obligation ou responsabilité pour une telle correspondance, achat ou promotion entre vous et un tel tiers."
+      },
+      {
+        "title": "Liens vers d'autres ressources",
+        "text": "Bien que l'application et les services mobiles puissent être liés à d'autres ressources (telles que des sites Web, des applications mobiles, etc.), nous n'impliquons, directement ou indirectement, aucune approbation, association, parrainage, approbation ou affiliation avec une ressource liée, sauf indication contraire dans les présentes. Certains liens de l'application mobile peuvent être des 'liens d'affiliation'. Cela signifie que si vous cliquez sur le lien et achetez un article, RASERS TECH VENTURES LIMITED recevra une commission d'affiliation. Nous ne sommes pas responsables de l'examen ou de l'évaluation, et nous ne justifions pas les offres d'entreprises ou de particuliers ou le contenu de leurs ressources. Nous n'assumons aucune responsabilité quant aux actions, produits, services et contenus d'autres tiers. Vous devez examiner attentivement les déclarations juridiques et les autres conditions d'utilisation de toute ressource à laquelle vous accédez via un lien dans l'application et les services mobiles. Votre lien vers toute autre ressource hors site est à vos risques et périls."
+      },
+      {
+        "title": "Utilisations interdites",
+        "text": "Outre d'autres termes tels que définis dans l'accord, il vous est interdit d'utiliser l'application et les services mobiles ou le contenu: (une) à toute fin illégale; (b) solliciter d'autres pour accomplir ou participer à tout acte illégal; (c) violer tout international, fédéral, règlements provinciaux ou étatiques, règles, lois, ou des ordonnances locales; (ré) porter atteinte ou violer nos droits de propriété intellectuelle ou les droits de propriété intellectuelle d'autrui; (e) harceler, abus, insulte, mal, diffame, calomnie, dénigrement, intimider, ou discriminer en fonction du sexe, orientation sexuelle, religion, origine ethnique, course, âge, origine nationale, ou handicap; (F) soumettre des informations fausses ou trompeuses; (g) pour télécharger ou transmettre des virus ou tout autre type de code malveillant qui sera ou pourra être utilisé de quelque manière que ce soit qui affectera la fonctionnalité ou le fonctionnement de l'application et des services mobiles, produits et services tiers, ou Internet; (h) au spam, phish, pharm, prétexte, araignée, ramper, ou gratter; (je) pour tout but obscène ou immoral; ou (j) pour interférer avec ou contourner les fonctions de sécurité de l'application et des services mobiles, produits et services tiers, ou Internet. Nous nous réservons le droit de mettre fin à votre utilisation de l'application et des services mobiles pour avoir violé l'une des utilisations interdites."
+      },
+      {
+        "title": "Avertissement de garantie",
+        "text": "Vous acceptez que ce service soit fourni «tel quel» et «tel que disponible» et que votre utilisation de l'application et des services mobiles soit uniquement à vos risques et périls. Nous déclinons expressément toutes les garanties de toute nature, explicites ou implicites, y compris, mais sans s'y limiter, les garanties implicites de qualité marchande, d'adéquation à un usage particulier et de non-contrefaçon. Nous ne garantissons pas que les Services répondront à vos besoins, ou que le service sera ininterrompu, opportun, sécurisé, ou sans erreur; nous ne faisons aucune garantie quant aux résultats qui peuvent être obtenus de l'utilisation du Service ou quant à l'exactitude ou à la fiabilité de toute information obtenue via le Service ou que les défauts du Service seront corrigés. Vous comprenez et acceptez que tout matériel et / ou données téléchargés ou autrement obtenus grâce à l'utilisation du service se fait à votre discrétion et à vos risques et que vous serez seul responsable de tout dommage ou perte de données résultant du téléchargement de ce matériel et / ou données. Nous ne faisons aucune garantie concernant les biens ou services achetés ou obtenus par le biais du Service ou toute transaction conclue par le biais du Service, sauf indication contraire. Aucun conseil ou information, oral ou écrit, obtenu par vous de notre part ou par le biais du Service ne créera une garantie non expressément faite ici."
+      },
+      {
+        "title": "Limitation de responsabilité",
+        "text": "Dans toute la mesure permise par la loi applicable, en aucun cas RASERS TECH VENTURES LIMITED, ses filiales, administrateurs, officiers, employés, agents, les fournisseurs ou concédants de licence sont responsables envers toute personne de tout indirect, accessoire, spécial, punitif, couvrir ou dommages consécutifs (y compris, sans limitation, dommages et intérêts pour manque à gagner, revenus, ventes, bonne volonté, utilisation du contenu, impact sur les affaires, interruption des affaires, perte d'économies prévues, perte d'opportunité commerciale) cependant causé, selon toute théorie de responsabilité, y compris, sans limitation, contrat, délit, garantie, manquement à l'obligation légale, négligence ou autre, même si la partie responsable a été informée de la possibilité de tels dommages ou aurait pu prévoir de tels dommages. Dans toute la mesure permise par la loi applicable, la responsabilité globale de RASERS TECH VENTURES LIMITED et de ses filiales, officiers, employés, agents, les fournisseurs et concédants de licence relatifs aux services seront limités à un montant supérieur à un dollar ou à tout montant effectivement payé en espèces par vous à RASERS TECH VENTURES LIMITED pour la période antérieure d'un mois avant le premier événement ou événement donnant lieu à une telle responsabilité. Les limitations et exclusions s'appliquent également si ce recours ne vous compense pas entièrement pour toute perte ou défaillance de son objectif essentiel."
+      },
+      {
+        "title": "Indemnisation",
+        "text": "Vous acceptez d'indemniser et de détenir RASERS TECH VENTURES LIMITED et ses sociétés affiliées, administrateurs, officiers, employés, agents, fournisseurs et concédants de licence inoffensifs contre et contre toute responsabilité, pertes, dommages ou frais, y compris les honoraires d'avocat raisonnables, encourus en relation avec ou découlant de toute allégation de tiers, réclamations, actions, différends, ou des demandes formulées contre l'un d'eux à la suite ou concernant votre contenu, votre utilisation de l'application et des services mobiles ou toute faute intentionnelle de votre part."
+      },
+      {
+        "title": "la clause de divisibilité",
+        "text": "Tous les droits et restrictions contenus dans le présent accord peuvent être exercés et ne seront applicables et contraignants que dans la mesure où ils ne violent aucune loi applicable et sont censés être limités dans la mesure nécessaire pour ne pas rendre le présent accord illégal, invalide ou inapplicable. Si une disposition ou une partie d'une disposition du présent accord est considérée comme illégale, invalide ou inapplicable par un tribunal compétent, les parties ont l'intention que les dispositions restantes ou des parties de celles-ci constituent leur accord en ce qui concerne l'objet des présentes, et toutes ces dispositions restantes ou parties de celles-ci doivent rester pleinement en vigueur et en vigueur."
+      },
+      {
+        "title": "Résolution des différends",
+        "text": "La formation, l'interprétation et l'exécution du présent accord et tout litige en découlant sont régis par les lois de fond et de procédure de la France sans égard à ses règles de conflit ou de choix de loi et, dans la mesure applicable, aux lois de la France . La compétence exclusive et le lieu des actions liées à l'objet des présentes seront les tribunaux situés en France, et vous vous soumettez à la compétence personnelle de ces tribunaux. Vous renoncez par la présente à tout droit à un procès avec jury dans toute procédure découlant du présent accord ou liée à celui-ci. La Convention des Nations Unies sur les contrats de vente internationale de marchandises ne s'applique pas au présent accord."
+      },
+      {
+        "title": "Changements et modifications",
+        "text": "We reserve the right to modify this Agreement or its terms relating to the Mobile Application and Services at any time, effective upon posting of an updated version of this Agreement in the Mobile Application. When we do, we will send you an email to notify you. Continued use of the Mobile Application and Services after any such changes shall constitute your consent to such changes."
+      },
+      {
+        "title": "Acceptation de ces termes",
+        "text": "Vous reconnaissez avoir lu cet accord et acceptez toutes ses conditions générales. En accédant et en utilisant l'application et les services mobiles, vous acceptez d'être lié par le présent accord. Si vous n'acceptez pas de respecter les termes du présent accord, vous n'êtes pas autorisé à accéder ou à utiliser l'application et les services mobiles."
+      },
+      {
+        "title": "Nous contacter",
+        "text": "Si vous souhaitez nous contacter pour en savoir plus sur cet accord ou si vous souhaitez nous contacter concernant toute question le concernant, vous pouvez envoyer un e-mail à contact@yuliigames.com. Ce document a été mis à jour pour la dernière fois le 28 avril 2023"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Questions Fréquemment Posées on Yulli",
+    "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
+    "subheading": "Nous sommes là pour vous aider ! Contactez-nous pour toute question ou assistance",
+    "subtext": "Avez-vous une question, avez-vous besoin de plus d'informations ou nécessitez-vous de l'aide ? Nous sommes à un clic ou un appel de distance. Notre équipe de support dédiée est prête à vous aider et à garantir que votre expérience avec nous soit fluide et satisfaisante"
+  },
+  "socials": {
+    "heading": "Sociales",
+    "title": "Bienvenue sur Yulii Socials, le centre vibrant où notre communauté prend vie ! Rejoignez la conversation, restez informé et soyez inspiré par les derniers événements dans le monde de Yulii.",
+    "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
+    "section" : [
+      {
+        "name": "david",
+        "heading": "Elevate your style, one outfit at a time. ✨ #FashionForward #OOTD"
+        
+      },
+      {
+        "name": "rosa92",
+        "heading": "Embarking on a journey is not just about changing locations; it's about evolving perspectives. Every destination holds a piece of the extraordinary, and each step fuels my wanderlust. From bustling cityscapes to serene landscapes, I'm on a constant quest for the profound beauty that this world has to offer. Join me in exploring the wonders that ignite our curiosity and inspire us to embrace the richness of diverse cultures. 🌍✈️ #Wanderlust #TravelDiaries "
+        
+      },
+      {
+        "name": "Kingston",
+        "heading": "Fitness is not just a routine; it's a commitment to my well-being. Each drop of sweat, every sore muscle — they're all part of a transformative journey towards a stronger, healthier version of myself. Through the highs and lows, I find joy in the progress, not perfection. Join me in embracing the empowerment that comes from self-care and the pursuit of a fit, balanced life. 💪✨ #FitLife #WorkoutMotivation #WellnessJourney"
+        
+      },
+      {
+        "name": "marvella75",
+        "heading": "Savoring every bite because life is too short for bad food. 🍔🥑 #FoodieAdventures #FoodLove"
+        
+      },
+      {
+        "name": "Bella_zoe",
+        "heading": "In the realm of technology, every innovation is a step into the future. From cutting-edge gadgets to the latest advancements, I'm on a perpetual journey to explore the ever-evolving world of tech. Join me in unraveling the mysteries of artificial intelligence, marveling at the intricacies of coding, and embracing the digital transformations that shape our world. Let's navigate the future together, one byte at a time. 🚀💻 #TechExplorer #GeekLife #DigitalFrontiers"
+        
+      }
+    ]
+  
+  },
+  "banner": {
+    "title": "Rehaussez votre expérience d'achat avec Yulii.",
+    "text": "Votre porte d'accès à des offres imbattables, des récompenses et une commodité à portée de main.",
+    "image": "../src/assets/footer.png"
+  },
+  "prousers": {
+    "title": "La plate-forme ultime pour des activités agréables",
+    "text": "Avec yulii, vous avez le contrôle d’atteindre plus de fans, d’amis et de famille en offrant des promotions hors du commun et en offrant des expériences exceptionnelles.",
+    "subtitle": "Historique des commandes sans effort",
+    "subtext": "Simplifiez votre processus de gestion des commandes. Notre plateforme intuitive vous permet de suivre l'historique de vos commandes, de gérer les livraisons et les retraits, et d'améliorer l'expérience d'achat pour vos clients.",
+   "prosectiontitle": "Avec le compte Yulli Pro, vous pourrez atteindre le statut de célébrité au sein de l'application. Les avantages d'obtenir un compte Pro sont les suivants",
+   "prosectionlabel": "Devenez une célébrité sur Yulii et profitez de tous les avantages",
+   "section" : [
+      {
+          "title": "Atteindre un public vaste",
+          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulli vous permet de superviser différents projets OU de manière transparente, rationalisant ainsi vos opérations et vous faisant gagner un temps précieux"
+      },
+      {
+          "title": "Gestion d'entreprise rationalisée",
+          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulli vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
+      },
+      {
+          "title": "Analyses complètes",
+          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulli vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
+      }
+  ],
+  "goprosection" : [
+     
+      {
+          "title": "Obtenez un badge vérifié"
+          
+      },
+      {
+          "title": "Donner des tâches et des récompenses à votre public sans vous soucier d'en recevoir également."
+          
+      },
+      {
+          "title": "Receive free tokens to publish your products"
+          
+      },
+      {
+          "title": "Recevez des jetons gratuits pour publier vos produits"
+          
+      },
+      {
+          "title": "Publiez vos prochains événements dans la catégorie 'Événements' pour informer votre public de ce que vous avez prévu pour eux."
+          
+      }
+  ]
+  
+  },
+  "navigationItems": [
+    {
+      "key": "home",
+      "text": "",
+      "href": "/home"
+    },
+    {
+      "key": "Pro Users",
+      "text": "Utilisateurs Professionnels",
+      "href": "/pro-users"
+    },
+    {
+      "key": "Socials",
+      "text": "Sociales",
+      "href": "/socials"
+    },
+    {
+      "key": "How it works",
+      "text": "Comment ça fonctionne.",
+      "href": "/how-it-works"
+    },
+    {
+      "key": "contact",
+      "text": "Contact",
+      "href": "/contact"
     }
-
+  ],
+  "footerItems": [
+    {
+      "key": "home",
+      "text": "",
+      "href": "/home"
+    },
+    {
+      "key": "Pro Users",
+      "text": "Utilisateurs Professionnels",
+      "href": "/pro-users"
+    },
+    {
+      "key": "Socials",
+      "text": "Sociales",
+      "href": "/socials"
+    },
+    {
+      "key": "How it works",
+      "text": "Comment ça fonctionne.",
+      "href": "/how-it-works"
+    },
+    {
+      "key": "contact",
+      "text": "Contact",
+      "href": "/contact"
+    },
+    {
+      "key": "terms of use",
+      "text": "Terms of Use",
+      "href": "/contact"
+    },
+    {
+      "key": "privacy policy",
+      "text": "Privacy Policy",
+      "href": "/contact"
+    }
+  ]
+ 
 }
