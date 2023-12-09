@@ -11,7 +11,7 @@
                 "title": "Your children to do basic daily tasks and reward them with points.",
                 "subtext": "With thepoints they accumulate from helping at home, they can obtain a gift, from a large list of items of their choice. This way, they learn the sense of responsabilities and associate them with fun, and the notion of being rewarded when they listen and do what you asked them to.",
                 "btnText": "Join for free",
-                "image": "../src/assets/section1.svg"
+                "image": "../../assets/section1.svg"
             },
             "section2": {
                 "label": "Reward friends and family with exciting rewards",

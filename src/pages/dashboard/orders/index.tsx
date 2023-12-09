@@ -1,9 +1,8 @@
-import Table from "@/components/dashboard/table";
 import {orderHistoryTableData} from "../../../constants"
 import { Button } from "@/components/ui/button";
 
 const OrdersPage = () => {
-    const {data, headers,searchBy} = orderHistoryTableData
+    const {searchBy} = orderHistoryTableData
     return (
         <div className="p-6">
             <div className="flex space-x-10 items-center py-4">
@@ -12,7 +11,7 @@ const OrdersPage = () => {
                       <Button
                       key={index}
                   //   onClick={() => handleCategoryFilter(category)}
-                    className={ ' rounded-xl text-black text-[#909091] rounded-xl  hover:text-white space-x-10'}
+                    className={ ' rounded-xl text-black text-[#909091]  hover:text-white space-x-10'}
                   >
                     {item}
                   </Button>
@@ -20,7 +19,7 @@ const OrdersPage = () => {
           
             </div>
             <div>
-                <Table data={data} headers={headers} color={''} extraTableRow={true} showAdditionalContent={false}/>
+                {/* <Table data={data} headers={headers} color={''} extraTableRow={true} showAdditionalContent={false}/> */}
             </div>
         </div>
 

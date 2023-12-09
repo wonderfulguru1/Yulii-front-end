@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { TimerReset, ChevronRight } from "lucide-react"
-import StatWidget from "@/components/dashboard/stat-widget";
-import { singleOverviewCardItems } from "../../../../constants"
+// import StatWidget from "@/components/dashboard/stat-widget";
+// import { singleOverviewCardItems } from "../../../../constants"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {Link} from "react-router-dom";
 import ProductDetailsImg from "../../../../assets/productDetail.png"
@@ -37,7 +37,7 @@ const ProductDetails = () => {
                 </Link>
             </div>
             <div className="flex space-x-10">
-                {singleOverviewCardItems.map((item, index) => (
+                {/* {singleOverviewCardItems.map((item, index) => (
                     <StatWidget
                         key={index}
                         icon={item.icon}
@@ -51,7 +51,7 @@ const ProductDetails = () => {
                         iconColor={item.iconColor}
 
                     />
-                ))}
+                ))} */}
             </div>
             <div className="flex flex-col lg:flex-row py-10 space-x-10 items-center">
                 <div>

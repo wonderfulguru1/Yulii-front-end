@@ -35,7 +35,7 @@ const Contact: React.FC<FAQProps> = () => {
   return (
     <div className='flex flex-col'>
       <HeroSection />
-      <div className='container mx-auto flex my-20 px-4 md:px-o space-x-20'>
+      <div className='container mx-auto flex lg:my-20 px-4 md:px-o lg:space-x-20'>
         <div className='w-1/3 hidden md:block'>
           {/* <h3 className=' text-lg font-semibold'>Account and Registration</h3> */}
           <ul className="py-4">

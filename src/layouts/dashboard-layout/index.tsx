@@ -1,6 +1,7 @@
 
 import { Sidebar } from '@/components/dashboard/sidebar';
 import { useOutlet } from 'react-router-dom';
+// import {projectAuth} from "..fire"
 
 const DashboardLayout = () => {
     const outlet = useOutlet();

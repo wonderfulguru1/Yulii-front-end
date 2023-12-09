@@ -94,7 +94,7 @@ const HeroSection: React.FC<HeroProps> = () => {
                     </div>
                    
                     <div>
-                        <h1 className='lg:text-4xl text-xl font-medium' data-aos="fade-right" > {t(`homepage.title1`)} <span className='text-[#67c7c0]'>{t(`homepage.title2`)} </span>{t(`homepage.title3`)} <span className='text-[#67c7c0]'>{t(`homepage.title4`)}</span></h1>
+                        <h1 className='lg:text-4xl text-xl font-semibold' data-aos="fade-right" > {t(`homepage.title1`)} <span className='text-[#67c7c0]'>{t(`homepage.title2`)} </span>{t(`homepage.title3`)} <span className='text-[#67c7c0]'>{t(`homepage.title4`)}</span></h1>
                         <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">{t(`homepage.subtitle`)}
 </p>
                     </div>

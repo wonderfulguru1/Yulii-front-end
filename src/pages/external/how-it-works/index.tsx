@@ -43,7 +43,7 @@ const HowItWorks: React.FC<WorksProps> = () => {
         <div className='container mx-auto my-6 '>
           <div className='flex flex-col md:flex-row  md:px-0 gap-4'>
             {howItWorks.map((item) => (
-              <div className={`flex w-1/4 p-4 border rounded-md flex-col ${t(`${item.color}`)}`}>
+              <div className={`flex lg:w-1/4 p-4 border rounded-md flex-col ${t(`${item.color}`)}`}>
                 <LazyLoadImage
                   src={t(`${item.icon}`)}
                   width={50}

@@ -1,10 +1,13 @@
 import Button from '../../../components/externalComponents/Button'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LoginImg from "../../../assets/logindesign.png"
+import { useState } from 'react';
 
 
 
 const Register = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     return (
         <div className=' container mx-auto py-10 pt-16'>
           
@@ -14,13 +17,35 @@ const Register = () => {
                 <h2 className='font-semibold text-2xl'>Create your Plenti Account</h2>
             <p className='text-sm'>Earn Cashback and points when you shop at your favourite store</p>
                 <div className='my-6'>
-                        <div className="mb-6">
-                            <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone Number</label>
-                            <input type="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white " placeholder="2340000000" required />
+                <div className="mb-6">
+                            <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
+                            <input
+                                type="email"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white "
+                                placeholder="2340000000"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value )}
+                                required />
                         </div>
                         <div className="mb-6">
-                            <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Referral code (optional)</label>
-                            <input type="number" id="number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white " placeholder="0000" required />
+                            <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
+                            <input
+                                type="password"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white "
+                                placeholder="2340000000"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value )}
+                                required />
+                        </div>
+                        <div className="mb-6">
+                            <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
+                            <input
+                                type="password"
+                                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white "
+                                placeholder="2340000000"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value )}
+                                required />
                         </div>
                     </div>
                     <small>Already have an account? <span>Login</span></small>

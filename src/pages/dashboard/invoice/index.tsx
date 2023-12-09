@@ -1,5 +1,5 @@
-import StatWidget from "@/components/dashboard/stat-widget";
-import { invoiceOverviewCardItems, customerTableData } from "../../../constants"
+// import StatWidget from "@/components/dashboard/stat-widget";
+import {  customerTableData } from "../../../constants"
 import Table from "@/components/dashboard/table";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ChevronUp } from "lucide-react"
@@ -20,7 +20,7 @@ const InvoicePage = () => {
             <div className=" flex justify-between">
 
                 <div className="w-1/3" >
-                    {invoiceOverviewCardItems.map((item, index) => (
+                    {/* {invoiceOverviewCardItems.map((item, index) => (
                         <StatWidget
                             key={index}
                             icon={item.icon}
@@ -34,7 +34,7 @@ const InvoicePage = () => {
                             iconColor={item.iconColor}
 
                         />
-                    ))}
+                    ))} */}
                 </div>
 
 

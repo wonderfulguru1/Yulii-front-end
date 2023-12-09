@@ -8,8 +8,8 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import en from "../src/locales/en/en.json"
 import fr from "../src/locales/fr/fr.json"
-
-
+import { Provider } from 'react-redux';
+import store from './redux/store.ts';
 i18n
   .use(initReactI18next)
   .init({
@@ -31,8 +31,9 @@ i18n
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HashRouter>
-      <App />
+    <Provider store={store}>
+        <App />
+        </Provider >
     </HashRouter>
-
   </React.StrictMode>,
 )

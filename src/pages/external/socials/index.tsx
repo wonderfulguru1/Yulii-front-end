@@ -2,11 +2,6 @@
 import InstaCard from "@/components/externalComponents/InstaCard";
 import { useTranslation } from "react-i18next";
 
-// interface DropdownProps {
-//   options: string[];
-//   onSelect: (selectedOption: string) => void;
-// }
-
 interface SocialItem {
   name: string;
   heading: string;
@@ -25,10 +20,10 @@ const DealsPage: React.FC<SocialProps> = () => {
     <div className='pt-28 bg-[#fffdfd]'>
 
       <section className=''>
-        <div className='container w-1/2 px-4 md:px-0 mx-auto  items-center py-14 '>
+        <div className='container lg:w-1/2 px-4 md:px-0 mx-auto  items-center py-14 '>
           <div className=' text-center '>
             <h2 className='text-4xl font-semibold' data-aos="zoom-out-right">  {t(`socials.heading`)}</h2>
-            <p className='py-10 md:text-2xl text-lg ' data-aos="zoom-out-right">
+            <p className='lg:py-10 md:text-2xl text-lg ' data-aos="zoom-out-right">
             {t(`socials.title`)}
 
             </p>

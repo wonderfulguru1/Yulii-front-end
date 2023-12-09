@@ -1,5 +1,5 @@
-import StatWidget from "@/components/dashboard/stat-widget";
-import { singleOverviewCardItems, customerTableData } from "../../../constants"
+// import StatWidget from "@/components/dashboard/stat-widget";
+import { customerTableData } from "../../../constants"
 import Table from "@/components/dashboard/table";
 import { PieChartss } from "@/components/dashboard/pie-chart";
 import { Info } from "lucide-react"
@@ -18,7 +18,7 @@ const CustomersPage = () => {
             <div className="flex space-x-10">
                 <div className="w-3/4">
                     <div className="flex space-x-10 py-6">
-                        {singleOverviewCardItems.map((item, index) => (
+                        {/* {singleOverviewCardItems.map((item, index) => (
                             <StatWidget
                                 key={index}
                                 icon={item.icon}
@@ -32,7 +32,7 @@ const CustomersPage = () => {
                                 iconColor={item.iconColor}
 
                             />
-                        ))}
+                        ))} */}
                     </div>
                     <Table data={data} headers={headers} showAdditionalContent={true} extraTableRow={false} color={""}/>
                 </div>

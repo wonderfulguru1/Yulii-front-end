@@ -27,7 +27,7 @@ const Merchant: React.FC<ProUserProps> = () => {
 
       <div className='bg-white'>
         <div className='container  md:px-10 justify-center lg:px-0 flex lg:flex-row gap-32 items-center flex-col-reverse  md:flex-row   mx-auto pb-10 pt-20 '>
-          <div className={`flex  `}
+          <div className={`lg:flex hidden `}
             data-aos="fade-right">
             <LazyLoadImage
               src={Image1}
@@ -58,8 +58,9 @@ const Merchant: React.FC<ProUserProps> = () => {
 
           <div className={` flex-col px-4 md:px-0 lg:w-1/2 `} data-aos="fade-left"
           >
-            <span className={`px-14 py-4 rounded-md text-lg font-bold md:text-base bg-[#a4eee9] `}>{t(`prousers.prosectionlabel`)}</span>
-
+            <div className='lg:flex hidden'>
+            <span className={`lg:px-14 py-4 rounded-md text-sm  lg:text-lg font-bold md:text-base bg-[#a4eee9] `}>{t(`prousers.prosectionlabel`)}</span>
+            </div>
             <h2 className='text-2xl my-10 font-semibold '>{t(`prousers.prosectiontitle`)}</h2>
             <div className='flex  '>
               <ul>

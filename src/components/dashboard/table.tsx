@@ -1,5 +1,7 @@
 
-import OrderDetail from './order-details';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 
 interface TableProbs {
@@ -8,39 +10,51 @@ interface TableProbs {
     color: string
     showAdditionalContent: boolean
     extraTableRow: boolean
+    // id: string;
+    // username: string;
+    // email: string;
+    // name: string;
 }
-const Table: React.FC<TableProbs> = ({ data, headers, extraTableRow }) => {
-    // const [selectedRow, setSelectedRow] = useState<number | null>(null);
-    // const [modelContent, setModalContent] = useState<string | null>(null)
-    // const handleRowClick = (index: number) => {
-    //     setSelectedRow(index === selectedRow ? null : index);
-    // }
+const Table: React.FC<TableProbs> = ({ data, headers }) => {
+    const navigate = useNavigate();
+    const users = data;
+  const [filter] = useState<string>('');
 
-    // const openModal = (content: string) => {
-    //     setModalContent(content)
-    // }
-
-    // const closeModal = () => {
-    //     setModalContent(null)
-    // }
-
+  const filteredUsers = users.filter((user) => {
+    const searchText = filter.toLowerCase();
     return (
+      
+      user?.firstname.toLowerCase().includes(searchText) ||
+      user?.lastname.toLowerCase().includes(searchText) ||
+      user?.email.toLowerCase().includes(searchText)
+    );
+  });
 
-        <div className="inline-block w-full shadow-md rounded-lg overflow-hidden">
 
-            <table className="min-w-full leading-normal ">
+  const handleTableCellClick = (userId: string) => {
+    // Handle the click on a table cell (td)
+    // For example, navigate to the UserDetailsPage
+    navigate(`/merchant/sales/${userId}`);
+  };
+
+//   console.log("zzzz", filteredUsers)
+     return (
+
+        <div className="inline-block w-full shadow-md  overflow-scroll">
+
+            <table className="min-w-full bg-[#f6f7f6] leading-normal border-b border-gray-200  ">
                 {headers && (
-                    <thead>
+                    <thead className=''>
                         <tr>
                             {headers.map((header, index) => (
                                 <th key={index}
-                                    className="px-5 py-3 border-b-2 bg-[#f6f7f6]  border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    className="px-5 py-3 border-b-2 bg-[#f6f7f6]  border-gray-200  text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                     {header}
                                 </th>
                             ))}
-                            {extraTableRow && (
+                            {/* {extraTableRow && (
                                 <th className="px-5 py-3 border-b-2 bg-[#f6f7f6]  border-gray-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
-                            )}
+                            )} */}
 
                         </tr>
                      
@@ -125,31 +139,48 @@ const Table: React.FC<TableProbs> = ({ data, headers, extraTableRow }) => {
                     </div>
                 )} */}
                 <tbody>
-                    {data.map((row, index) => (
-                        <tr key={index}>
-                            {headers && headers.map((header, colIndex) => (
-                                <td key={colIndex}
+                    {filteredUsers.map((user, index) => (
+                        <tr key={user.id}
+                        className={ "px-5 py-5 border-b text-center border-gray-200 bg-white text-sm"}
+                        >
+                            {/* {headers && headers.map((header, colIndex) => ( */}
+                                <td key={index}
 
-                                    className={ "px-5 py-5 border-b border-gray-200 bg-white text-sm"}
+                                    className={ "px-5 py-5 "}
                                 >
                                     {/* header === 'status' ? `bg-${color}` : */}
                                     {/* <div className="flex items-center">
                                         <div className="ml-3">
                                             <p className="text-gray-900 whitespace-no-wrap "> */}
-                                    {row[header]}
+                                    {user.firstname}
                                     {/* </p>
                                         </div>
                                     </div> */}
 
 
                                 </td>
+                                <td>
+                                {user.lastname}
+                                </td>
+                                <td>
+                                {user.email}
+                                </td>
+                                <td>
+                                {user.gender}
+                                </td>
+                                <td>
+                                {user.phone}
+                                </td>
+                                <td onClick={() => handleTableCellClick(user.id)}  className={ "px-5 py-5 underline cursor-pointer"}>
+                                    View
+                                </td>
 
-                            ))}
-                            {extraTableRow && (
+                            {/* ))} */}
+                            {/* {extraTableRow && (
                                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                                     <OrderDetail />
                                 </td>
-                            )}
+                            )} */}
 
 
                         </tr>

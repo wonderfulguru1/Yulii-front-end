@@ -5,6 +5,7 @@ import CustomersPage from "@/pages/dashboard/sales"
 import PromotionsPage from "@/pages/dashboard/promotions"
 import ProductDetails from "@/pages/dashboard/promotions/[id]"
 import CreatePromotion from "@/pages/dashboard/promotions/create"
+import UserDetailsPage from "@/pages/dashboard/userDetails"
 
 const dashboardRoute = [
     {
@@ -22,6 +23,10 @@ const dashboardRoute = [
     {
         element: <CustomersPage/>,
         path: 'merchant/sales',
+    },
+    {
+        element: <UserDetailsPage/>,
+        path: 'merchant/sales/:userId',
     },
     {
         element: <PromotionsPage/>,

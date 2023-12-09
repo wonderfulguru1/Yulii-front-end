@@ -30,8 +30,10 @@ const GenericSection: React.FC<SectionProps> = ({ sectionName, bgColor, labelCol
 
             <div className={` flex-col px-4 md:px-0 lg:w-1/2 ${order2}`}  data-aos="fade-left"
                >
-                <span className={`p-4 rounded-md text-sm md:text-base ${labelColor}`}>{t(`homepage.sections.${sectionName}.label`)}</span>
-                <h2 className='text-3xl mt-20 font-semibold'>{t(`homepage.sections.${sectionName}.title`)}</h2>
+                <div className='lg:flex hidden'>
+                <span className={`p-4 rounded-md  text-sm md:text-base ${labelColor}`}>{t(`homepage.sections.${sectionName}.label`)}</span>
+                </div>
+                <h2 className='text-3xl lg:mt-20 font-semibold'>{t(`homepage.sections.${sectionName}.title`)}</h2>
                 <p className='my-10'>{t(`homepage.sections.${sectionName}.subtext`)}</p>
                 <Button title='Join for free' bgColor={bgColor} />
             </div>

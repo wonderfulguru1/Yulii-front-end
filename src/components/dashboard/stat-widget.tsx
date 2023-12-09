@@ -6,20 +6,20 @@ import React from "react"
 type CardProbs = {
     icon: React.ElementType;
     icon2: React.ElementType;
-    color: string;
-    color2: string;
-    iconColor: string;
-    iconBGColor: string;
-    text: string;
-    amount: string;
-    percentage: string
+    color?: string;
+    color2?: string;
+    iconColor?: string;
+    iconBGColor?: string;
+    text?: string;
+    amount?: number;
+    percentage?: string
 }
 
 
 const StatWidget = ({ icon: Icon, icon2: Icon2, color, text, amount, percentage, iconColor, color2, iconBGColor }: CardProbs) => {
 
     return (
-        <div className="relative flex  flex-grow p-4 flex-col rounded-[10px]  border-[1px] border-gray-200 bg-clip-border shadow-md dark:shadow-none">
+        <div className="relative lg:w-1/3 w-full flex  p-4 flex-col rounded-[10px]  border-[1px] border-gray-200 bg-clip-border shadow-md dark:shadow-none">
 
             <div className="flex  rounded-full  ">
 

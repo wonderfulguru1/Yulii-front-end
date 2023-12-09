@@ -29,7 +29,7 @@ const Faq: React.FC<FAQProps> = () => {
         {faqData?.map((item, index) => (
         <div className='border rounded-md p-6' key={index}>
            <div className='flex justify-between'>
-            <h3 className='font-semibold'>Q: {t(`${item.question}`)}</h3>
+            <h3 className='font-semibold w-5/6 lg:w-full'>Q: {t(`${item.question}`)}</h3>
             {openIndex === index ?
              <FaMinusCircle 
              className="text-[#dbb5ce]  rounded-full"

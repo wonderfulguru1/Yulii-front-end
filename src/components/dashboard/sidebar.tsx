@@ -1,10 +1,21 @@
 import { Logo } from "./logo"
 import { SidebarRoutes } from "./sidebar-routes"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Logout from "../../assets/logout.png"
+import { signOut } from "firebase/auth";
+import { auth} from "@/firebase";
 
 export const Sidebar = () => {
+    const navigate = useNavigate()
+    const logout = async () => {
+        try {
+          await signOut(auth);
+          navigate("/login")
+        } catch (error) {
+          console.error("error");
+        }
+      };
     return (
         <div className=" border-r flex justify-between items-center bg-[#fffdfd] shadow-sm px-14">
             <div className="flex justify-items-center border-b h-20 p-4">
@@ -33,7 +44,7 @@ export const Sidebar = () => {
                     </div>
 
                 </div> */}
-                <Link to="/">
+                <button onClick={logout}>
                     <div className="flex gap-2 ">
                         <LazyLoadImage
                             src={Logout}
@@ -44,7 +55,7 @@ export const Sidebar = () => {
                         />
                         <h3 className="text-red-400 font-semibold">Log out</h3>
                     </div>
-                </Link>
+                </button>
             </div>
         </div>
     )

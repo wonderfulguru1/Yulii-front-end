@@ -29,7 +29,7 @@ const HeroSection: React.FC<ProUserProps> =() => {
 
 
                     <div>
-                        <h1 className='lg:text-5xl text-3xl font-medium px-10' data-aos="fade-right" >{t(`prousers.title`)}</h1>
+                        <h1 className='lg:text-5xl text-xl font-semibold lg:px-10' data-aos="fade-right" >{t(`prousers.title`)}</h1>
                         <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left">{t(`prousers.text`)}</p>
                     </div>
                     
