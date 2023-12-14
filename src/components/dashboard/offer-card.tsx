@@ -1,8 +1,7 @@
 "use client"
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { items } from "@/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import {Link} from "react-router-dom";
 import { MoreHorizontal } from "lucide-react"
@@ -15,46 +14,59 @@ import {
 import ProductDetailsImg from "../../assets/productDetail.png"
 
 export type Item = {
+  image: string;
   id: number;
   name: string;
-  category: string;
+  Status: string;
   price: string;
   status: string
 };
 
-const OfferCard: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All offers');
+interface Props {
+  items: Item[];
+}
 
-  const filteredItems: Item[] = selectedCategory === 'All offers'
-    ? items
-    : items.filter(item => item.category === selectedCategory);
+const OfferCard: React.FC<Props> = ({ items }) => {
+  const [filteredData, setFilteredData] = useState<Item[]>([]);
+  const [status, setStatus] = useState<string[]>(['All']);
+  const [selectedStatus, setSelectedStatus] = useState<string>('All');
 
-  const uniqueCategories = ['All offers', ...new Set(items.map(item => item.category))];
+  useEffect(() => {
+    const uniqueCategories = Array.from(new Set(items.map(item => item.status)));
+    setStatus(['All', ...uniqueCategories]); // Include an "All" option
 
-  const handleCategoryFilter = (category: string) => {
-    setSelectedCategory(category);
-  }
+    setFilteredData(items);
+  }, [items]);
+
+  const handleStatusChange = (selectedStatus: string) => {
+    if (selectedStatus === 'All') {
+      setFilteredData(items); // Show all items
+    } else {
+      const filteredItems = items.filter(item => item.status === selectedStatus);
+      setFilteredData(filteredItems);
+    }
+
+    setSelectedStatus(selectedStatus);
+  };
 
   return (
     <>
-
-      {uniqueCategories.map(category => (
-
+      {status.map(item => (
         <Button
-          key={category}
-          onClick={() => handleCategoryFilter(category)}
-          className={selectedCategory === category ? 'bg-[#f0f0f0] rounded-xl text-black' : 'text-[#909091] rounded-xl  hover:text-white'}
+          key={item}
+          onClick={() => handleStatusChange(item)}
+          className={selectedStatus === item ? 'bg-[#f0f0f0] rounded-xl text-black ' : 'text-[#909091] rounded-xl  hover:text-white'}
         >
-          {category}
+          {item}
         </Button>
       ))}
       <div className="grid py-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {filteredItems.map(item => (
+        {filteredData.map(item => (
           <div className="bg-white my-2 rounded-xl shadow-md p-3 " key={item.id}>
             <LazyLoadImage 
             width={300}
             height={100}
-            src={ProductDetailsImg}
+            src={item?.image || ProductDetailsImg}
             alt="Placeholder Image" 
             className="w-full object-fit h-48 rounded-lg " 
             />
@@ -88,20 +100,16 @@ const OfferCard: React.FC = () => {
               <p className="py-3 text-sm font-semibold">{item.price}</p>
             </div>
             <div className="flex">
-              <div className="p-2 flex text-xs text-center rounded-md text-[#ea1c25] bg-[#fef4f5]">
+              <div className={item.status === "Completed" || item.status === "Done"  ? 'bg-green-500 rounded-md p-2 flex text-xs text-center text-white' : 'p-2 flex text-xs text-center rounded-md text-[#ea1c25] bg-[#fef4f5]'}>
                 {item.status}
               </div>
             </div>
-            <div className="px-1 pt-3 text-sm">
-              <Link to={`/merchant/promotions/${item.id}`} className="underline">
+            <div className="px-1 pt-3 text-sm" key={item.id}>
+              <Link to={`/deals/${item.id}`} className="underline">
                 View details
               </Link>
             </div>
           </div>
-
-
-          // </div>
-
         ))}
       </div>
     </>
@@ -110,20 +118,3 @@ const OfferCard: React.FC = () => {
 
 export default OfferCard;
 
-{/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
- 
-<div className="bg-white rounded-lg border p-4">
-  <Image src="/promotions.png" width={100} height={100} alt="Placeholder Image" className="w-full h-48 rounded-md object-cover"/>
-  <div className="px-1 py-4">
-    <div className="font-bold text-xl mb-2">Blog Title</div>
-    <p className="text-gray-700 text-base">
-      This is a simple blog card example using Tailwind CSS. You can replace this text with your own blog content.
-    </p>
-  </div>
-  <div className="px-1 py-4">
-    <a href="#" className="text-blue-500 hover:underline">Read More</a>
-  </div>
-</div>
-
-
-</div> */}

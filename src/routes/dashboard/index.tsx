@@ -1,49 +1,61 @@
 import Home from "@/pages/dashboard/home"
-import InvoicePage from "@/pages/dashboard/invoice"
+
 import OrdersPage from "@/pages/dashboard/orders"
 import CustomersPage from "@/pages/dashboard/sales"
 import PromotionsPage from "@/pages/dashboard/promotions"
 import ProductDetails from "@/pages/dashboard/promotions/[id]"
 import CreatePromotion from "@/pages/dashboard/promotions/create"
 import UserDetailsPage from "@/pages/dashboard/userDetails"
+import YulliStorePage from "@/pages/dashboard/yulliStore"
+import StoreItem from "@/pages/dashboard/yulliStore/[id]"
+import AddStoreItemForm from "@/pages/dashboard/yulliStore/addStoreItem"
 
 const dashboardRoute = [
     {
         element: <Home/>,
-        path: 'merchant',
+        path: 'overview',
     },
     {
-        element: <InvoicePage/>,
-        path: 'merchant/invoices',
+        element: <YulliStorePage/>,
+        path: 'yulli-store',
     },
     {
         element: <OrdersPage/>,
-        path: 'merchant/orders',
+        path: 'rewards',
     },
     {
         element: <CustomersPage/>,
-        path: 'merchant/sales',
+        path: 'users',
+    },
+    
+    {
+        element: <PromotionsPage/>,
+        path: 'deals',
     },
     {
         element: <UserDetailsPage/>,
-        path: 'merchant/sales/:userId',
-    },
-    {
-        element: <PromotionsPage/>,
-        path: 'merchant/promotions',
-    },
-    {
-        element: <PromotionsPage/>,
-        path: 'merchant/promotions',
+        path: 'settings',
     },
 
     {
         element: <ProductDetails/>,
-        path: 'merchant/promotions/:id',
+        path: 'deals/:taskId',
+    },
+    {
+        element: <UserDetailsPage/>,
+        path: 'users/:userId',
+    },
+    {
+        element: <StoreItem/>,
+        path: 'yulli-store/:storeItemId',
+    },
+    {
+        element: <AddStoreItemForm/>,
+        path: 'yulli-store/add',
     },
     {
         element: <CreatePromotion/>,
-        path: 'merchant/promotions/create',
+        path: 'deals/create',
     },
     
 ]

@@ -10,10 +10,6 @@ interface TableProbs {
     color: string
     showAdditionalContent: boolean
     extraTableRow: boolean
-    // id: string;
-    // username: string;
-    // email: string;
-    // name: string;
 }
 const Table: React.FC<TableProbs> = ({ data, headers }) => {
     const navigate = useNavigate();
@@ -32,12 +28,10 @@ const Table: React.FC<TableProbs> = ({ data, headers }) => {
 
 
   const handleTableCellClick = (userId: string) => {
-    // Handle the click on a table cell (td)
-    // For example, navigate to the UserDetailsPage
-    navigate(`/merchant/sales/${userId}`);
+    navigate(`/users/${userId}`);
   };
 
-//   console.log("zzzz", filteredUsers)
+
      return (
 
         <div className="inline-block w-full shadow-md  overflow-scroll">

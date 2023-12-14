@@ -4,33 +4,35 @@ import { TimerReset, ChevronRight } from "lucide-react"
 // import StatWidget from "@/components/dashboard/stat-widget";
 // import { singleOverviewCardItems } from "../../../../constants"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {Link, useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProductDetailsImg from "../../../../assets/productDetail.png"
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTaskById, fetchTasks } from "@/redux/tasksSlice";
+import { fetchStoreItemById } from "@/redux/storeItemSlice";
 import { useEffect } from "react";
 import { RootState } from "@/redux/store";
+import React from "react";
+import LoadingFallback from "@/components/dashboard/loadingFallback";
 
 
 
-const ProductDetails = () => {
-    const { taskId } = useParams<{ itemId: string }>();
+const StoreItem = () => {
+    const { storeItemId } = useParams<{ itemId: string }>();
     const dispatch = useDispatch();
-    const selectedTask = useSelector((state: RootState) => state.tasks.selectedTask);
-    const status = useSelector((state: RootState) => state.tasks.status);
-    const error = useSelector((state: RootState) => state.tasks.error);
-  
+    const selectedItem = useSelector((state: RootState) => state.storeItems.selectedItems);
+    const status = useSelector((state: RootState) => state.storeItems.status);
+    const error = useSelector((state: RootState) => state.storeItems.error);
+
     useEffect(() => {
-      dispatch(fetchTaskById(taskId));
-    }, [dispatch, taskId]);
-    console.log("hhhh", selectedTask)
-    
+        dispatch(fetchStoreItemById(storeItemId));
+    }, [dispatch, storeItemId]);
+    console.log("hhhh", selectedItem)
+
     return (
         <div className="p-6 h-full">
             <div className="flex justify-between py-2">
                 <div className="flex items-center">
 
-                    <Link to="/deals">
+                    <Link to="/yulli-store">
                         <h3 className="text-sm">Promotion & Offer </h3>
                     </Link>
                     <ChevronRight size={18} />
@@ -67,33 +69,38 @@ const ProductDetails = () => {
                     />
                 ))} */}
             </div>
-            <div className="flex flex-col lg:flex-row py-10 space-x-10 items-center">
-                <div>
-                    <LazyLoadImage
-                        width={300}
-                        height={100}
-                        src={ProductDetailsImg}
-                        alt="image"
-                    />
-                </div>
-                <div className="flex flex-col">
-                    <div className="flex items-center bg-[#fff5f5] text-red-500  rounded-md justify-center">
-                        <TimerReset
-                            size={16}
-                        />
-                        <span className="p-2 text-xs">Deal ends in 30 days</span>
+            <React.Suspense fallback={<LoadingFallback />}>
+                {status === 'loading' ? (
+                    <LoadingFallback />
+                ) : (
+                    <div className="flex flex-col lg:flex-row py-10 space-x-10 items-center">
+                        <div>
+                            <LazyLoadImage
+                                width={300}
+                                height={100}
+                                src={selectedItem?.image || ProductDetailsImg}
+                                alt="image"
+                            />
+                        </div>
+                        <div className="flex flex-col">
+                            <div className="flex items-center bg-[#fff5f5] text-red-500  rounded-md justify-center">
+                                <TimerReset
+                                    size={16}
+                                />
+                                <span className="p-2 text-xs">Deal ends in 30 days</span>
+                            </div>
+                            <div>
+                                <h3 className="font-semibold py-3">{selectedItem?.title}</h3>
+                                <p className="">Total offer view: <span className="font-semibold">{selectedItem?.rating?.count}</span></p>
+                                <p className="py-3">Price <span className="font-semibold">${selectedItem?.price}</span></p>
+                            </div>
+                        </div>
+                        <div className="">
+                            <span className="text-green-500">{selectedItem?.status}</span>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="font-semibold py-3">{selectedTask?.name}</h3>
-                        <p className="">Total offer view: <span className="font-semibold">500</span></p>
-                        <p className="py-3">Total offer sales: <span className="font-semibold">N200,000</span></p>
-                    </div>
-                </div>
-                <div className="">
-                    <span className="text-green-500">{selectedTask?.status}</span>
-                </div>
-            </div>
-
+                )}
+            </React.Suspense>
             <div className="flex w-full">
                 <Tabs defaultValue="account" className="w-full">
 
@@ -105,8 +112,8 @@ const ProductDetails = () => {
                     <TabsContent value="account">
                         {/* <h3 className="pt-8 font-semibold">Buy 2 cups of ice cream for ₦3000 and earn up to ₦300 airtime and other free goodies </h3> */}
                         <p className="py-4">
-                            {selectedTask?.description}
-                            
+                            {selectedItem?.description}
+
                         </p>
                     </TabsContent>
                     <TabsContent value="password">Change your password here.</TabsContent>
@@ -122,4 +129,4 @@ const ProductDetails = () => {
     );
 }
 
-export default ProductDetails;
+export default StoreItem;

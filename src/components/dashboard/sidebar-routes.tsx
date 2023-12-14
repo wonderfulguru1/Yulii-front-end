@@ -6,32 +6,32 @@ const merchantRoutes = [
     {
         icon: Layout,
         label: "Overview",
-        href: "/merchant"
+        href: "/overview"
     },
     {
         icon: Compass,
-        label: "Promotions & Offers",
-        href: "/merchant/promotions"
+        label: "Deals",
+        href: "/deals"
     },
     {
         icon: Compass,
-        label: "Order history",
-        href: "/merchant/orders"
+        label: "Rewards",
+        href: "/rewards"
     },
     {
         icon: Compass,
-        label: "Customers",
-        href: "/merchant/sales"
+        label: "Users",
+        href: "/users"
     },
     {
         icon: Compass,
-        label: "Invoice",
-        href: "/merchant/invoices"
+        label: "Yulli Store",
+        href: "/yulli-store"
     },
     {
         icon: Compass,
         label: "Settings",
-        href: "/merchant/settings"
+        href: "/settings"
     },
 ];
 
@@ -68,7 +68,7 @@ const isCustomerPage = location.pathname?.includes("/customer");
 const routes = isCustomerPage ? customerRoutes : merchantRoutes
 
     return (
-        <div className="flex  w-full">
+        <div className="flex flex-col w-full">
             {routes.map((route) => (
                 <SidebarItem 
                 key={route.href}

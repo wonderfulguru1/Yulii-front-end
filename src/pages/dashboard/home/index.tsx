@@ -2,7 +2,7 @@ import Table from "@/components/dashboard/table";
 import { StatOverview } from "@/components/dashboard/stat-overview";
 import StatWidget from "@/components/dashboard/stat-widget";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUsers } from "@/redux/userSlice";
+import { fetchUsers } from "@/redux/usersSlice";
 import { RootState } from "@/redux/store";
 import { useEffect } from "react";
 import { User2 } from "lucide-react";
