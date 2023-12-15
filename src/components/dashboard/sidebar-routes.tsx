@@ -28,11 +28,11 @@ const merchantRoutes = [
         label: "Yulli Store",
         href: "/yulli-store"
     },
-    {
-        icon: Compass,
-        label: "Settings",
-        href: "/settings"
-    },
+    // {
+    //     icon: Compass,
+    //     label: "Settings",
+    //     href: "/settings"
+    // },
 ];
 
 const customerRoutes = [
