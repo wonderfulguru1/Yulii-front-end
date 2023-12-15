@@ -21,7 +21,7 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        dispatch(fetchUsers());
+        await dispatch(fetchUsers());
       } catch (error) {
         console.error('Error fetching users:');
       }

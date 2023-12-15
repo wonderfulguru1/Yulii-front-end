@@ -82,8 +82,8 @@ export const addEditStoreItem = createAsyncThunk(
         });
 
 
-      // const newStoreItemId = newItemRef.id;
-      // console.log('New item ID:', newStoreItemId);
+      const newStoreItemId = newItemRef;
+      console.log('New item ID:', newStoreItemId);
     }
   }
 );
