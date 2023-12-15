@@ -12,9 +12,10 @@ import { SelectItem } from '@radix-ui/react-select';
 import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { auth } from '@/firebase';
+import { auth, firestoreStorage } from '@/firebase';
 import { RootState } from '@/redux/store';
 import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
+import { addDoc, collection } from 'firebase/firestore';
 
 const AddStoreItemForm = () => {
   const dispatch = useDispatch();
@@ -72,13 +73,36 @@ const AddStoreItemForm = () => {
     affiliate_link: ""
   });
 
-  console.log("good", item);
-  console.log("item", foundUser);
-  console.log("user", loggedInUserId);
+  console.log("good", storeItem);
+ 
 
-  // const unixTimestamp = 1702592996;
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const collectionRef = collection(firestoreStorage, 'storeItem');
 
-  // Multiply by 1000 to convert seconds to milliseconds
+  //       const newItemRef = await addDoc(collectionRef, {
+  //         ...storeItem,
+  //         // createdAt: serverTimestamp(), // Optional: Store the creation timestamp
+  //       });
+
+  //       const newStoreItemId = newItemRef.id;
+
+  //       // Update the state with the generated ID
+  //       setStoreItem((prevStoreItem) => ({
+  //         ...prevStoreItem,
+  //         id: newStoreItemId,
+  //       }));
+
+  //       console.log('New item ID:', newStoreItemId);
+  //     } catch (error) {
+  //       console.error('Error adding item:', error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [storeItem]);
+
 
 
 
@@ -92,15 +116,18 @@ const AddStoreItemForm = () => {
 
   const handleAddStoreItem = async () => {
     try {
-      await dispatch(addEditStoreItem({ storeItem }));
-      console.log("action", action)
+      const collectionRef = collection(firestoreStorage, 'storeItem');
 
-      // const generatedId = action.payload.id;
+            const newItemRef = await addDoc(collectionRef, {
+              ...storeItem,
+            });
+    
+            const newStoreItemId = newItemRef.id;
 
-      // setStoreItem((prevStoreItem) => ({
-      //   ...prevStoreItem,
-      //   id: StoreItemID,
-      // }));
+            setStoreItem((prevStoreItem) => ({
+              ...prevStoreItem,
+              id: newStoreItemId,
+            }));
 
       toast("Store Item Created Successfully");
     } catch (error) {

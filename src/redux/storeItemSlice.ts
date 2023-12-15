@@ -62,42 +62,39 @@ export const fetchStoreItemById = createAsyncThunk('storeItem/fetchStoreItemById
 
 
 export const addEditStoreItem = createAsyncThunk(
-  'storeItem/addEditMerchant',
+  'storeItem/addEditStoreItem',
   async ({ storeItem }: AddEditItemPayload) => {
-  
+    let newStoreItemId;
 
-    const myTimestampAsDate = Timestamp.now()
-    console.log("jjjj", myTimestampAsDate)
     if (storeItem.id) {
- 
       const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id);
       await updateDoc(itemDocRef, { ...storeItem });
+      newStoreItemId = storeItem.id;
     } else {
-      // If the item doesn't have an ID, it's an add
       const collectionRef = collection(firestoreStorage, 'storeItem');
 
-      //       const newItemRef = await addDoc(collectionRef, {
-      //   ...storeItem,
-      //   id: myTimestampAsDate, 
-      // });
+      const timestampId = new Date().getTime().toString();
 
-      await addDoc(collectionRef, {
+      const newItemRef = await addDoc(collectionRef, {
         ...storeItem,
-        id: serverTimestamp(),
+        id: timestampId,
       });
 
-      // await setDoc(doc(collectionRef, myTimestampAsDate), {
-      //     ...storeItem,
-      //     id: myTimestamserverTimestamp()pAsDate,
-      //   });
+      await setDoc(doc(collectionRef, timestampId), {
+        ...storeItem,
+        id: timestampId,
+      });
 
 
-      const newMerchantId = newItemRef.id;
-      console.log('New item ID:', newMerchantId);
+      newStoreItemId = newItemRef.id;
+      console.log('New item ID:', newStoreItemId);
+
+      await updateDoc(newItemRef, { id: newStoreItemId, ...storeItem });
     }
+
+    return { id: newStoreItemId, ...storeItem };
   }
 );
-
 
 const storeItemSlice = createSlice({
   name: 'storeItems',
