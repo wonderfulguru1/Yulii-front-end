@@ -21,8 +21,8 @@ const YulliStorePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        fetchStoreItem();
-        fetchMerchants();
+        dispatch(fetchStoreItem());
+        dispatch(fetchMerchants());
         
       } catch (error) {
         console.error('Error fetching users:');

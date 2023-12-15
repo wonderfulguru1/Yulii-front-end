@@ -20,7 +20,7 @@ const StoreItem = () => {
     const dispatch = useDispatch();
     const selectedItem = useSelector((state: RootState) => state.storeItems.selectedItems);
     const status = useSelector((state: RootState) => state.storeItems.status);
-    // const error = useSelector((state: RootState) => state.storeItems.error);
+    const error = useSelector((state: RootState) => state.storeItems.error);
 
     useEffect(() => {
         dispatch(fetchStoreItemById(storeItemId));
@@ -91,13 +91,13 @@ const StoreItem = () => {
                             </div>
                             <div>
                                 <h3 className="font-semibold py-3">{selectedItem?.title}</h3>
-                                <p className="">Total offer view: <span className="font-semibold">{selectedItem?.rating}</span></p>
+                                <p className="">Total offer view: <span className="font-semibold">{selectedItem?.rating?.count}</span></p>
                                 <p className="py-3">Price <span className="font-semibold">${selectedItem?.price}</span></p>
                             </div>
                         </div>
-                        {/* <div className="">
+                        <div className="">
                             <span className="text-green-500">{selectedItem?.status}</span>
-                        </div> */}
+                        </div>
                     </div>
                 )}
             </React.Suspense>
