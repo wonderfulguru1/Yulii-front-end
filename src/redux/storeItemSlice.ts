@@ -1,14 +1,12 @@
 // UserSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { firestoreStorage } from "../firebase";
-import { getDocs, collection, doc, getDoc, addDoc, updateDoc, setDoc, Timestamp, serverTimestamp } from 'firebase/firestore';
+import { getDocs, collection, doc, getDoc, updateDoc, setDoc} from 'firebase/firestore';
 
 interface StoreItem {
   category: any;
-  name: string;
   id: string;
   description: string;
-  status: string;
   price: string;
   title: string;
   rating: [];
@@ -64,35 +62,29 @@ export const fetchStoreItemById = createAsyncThunk('storeItem/fetchStoreItemById
 export const addEditStoreItem = createAsyncThunk(
   'storeItem/addEditStoreItem',
   async ({ storeItem }: AddEditItemPayload) => {
-    let newStoreItemId;
-
+    const timestampId = new Date().getTime().toString();
     if (storeItem.id) {
+ 
       const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id);
       await updateDoc(itemDocRef, { ...storeItem });
-      newStoreItemId = storeItem.id;
     } else {
+
       const collectionRef = collection(firestoreStorage, 'storeItem');
 
-      const timestampId = new Date().getTime().toString();
+      //       const newItemRef = await addDoc(collectionRef, {
+      //   ...storeItem,
+      //   id: timestampId, 
+      // });
 
-      const newItemRef = await addDoc(collectionRef, {
-        ...storeItem,
-        id: timestampId,
-      });
-
-      await setDoc(doc(collectionRef, timestampId), {
-        ...storeItem,
-        id: timestampId,
-      });
+      const newItemRef = await setDoc(doc(collectionRef, timestampId), {
+          ...storeItem,
+          id: timestampId,
+        });
 
 
-      newStoreItemId = newItemRef.id;
-      console.log('New item ID:', newStoreItemId);
-
-      await updateDoc(newItemRef, { id: newStoreItemId, ...storeItem });
+      // const newStoreItemId = newItemRef.id;
+      // console.log('New item ID:', newStoreItemId);
     }
-
-    return { id: newStoreItemId, ...storeItem };
   }
 );
 

@@ -29,7 +29,7 @@ const Login = () => {
         try {
           await signInWithEmailAndPassword(auth, email, password);
           console.log('Login successful!');
-          navigate("/merchant")
+          navigate("/overview")
         } catch (error) {
             setError(true)
         }

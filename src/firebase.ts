@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import "firebase/auth";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import {getFirestore} from "firebase/firestore"
+import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
@@ -29,6 +30,6 @@ const googleProvider = new GoogleAuthProvider();
 const firestoreStorage = getFirestore(app)
 // const firestore = getFirestore(app);
 // const storage = getStorage(app);
-
-export {auth, googleProvider, firestoreStorage};
+const storage = getStorage(app);
+export {auth, googleProvider, firestoreStorage, storage};
 

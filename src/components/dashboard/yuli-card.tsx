@@ -1,48 +1,21 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
-export type Item = {
+export type Items = {
   title: string
   image: string;
   id: number;
   name: string;
-  Status: string;
+  status: string;
   price: string;
-  status: string
 };
 
 interface Props {
-  items: Item[];
+  items: Items[];
 }
 
 const YulliCard: React.FC<Props> = ({ items }) => {
-  const [filteredData, setFilteredData] = useState<Item[]>([]);
-  const [status, setStatus] = useState<string[]>(['All']);
-  const [selectedStatus, setSelectedStatus] = useState<string>('All');
 
-
-  // if(loggedInUser.uid === merchantsData.id) (
-
-  // )
-
-  // useEffect(() => {
-  //   const uniqueCategories = Array.from(new Set(items.map(item => item.status)));
-  //   setStatus(['All', ...uniqueCategories]); // Include an "All" option
-
-  //   setFilteredData(items);
-  // }, [items]);
-
-  // const handleStatusChange = (selectedStatus: string) => {
-  //   if (selectedStatus === 'All') {
-  //     setFilteredData(items); // Show all items
-  //   } else {
-  //     const filteredItems = items.filter(item => item.status === selectedStatus);
-  //     setFilteredData(filteredItems);
-  //   }
-
-  //   setSelectedStatus(selectedStatus);
-  // };
   return (
     <div className="grid py-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       {items.map(item => (

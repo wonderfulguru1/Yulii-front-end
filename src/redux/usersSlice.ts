@@ -7,7 +7,6 @@ interface User {
   isEmailVerified: boolean;
   id: string;
   firstname:string
-  // other User properties
 }
 
 interface UserState {

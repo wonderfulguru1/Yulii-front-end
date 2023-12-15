@@ -17,9 +17,8 @@ export type Item = {
   image: string;
   id: number;
   name: string;
-  Status: string;
+  status: string;
   price: string;
-  status: string
 };
 
 interface Props {

@@ -7,18 +7,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {Link, useParams} from "react-router-dom";
 import ProductDetailsImg from "../../../../assets/productDetail.png"
 import { useDispatch, useSelector } from "react-redux";
-import { fetchTaskById, fetchTasks } from "@/redux/tasksSlice";
+import { fetchTaskById} from "@/redux/tasksSlice";
 import { useEffect } from "react";
 import { RootState } from "@/redux/store";
 
 
 
 const ProductDetails = () => {
-    const { taskId } = useParams<{ itemId: string }>();
+    const taskId  = useParams<{ itemId: string }>();
     const dispatch = useDispatch();
     const selectedTask = useSelector((state: RootState) => state.tasks.selectedTask);
-    const status = useSelector((state: RootState) => state.tasks.status);
-    const error = useSelector((state: RootState) => state.tasks.error);
+    // const status = useSelector((state: RootState) => state.tasks.status);
+    // const error = useSelector((state: RootState) => state.tasks.error);
   
     useEffect(() => {
       dispatch(fetchTaskById(taskId));

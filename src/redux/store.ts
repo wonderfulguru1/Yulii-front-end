@@ -4,16 +4,16 @@ import userSlice from './usersSlice';
 import tasksSlice from './tasksSlice';
 import storeItemSlice from './storeItemSlice';
 import merchantsSlice from './merchantsSlice';
-// import categoriesReducer from './path-to-categorySlice/categorySlice';
+// import categorySlice from './categorySlice';
+
 
 const store = configureStore({
   reducer: {
     users: userSlice,
     tasks: tasksSlice,
     storeItems: storeItemSlice,
-    merchants:merchantsSlice
-    // categories: categoriesReducer,
-    // Add other reducers if needed
+    merchants:merchantsSlice,
+    // categories: categorySlice,
   },
 });
 

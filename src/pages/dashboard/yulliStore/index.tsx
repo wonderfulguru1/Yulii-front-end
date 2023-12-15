@@ -1,7 +1,7 @@
 // import StatWidget from "@/components/dashboard/stat-widget";
 
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ChevronUp } from "lucide-react"
+import { ExternalLink} from "lucide-react"
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchStoreItem } from "@/redux/storeItemSlice";
 import { RootState } from "@/redux/store";

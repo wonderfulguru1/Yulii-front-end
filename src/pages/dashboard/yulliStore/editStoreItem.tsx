@@ -1,5 +1,5 @@
 // EditItemForm.tsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addEditStoreItem } from '@/redux/storeItemSlice';
 
@@ -9,10 +9,7 @@ const EditStoreItemForm = ({ itemToEdit }) => {
   const dispatch = useDispatch();
 
   const handleEditItem = () => {
-    // Additional validation can be added here
-
     dispatch(addEditStoreItem({ item }));
-    // Optionally, you can reset the form or navigate to another page after editing
   };
 
   useEffect(() => {

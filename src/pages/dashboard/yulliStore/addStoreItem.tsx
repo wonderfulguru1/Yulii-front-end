@@ -1,5 +1,5 @@
 // AddItemForm.tsx
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addEditStoreItem, fetchStoreItem } from '@/redux/storeItemSlice';
 import { Label } from '@/components/ui/label';
@@ -7,33 +7,30 @@ import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { SelectItem } from '@radix-ui/react-select';
-import { v4 as uuidv4 } from 'uuid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { auth, firestoreStorage } from '@/firebase';
+import { auth, storage } from '@/firebase';
 import { RootState } from '@/redux/store';
 import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
-import { addDoc, collection } from 'firebase/firestore';
+import ImageUpload from '@/components/dashboard/imageUpload';
+import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+// import { fetchCategories } from '@/redux/categorySlice';
 
 const AddStoreItemForm = () => {
   const dispatch = useDispatch();
-  const merchantsData = useSelector((state: RootState) => state.merchants.data);
-  const StoreItemID = useSelector((state: RootState) => state.storeItems.data?.id); // Replace 'yourReducer' with your actual reducer name
+  const merchantsData = useSelector((state: RootState) => state.merchants.data); // Replace 'yourReducer' with your actual reducer name
   const loggedInUserId = auth?.currentUser?.uid;
   const isUserInData = merchantsData.some(user => user.id === loggedInUserId);
-
+  // const [imageUrl, setImageUrl] = useState<string>('');
   const foundUser = merchantsData.find(user => user.id === loggedInUserId);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
 
-
-  
-  // const loggedInUserId = auth?.currentUser?.uid 
   useEffect(() => {
     const fetchData = async () => {
       try {
         dispatch(fetchMerchants());
         dispatch(fetchStoreItem());
+        // dispatch(fetchCategories());
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -50,6 +47,7 @@ const AddStoreItemForm = () => {
     address: "",
     publish_token: "500"
   })
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [storeItem, setStoreItem] = useState({
     category: "",
     couponCode: "",
@@ -65,93 +63,75 @@ const AddStoreItemForm = () => {
       rate: ""
     },
     merchant: {
-      address: foundUser?.address, 
-      logo: foundUser?.logo, 
-      name: foundUser?.name, 
+      id: foundUser?.id,
+      address: foundUser?.address,
+      logo: foundUser?.logo,
+      name: foundUser?.name,
     },
     title: '',
     affiliate_link: ""
   });
 
   console.log("good", storeItem);
- 
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const collectionRef = collection(firestoreStorage, 'storeItem');
-
-  //       const newItemRef = await addDoc(collectionRef, {
-  //         ...storeItem,
-  //         // createdAt: serverTimestamp(), // Optional: Store the creation timestamp
-  //       });
-
-  //       const newStoreItemId = newItemRef.id;
-
-  //       // Update the state with the generated ID
-  //       setStoreItem((prevStoreItem) => ({
-  //         ...prevStoreItem,
-  //         id: newStoreItemId,
-  //       }));
-
-  //       console.log('New item ID:', newStoreItemId);
-  //     } catch (error) {
-  //       console.error('Error adding item:', error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [storeItem]);
 
 
-
-
-  const handleMerchantChange = (property: string, value: any) => {
-    setItem((prevItem) => ({
-      ...prevItem,
-      id: prevItem.id || uuidv4(), // Set item ID if not present
-      [property]: value,
-    }));
-  };
 
   const handleAddStoreItem = async () => {
     try {
-      const collectionRef = collection(firestoreStorage, 'storeItem');
-
-            const newItemRef = await addDoc(collectionRef, {
-              ...storeItem,
-            });
-    
-            const newStoreItemId = newItemRef.id;
-
-            setStoreItem((prevStoreItem) => ({
-              ...prevStoreItem,
-              id: newStoreItemId,
-            }));
-
-      toast("Store Item Created Successfully");
+      // Check if an image is selected
+      if (!selectedImage) {
+        toast.error('Please select an image');
+        return;
+      }
+      const imageFile = selectedImage;
+      // const imageName = "";
+      const imageUrl = await uploadImageToStorage(imageFile);
+      const updatedStoreItem = {
+        ...storeItem,
+        image: imageUrl,
+      };
+      dispatch(addEditStoreItem({ storeItem: updatedStoreItem }));
+      toast.success('Created Successfully');
     } catch (error) {
-      console.error('Error adding/editing merchant');
+      console.error('Error adding store item:', error);
     }
   };
 
+  // Function to handle the selected image from ImageUpload component
+  const handleImageSelect = (file: File) => {
+    setSelectedImage(file);
+  };
+  const categories = ["appliances", "fashion"]
 
-
-
-  // const handleAddStoreItem = () => {
-  //   // Additional validation can be added here
-
-  //   dispatch(addEditStoreItem({ storeItem }));
-  //   toast("Created Successfully");
-  //   // Optionally, you can reset the form or navigate to another page after adding
-  // };
+  const uploadImageToStorage = async (file: File): Promise<string> => {
+    try {
+      const fileName = `${file.name}`;
+      const storageRef = ref(storage, 'images/' + fileName + '.jpeg');
+      // const storageRef = ref(storage, `images/${fileName}/.jpeg`);
+      console.log("path", storageRef)
+      await uploadBytes(storageRef, file);
+      const downloadURL = await getDownloadURL(storageRef);
+      return downloadURL;
+    } catch (error) {
+      console.error('Error uploading image to storage:', error);
+      throw error;
+    }
+  };
 
   const handleAddMerchant = () => {
-    // Additional validation can be added here
-
     dispatch(addEditMerchant({ item }));
     toast("Created Successfully");
-    // Optionally, you can reset the form or navigate to another page after adding
+  };
+
+  const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = event.target.value;
+
+    setStoreItem((prevStoreItem) => ({
+      ...prevStoreItem,
+      category: selectedValue,
+    }));
+
+    setSelectedCategory(selectedValue);
   };
 
   return (
@@ -202,12 +182,6 @@ const AddStoreItemForm = () => {
                   <Label htmlFor="logo" className='py-4'>Upload Logo</Label>
 
                   <div className="border  relative">
-                    <Input placeholder="e.g Shoprite"
-                      type='file'
-                      className="cursor-pointer relative block opacity-0  p-20 z-50"
-                      value={item.logo}
-                      onChange={(e) => setItem({ ...item, logo: e.target.value })} />
-
                     <div className="text-center p-10 absolute top-0 right-0 left-0 m-auto">
 
                       <p className="">Select Files</p>
@@ -245,18 +219,13 @@ const AddStoreItemForm = () => {
                 </div>
                 <div className='flex flex-col w-1/2'>
                   <Label htmlFor="email" className='py-4'>Select Catgory</Label>
-                  <Select defaultValue="billing">
-                    <SelectTrigger id="area">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="team">Categories</SelectItem>
-                      <SelectItem value="billing">Billing</SelectItem>
-                      <SelectItem value="account">Account</SelectItem>
-                      <SelectItem value="deployments">Deployments</SelectItem>
-                      <SelectItem value="support">Support</SelectItem>
-                    </SelectContent>
-                  </Select>
+                  <select id="category" value={selectedCategory} onChange={handleCategoryChange}>
+                    {categories.map((category) => (
+                      <option key={category} value={category}>
+                        {category}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
               <div className='flex gap-6 '>
@@ -306,13 +275,8 @@ const AddStoreItemForm = () => {
                 <div className='w-1/2'>
                   <Label htmlFor="email" className='py-4'>Upload Photo</Label>
 
-                  <div className="border  relative">
-                    <Input placeholder="e.g Shoprite"
-                      type='file'
-                      className="cursor-pointer relative block opacity-0  p-20 z-50"
-                      value={storeItem.image}
-                      onChange={(e) => setStoreItem({ ...storeItem, image: e.target.value })} />
-
+                  <div className="border  ">
+                    <ImageUpload onImageSelect={handleImageSelect} />
                     <div className="text-center p-10 absolute top-0 right-0 left-0 m-auto">
 
                       <p className="">Select Files</p>
@@ -344,4 +308,5 @@ const AddStoreItemForm = () => {
   );
 };
 
-export default AddStoreItemForm;
+export default AddStoreItemForm
+

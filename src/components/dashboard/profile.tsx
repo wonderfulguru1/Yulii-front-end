@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUser, fetchUserById } from '../../redux/usersSlice'
-
 import Trophy from "../../assets/trophy.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import NoImage from "../../assets/no_image.jpeg";
@@ -10,7 +9,7 @@ import { Button } from '../ui/button';
 
 interface DataItemProps {
     item: {
-        id: string; // Assuming each user has a unique identifier
+        id?: string; // Assuming each user has a unique identifier
         firstname?: string;
         avatarUrl?: string;
         photoURL?: string;
@@ -18,7 +17,8 @@ interface DataItemProps {
         gender?: string;
         account?: string;
         email?: string;
-        phone?: string;
+        phone?: number;
+        isEmailVerified: boolean
         // Add more data properties as needed
     };
 }
@@ -26,7 +26,6 @@ interface DataItemProps {
 const Profile: React.FC<DataItemProps> = ({ item }) => {
     const dispatch = useDispatch();
     const selectedUser = useSelector((state) => state.users.selectedUser);
-
     const [isEditing, setIsEditing] = useState(false);
     const [editedUser, setEditedUser] = useState(item);
 

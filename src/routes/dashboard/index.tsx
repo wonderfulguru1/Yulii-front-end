@@ -9,7 +9,7 @@ import UserDetailsPage from "@/pages/dashboard/userDetails"
 import YulliStorePage from "@/pages/dashboard/yulliStore"
 import StoreItem from "@/pages/dashboard/yulliStore/[id]"
 import AddStoreItemForm from "@/pages/dashboard/yulliStore/addStoreItem"
-import UserProfile from "@/pages/dashboard/settings"
+// import UserProfile from "@/pages/dashboard/settings"
 
 const dashboardRoute = [
     {
@@ -33,10 +33,10 @@ const dashboardRoute = [
         element: <PromotionsPage/>,
         path: 'deals',
     },
-    {
-        element: <UserProfile/>,
-        path: 'settings',
-    },
+    // {
+    //     element: <UserProfile/>,
+    //     path: 'settings',
+    // },
 
     {
         element: <ProductDetails/>,
