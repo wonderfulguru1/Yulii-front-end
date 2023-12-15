@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 
@@ -20,6 +20,11 @@ const YulliCard: React.FC<Props> = ({ items }) => {
   const [filteredData, setFilteredData] = useState<Item[]>([]);
   const [status, setStatus] = useState<string[]>(['All']);
   const [selectedStatus, setSelectedStatus] = useState<string>('All');
+
+
+  // if(loggedInUser.uid === merchantsData.id) (
+
+  // )
 
   // useEffect(() => {
   //   const uniqueCategories = Array.from(new Set(items.map(item => item.status)));

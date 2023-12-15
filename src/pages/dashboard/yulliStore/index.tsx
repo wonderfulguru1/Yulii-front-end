@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import YulliCard from "@/components/dashboard/yuli-card";
 
 import { Link } from "react-router-dom";
+import { fetchMerchants } from "@/redux/merchantsSlice";
 
 
 
@@ -21,6 +22,8 @@ const YulliStorePage = () => {
     const fetchData = async () => {
       try {
         dispatch(fetchStoreItem());
+        dispatch(fetchMerchants());
+        
       } catch (error) {
         console.error('Error fetching users:');
       }
@@ -28,12 +31,23 @@ const YulliStorePage = () => {
 
     fetchData();
   }, [dispatch]);
-
   const storesData = useSelector((state: RootState) => state.storeItems.data);
+  // const dispatch = useDispatch();
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       dispatch(fetchMerchants());
+  //     } catch (error) {
+  //       console.error('Error fetching users:');
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [dispatch]);
+
+  
   const categories = Array.from(new Set(storesData.map((item) => item.category)));
-
-
 
   const handleFilterChange = (event: { target: { value: any; }; }) => {
     const newFilter = event.target.value;

@@ -3,13 +3,15 @@ import { configureStore } from '@reduxjs/toolkit';
 import userSlice from './usersSlice';
 import tasksSlice from './tasksSlice';
 import storeItemSlice from './storeItemSlice';
+import merchantsSlice from './merchantsSlice';
 // import categoriesReducer from './path-to-categorySlice/categorySlice';
 
 const store = configureStore({
   reducer: {
     users: userSlice,
     tasks: tasksSlice,
-    storeItems: storeItemSlice
+    storeItems: storeItemSlice,
+    merchants:merchantsSlice
     // categories: categoriesReducer,
     // Add other reducers if needed
   },

@@ -1,5 +1,4 @@
-// import StatWidget from "@/components/dashboard/stat-widget";
-import { customerTableData } from "../../../constants"
+
 import Table from "@/components/dashboard/table";
 import { PieChartss } from "@/components/dashboard/pie-chart";
 import { Info } from "lucide-react"
@@ -9,12 +8,17 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 const CustomersPage = () => {
-    const { data, headers } = customerTableData
+    const usersData = useSelector((state: RootState) => state.users.data);
+    const tableHeader = ["First Name", "Last Name", "Email", "Gender", "Phone Number"]
+
+
     return (
         <div className="p-6">
-            <h3 className="font-semibold">Customers</h3>
+            <h3 className="font-semibold">Users</h3>
             <div className="flex space-x-10">
                 <div className="w-3/4">
                     <div className="flex space-x-10 py-6">
@@ -34,7 +38,8 @@ const CustomersPage = () => {
                             />
                         ))} */}
                     </div>
-                    <Table data={data} headers={headers} showAdditionalContent={true} extraTableRow={false} color={""}/>
+                    <Table data={usersData} headers={tableHeader} extraTableRow={true} color={""} showAdditionalContent={false}/>
+                    {/* <Table data={data} headers={headers} showAdditionalContent={true} extraTableRow={false} color={""}/> */}
                 </div>
                 <div className="w-1/4 py-6 ">
                     <div className="shadow-lg p-6 flex flex-col">

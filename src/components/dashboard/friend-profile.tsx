@@ -1,6 +1,16 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import Trophy from "../../assets/trophy.png"
 import Symbol from "../../assets/prizeSymbol.png"
+
+// interface PageProps {
+//     pageTitle: string;
+//     data: {
+//       title: string;
+//       content: string;
+//       // Add more data properties as needed
+//     };
+//   }
+
 const FriendsProfile = () => {
     return (
 

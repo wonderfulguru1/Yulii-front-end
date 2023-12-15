@@ -14,11 +14,12 @@ const Login = () => {
     const [password, setPassword] = useState("")
     const [error, setError] = useState(false)
 
-    console.log(auth?.currentUser?.email)
+  
     const signInWithGoogle = async () => {
         try {
           await signInWithPopup(auth, googleProvider);
-          navigate("/merchant")
+          navigate("/overview")
+          console.log("ffff",auth?.currentUser?.email)
         } catch (error) {
           setError(true)
         }

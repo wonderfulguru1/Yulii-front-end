@@ -1,7 +1,7 @@
 // UserSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { firestoreStorage } from "../firebase";
-import { getDocs, collection, doc, getDoc} from "firebase/firestore";
+import { getDocs, collection, doc, getDoc, updateDoc} from "firebase/firestore";
 
 interface User {
   isEmailVerified: boolean;
@@ -45,6 +45,14 @@ export const fetchUserById = createAsyncThunk('users/fetchUserById', async (user
   }
 });
 
+export const updateUser = createAsyncThunk('users/updateUser', async (updatedUser: User) => {
+  const { id, ...userData } = updatedUser;
+  const userDocRef = doc(firestoreStorage, 'users', id);
+
+  await updateDoc(userDocRef, userData);
+
+  return updatedUser;
+});
 
 const usersSlice = createSlice({
   name: 'users',
@@ -73,6 +81,25 @@ const usersSlice = createSlice({
       .addCase(fetchUserById.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message ?? 'Failed to fetch user details';
+      })
+      .addCase(updateUser.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(updateUser.fulfilled, (state, action: PayloadAction<User>) => {
+        state.status = 'succeeded';
+
+        const updatedUser = action.payload;
+        state.data = state.data.map((user) =>
+          user.id === updatedUser.id ? updatedUser : user
+        );
+ 
+        if (state.selectedUser && state.selectedUser.id === updatedUser.id) {
+          state.selectedUser = updatedUser;
+        }
+      })
+      .addCase(updateUser.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message ?? 'Failed to update user';
       });
   },
 });

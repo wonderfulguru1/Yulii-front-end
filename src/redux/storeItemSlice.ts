@@ -1,24 +1,28 @@
 // UserSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { firestoreStorage } from "../firebase";
-import { getDocs, collection, doc, getDoc, addDoc, updateDoc } from 'firebase/firestore';
+import { getDocs, collection, doc, getDoc, addDoc, updateDoc, setDoc, Timestamp, serverTimestamp } from 'firebase/firestore';
 
 interface StoreItem {
   category: any;
   name: string;
   id: string;
   description: string;
-  status:string;
-  price:string;
-  title:string;
-  rating:[];
-  image:string
-  merchant:{}
+  status: string;
+  price: string;
+  title: string;
+  rating: [];
+  image: string
+  merchant: {
+    address: string
+    name: string
+    logo: string
+  }
   // other User properties
 }
 
 interface AddEditItemPayload {
-  item: StoreItem;
+  storeItem: StoreItem;
 }
 
 interface UserState {
@@ -58,23 +62,38 @@ export const fetchStoreItemById = createAsyncThunk('storeItem/fetchStoreItemById
 
 
 export const addEditStoreItem = createAsyncThunk(
-  'storeItem/addEditStoreItem',
-  async ({ item }: AddEditItemPayload) => {
-    if (item.id) {
-      // If the item has an ID, it's an edit
-      const itemDocRef = doc(firestoreStorage, 'storeItem', item.id);
-      await updateDoc(itemDocRef, { ...item });
+  'storeItem/addEditMerchant',
+  async ({ storeItem }: AddEditItemPayload) => {
+  
+
+    const myTimestampAsDate = Timestamp.now()
+    console.log("jjjj", myTimestampAsDate)
+    if (storeItem.id) {
+ 
+      const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id);
+      await updateDoc(itemDocRef, { ...storeItem });
     } else {
       // If the item doesn't have an ID, it's an add
       const collectionRef = collection(firestoreStorage, 'storeItem');
 
-      // Use addDoc without specifying an ID to automatically generate one
-      const newItemRef = await addDoc(collectionRef, { ...item });
+      //       const newItemRef = await addDoc(collectionRef, {
+      //   ...storeItem,
+      //   id: myTimestampAsDate, 
+      // });
 
-      // Access the automatically generated ID
-      const newItemId = newItemRef.id;
-      console.log('New item ID:', newItemId);
-     
+      await addDoc(collectionRef, {
+        ...storeItem,
+        id: serverTimestamp(),
+      });
+
+      // await setDoc(doc(collectionRef, myTimestampAsDate), {
+      //     ...storeItem,
+      //     id: myTimestamserverTimestamp()pAsDate,
+      //   });
+
+
+      const newMerchantId = newItemRef.id;
+      console.log('New item ID:', newMerchantId);
     }
   }
 );
