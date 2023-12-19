@@ -46,6 +46,22 @@ export const fetchStoreItem = createAsyncThunk('storeItem/fetchStoreItem', async
   return data;
 });
 
+export const addItemToCollection = async ( item: any): Promise<boolean> => {
+  // const db = firebase.firestore();
+  try {
+      // console.log(`Adding item with id ${item.id}`);
+      const collectionRef = collection(firestoreStorage, "storeItem");
+      // await collectionRef.set(Object.assign({}, item));
+      const newItemRef = await setDoc(doc(collectionRef), {
+        ...item,
+      });
+      console.log(item)
+      return true;
+  } catch (error) {
+      // console.error(error.message);
+      return false;
+  }
+};
 
 export const fetchStoreItemById = createAsyncThunk('storeItem/fetchStoreItemById', async (storeItemId: string) => {
   const userDocRef = doc(firestoreStorage, 'storeItem', storeItemId);

@@ -14,6 +14,7 @@ import { RootState } from '@/redux/store';
 import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
 import ImageUpload from '@/components/dashboard/imageUpload';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { collection } from 'firebase/firestore';
 // import { fetchCategories } from '@/redux/categorySlice';
 
 const AddStoreItemForm = () => {
@@ -122,6 +123,47 @@ const AddStoreItemForm = () => {
     dispatch(addEditMerchant({ item }));
     toast("Created Successfully");
   };
+
+  const itemToAdd = {
+    "id": 1,
+    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+    "price": 109.95,
+    "discount":100,
+    "in_stock":7,
+    "percentage_discount":2,
+    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    "category": "fashion",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "couponCode": "5WM47SAX",
+    "rating": {
+      "rate": 3.9,
+      "count": 120
+    },
+    "merchant": {
+      "id": 1,
+      "name": "Amazon",
+      "logo": "https://img.maximummedia.ie/her_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtaGVyLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE1XFxcLzA4XFxcLzA2MTUzOTM0XFxcL2FtYXpvbi5qcGdcIixcIndpZHRoXCI6NjQwLFwiaGVpZ2h0XCI6MzYwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuaGVyLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvaGVyXFxcL25vLWltYWdlLnBuZz9pZD1iNmY4NGQ2MjdiNDExNGYwMGY1MFwiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJiZjViODNhNzFhZGE2MjFlODQxMTU2MWM4YzhkMTc0MzI4ZTZkMGRlIn0=/amazon.jpg"
+    }
+  }
+
+  const addItemToCollection = ( ) => {
+   console.log("item", itemToAdd)
+    dispatch(addItemToCollection( itemToAdd ));
+    // return db.collection(collectionName)
+    //   .add(Object.assign({}, item))
+    //   .then(() => true)
+    //   .catch((e: { message: any; }) => {
+    //     console.error(e.message);
+    //     return false;
+    //   });
+  }
+  
+  // Example usage
+  // const yourFirestoreDatabase: any = /* Your Firestore database instance */;
+  // const collectionName = 'storeItem';
+  
+  
+
 
   const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
@@ -295,7 +337,7 @@ const AddStoreItemForm = () => {
               variant="ghost"
               size="lg"
               className="bg-black  text-white rounded-3xl hover:bg-black-100 hover:text-white"
-              onClick={handleAddStoreItem}
+              onClick={addItemToCollection}
             >
               Publish Product
             </Button>
