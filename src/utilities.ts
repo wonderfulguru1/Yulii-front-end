@@ -1,5 +1,6 @@
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import { storage } from "./firebase";
+import {  storage } from "./firebase";
+
 
 export const uploadImageFileToStorage = async (file: File, folderPath: string): Promise<string> => {
     try {
@@ -13,3 +14,4 @@ export const uploadImageFileToStorage = async (file: File, folderPath: string): 
       throw error;
     }
   };
+

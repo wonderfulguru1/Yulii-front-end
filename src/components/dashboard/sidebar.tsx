@@ -1,7 +1,7 @@
 import { Logo } from "./logo"
 import { SidebarRoutes } from "./sidebar-routes"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useNavigate} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import Logout from "../../assets/logout.png"
 import { signOut } from "firebase/auth";
 import { auth} from "@/firebase";
@@ -20,7 +20,10 @@ export const Sidebar = () => {
     return (
         <div className="h-full border-r flex flex-col overflow-y-auto bg-[#fffdfd] shadow-sm">
         <div className="flex justify-items-center border-b h-20 p-4">
-            <Logo />
+            <Link to="/">
+                 <Logo />
+            </Link>
+          
         </div>
         <div className="flex flex-col w-full bg-white">
             <SidebarRoutes />

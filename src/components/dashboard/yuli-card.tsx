@@ -1,25 +1,25 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
+import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
 
-export type Items = {
-  title: string
-  image: string;
-  id: number;
-  name: string;
-  status: string;
-  price: string;
-};
+// export type Items = {
+//   title: string
+//   image: string;
+//   id: number;
+//   status: string;
+//   price: string;
+// };
 
 interface Props {
-  items: Items[];
+  items: any
 }
 
 const YulliCard: React.FC<Props> = ({ items }) => {
 
   return (
     <div className="grid py-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-      {items.map(item => (
-        <Link to={`/yulli-store/${item.id}`} >
+      {items.map((item: { id: Key | null | undefined; image: string | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Iterable<ReactNode> | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Iterable<ReactNode> | null | undefined; }) => (
+        <Link to={`/yulli-store/item-detail`} state={{data:item}}>
 
           <div className=" p-4 w-full border rounded-lg" key={item.id}>
             <a className="block relative h-48 rounded overflow-hidden">
@@ -29,8 +29,8 @@ const YulliCard: React.FC<Props> = ({ items }) => {
               <h3 className=" text-xs font-semibold ">{item?.title}</h3>
               <p className="py-2 font-semibold">${item?.price}</p>
             </div>
-            <div className="flex justify-end pt-4">
-              <Link to={`/yulli-store/${item.id}`} >
+            <div className="flex justify-end pt-4 cursor-pointer" >
+              <Link to={`/yulli-store/item-detail`} state={{data:item}}>
                 <Button
                   type="button"
                   variant="ghost"

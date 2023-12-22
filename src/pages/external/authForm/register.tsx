@@ -1,30 +1,43 @@
-import Button from '../../../components/externalComponents/Button'
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LoginImg from "../../../assets/logindesign.png"
 import { useState } from 'react';
-
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendEmailVerification } from 'firebase/auth';
+import { auth } from '@/firebase';
+import { Button } from '@/components/ui/button';
 
 
 const Register = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+
+    const emailSignup = async () => {
+        try {
+            await createUserWithEmailAndPassword(auth, email, password)
+            onAuthStateChanged(auth,async (user:any) => {
+                await sendEmailVerification(user)
+            })
+        } catch (err) {
+            console.error(err)
+        }
+    }
     return (
         <div className=' container mx-auto py-10 pt-16'>
-          
+
 
             <div className='flex  items-center justify-center'>
                 <div className='w-3/6'>
-                <h2 className='font-semibold text-2xl'>Create your Plenti Account</h2>
-            <p className='text-sm'>Earn Cashback and points when you shop at your favourite store</p>
-                <div className='my-6'>
-                <div className="mb-6">
+                    <h2 className='font-semibold text-2xl'>Create your Plenti Account</h2>
+                    <p className='text-sm'>Earn Cashback and points when you shop at your favourite store</p>
+                    <div className='my-6'>
+                        <div className="mb-6">
                             <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email</label>
                             <input
                                 type="email"
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white "
                                 placeholder="2340000000"
                                 value={email}
-                                onChange={(e) => setEmail(e.target.value )}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required />
                         </div>
                         <div className="mb-6">
@@ -34,25 +47,32 @@ const Register = () => {
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white "
                                 placeholder="2340000000"
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value )}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required />
                         </div>
-                        <div className="mb-6">
+                        {/* <div className="mb-6">
                             <label htmlFor="Phone Number" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>
                             <input
                                 type="password"
                                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5  dark:placeholder-gray-400 dark:text-white "
                                 placeholder="2340000000"
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value )}
+                                onChange={(e) => setPassword(e.target.value)}
                                 required />
-                        </div>
+                        </div> */}
                     </div>
                     <small>Already have an account? <span>Login</span></small>
 
                     <div className='flex items-center py-6 flex-col'>
-                        <Button title='Create'
-                        />
+                        <Button
+                            type="button"
+                            variant="ghost"
+                            size="lg"
+                            className="bg-black  text-white rounded-3xl hover:bg-black-100 hover:text-white"
+                            onClick={emailSignup}
+                        >
+                            Create
+                        </Button>
                     </div>
                     <p className='text-center'>OR</p>
 

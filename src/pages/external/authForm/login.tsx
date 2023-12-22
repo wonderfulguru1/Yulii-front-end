@@ -5,6 +5,7 @@ import LoginImg from "../../../assets/logindesign.png"
 import { useState } from 'react';
 import { auth, googleProvider } from '@/firebase';
 import { signInWithEmailAndPassword, signInWithPopup} from 'firebase/auth'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
@@ -17,24 +18,32 @@ const Login = () => {
   
     const signInWithGoogle = async () => {
         try {
-          await signInWithPopup(auth, googleProvider);
-          navigate("/overview")
-          console.log("ffff",auth?.currentUser?.email)
-        } catch (error) {
+          const data = await signInWithPopup(auth, googleProvider);
+          toast.success('LoggedIn Successfully');
+          setTimeout(() => {
+            data.user.emailVerified &&  navigate("/overview")
+          }, 1000)
+     
+        } catch (err) {
           setError(true)
         }
       };
 
     const handleLogin = async () => {
         try {
-          await signInWithEmailAndPassword(auth, email, password);
-          console.log('Login successful!');
-          navigate("/overview")
+         const data = await signInWithEmailAndPassword(auth, email, password);
+         toast.success('LoggedIn Successfully');
+         setTimeout(() => {
+            data.user.emailVerified && navigate("/overview")
+          }, 1000)
+         
         } catch (error) {
             setError(true)
         }
       };
     return (
+        <>
+        <ToastContainer autoClose={3000}/>
         <div className=' container mx-auto  pt-32 px-6'>
 
             <div className='flex gap-10 lg:flex-row flex-col lg:items-center justify-between'>
@@ -100,6 +109,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

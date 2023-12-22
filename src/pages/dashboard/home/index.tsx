@@ -1,23 +1,16 @@
 import Table from "@/components/dashboard/table";
 import { StatOverview } from "@/components/dashboard/stat-overview";
 import StatWidget from "@/components/dashboard/stat-widget";
-import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from "@/redux/usersSlice";
 import { RootState } from "@/redux/store";
 import { useEffect } from "react";
 import { User2 } from "lucide-react";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
-
-// interface Customer {
-//   id: string;
-//   email: string;
-//   isEmailVerified: boolean;
-//   // other User properties
-// }
 
 const Home: React.FC = () => {
-  const dispatch = useDispatch();
-  const usersData = useSelector((state: RootState) => state.users.data);
+  const dispatch = useAppDispatch();
+  const usersData = useAppSelector((state: RootState) => state.users.data);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,9 +22,7 @@ const Home: React.FC = () => {
 
     fetchData();
   }, [dispatch]);
-  // console.log("meeee", usersData)
-
-  // const userss: Customer[]= usersData
+ 
   const verifiedUsers = usersData.filter((user) => user.isEmailVerified === true);
   const unverifiedUsers = usersData.filter((user) => user.isEmailVerified === false);
   const tableHeader = ["First Name", "Last Name", "Email", "Gender", "Phone Number"]

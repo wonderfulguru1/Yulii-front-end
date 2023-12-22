@@ -2,14 +2,14 @@ import Home from "@/pages/dashboard/home"
 
 import OrdersPage from "@/pages/dashboard/orders"
 import CustomersPage from "@/pages/dashboard/users"
-import PromotionsPage from "@/pages/dashboard/promotions"
-import ProductDetails from "@/pages/dashboard/promotions/[id]"
-import CreatePromotion from "@/pages/dashboard/promotions/create"
+import PromotionsPage from "@/pages/dashboard/deals"
+import ProductDetails from "@/pages/dashboard/deals/[id]"
+import CreatePromotion from "@/pages/dashboard/deals/create"
 import UserDetailsPage from "@/pages/dashboard/userDetails"
 import YulliStorePage from "@/pages/dashboard/yulliStore"
 import StoreItem from "@/pages/dashboard/yulliStore/[id]"
 import AddStoreItemForm from "@/pages/dashboard/yulliStore/addStoreItem"
-// import UserProfile from "@/pages/dashboard/settings"
+import UserProfile from "@/pages/dashboard/settings"
 
 const dashboardRoute = [
     {
@@ -33,22 +33,26 @@ const dashboardRoute = [
         element: <PromotionsPage/>,
         path: 'deals',
     },
-    // {
-    //     element: <UserProfile/>,
-    //     path: 'settings',
-    // },
+    {
+        element: <UserProfile item={undefined}/>,
+        path: 'settings',
+    },
 
     {
         element: <ProductDetails/>,
-        path: 'deals/:taskId',
+        path: 'deals/deal-details',
     },
     {
         element: <UserDetailsPage/>,
-        path: 'users/:userId',
+        path: 'users/user-detail',
     },
     {
-        element: <StoreItem/>,
-        path: 'yulli-store/:storeItemId',
+        element: <StoreItem itemId={""}/>,
+        path: 'yulli-store/:itemId',
+    },
+    {
+        element: <StoreItem itemId={""}/>,
+        path: 'yulli-store/item-details',
     },
     {
         element: <AddStoreItemForm/>,

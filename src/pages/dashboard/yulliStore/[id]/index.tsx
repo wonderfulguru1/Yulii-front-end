@@ -1,31 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { TimerReset, ChevronRight } from "lucide-react"
-// import StatWidget from "@/components/dashboard/stat-widget";
-// import { singleOverviewCardItems } from "../../../../constants"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Link, useParams } from "react-router-dom";
-import ProductDetailsImg from "../../../../assets/productDetail.png"
-import { useDispatch, useSelector } from "react-redux";
+import { ChevronRight } from "lucide-react"
+import { Link, useLocation, useParams } from "react-router-dom";
 import { fetchStoreItemById } from "@/redux/storeItemSlice";
 import { useEffect } from "react";
 import { RootState } from "@/redux/store";
 import React from "react";
 import LoadingFallback from "@/components/dashboard/loadingFallback";
+import ItemDetails from "@/components/dashboard/item-details";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 
 
-const StoreItem = () => {
-    const { storeItemId } = useParams<{ itemId: string }>();
-    const dispatch = useDispatch();
-    const selectedItem = useSelector((state: RootState) => state.storeItems.selectedItems);
-    const status = useSelector((state: RootState) => state.storeItems.status);
-    const error = useSelector((state: RootState) => state.storeItems.error);
+const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
+    // const storeItemId  = useParams<{ storeItemId: string }>();
+    const params= useParams(); 
+    const location = useLocation()
+    const data = location?.state?.data
+    console.log("nnnn", data)
+    console.log("nnnn", params)
+    const dispatch = useAppDispatch();
+    const { status } = useAppSelector((state: RootState) => state.storeItems);
 
     useEffect(() => {
-        dispatch(fetchStoreItemById(storeItemId));
-    }, [dispatch, storeItemId]);
-    console.log("hhhh", selectedItem)
+        dispatch(fetchStoreItemById(itemId));
+    }, [dispatch, itemId]);
+    console.log("hhhh", itemId)
 
     return (
         <div className="p-6 h-full">
@@ -33,14 +32,14 @@ const StoreItem = () => {
                 <div className="flex items-center">
 
                     <Link to="/yulli-store">
-                        <h3 className="text-sm">Promotion & Offer </h3>
+                        <h3 className="text-sm font-semibold">Yulli Store </h3>
                     </Link>
                     <ChevronRight size={18} />
-                    <h3 className="text-sm">Promotion description </h3>
+                    <h3 className="text-sm">Item description </h3>
                 </div>
 
 
-                <Link to="/deals/create">
+                <Link to="/yulli-store/add">
                     <Button
                         type="button"
                         variant="ghost"
@@ -48,7 +47,7 @@ const StoreItem = () => {
                         className="bg-black  text-white rounded-xl hover:bg-black-100 hover:text-white"
 
                     >
-                        Add a new offer
+                        Add a new item
                     </Button>
                 </Link>
             </div>
@@ -69,62 +68,15 @@ const StoreItem = () => {
                     />
                 ))} */}
             </div>
+           
             <React.Suspense fallback={<LoadingFallback />}>
                 {status === 'loading' ? (
                     <LoadingFallback />
                 ) : (
-                    <div className="flex flex-col lg:flex-row py-10 space-x-10 items-center">
-                        <div>
-                            <LazyLoadImage
-                                width={300}
-                                height={100}
-                                src={selectedItem?.image || ProductDetailsImg}
-                                alt="image"
-                            />
-                        </div>
-                        <div className="flex flex-col">
-                            <div className="flex items-center bg-[#fff5f5] text-red-500  rounded-md justify-center">
-                                <TimerReset
-                                    size={16}
-                                />
-                                <span className="p-2 text-xs">Deal ends in 30 days</span>
-                            </div>
-                            <div>
-                                <h3 className="font-semibold py-3">{selectedItem?.title}</h3>
-                                <p className="">Total offer view: <span className="font-semibold">{selectedItem?.rating?.count}</span></p>
-                                <p className="py-3">Price <span className="font-semibold">${selectedItem?.price}</span></p>
-                            </div>
-                        </div>
-                        <div className="">
-                            <span className="text-green-500">{selectedItem?.status}</span>
-                        </div>
-                    </div>
+                    <ItemDetails item={data}/>
                 )}
             </React.Suspense>
-            <div className="flex w-full">
-                <Tabs defaultValue="account" className="w-full">
-
-                    <TabsList className="w-full shadow-md">
-                        <TabsTrigger value="account" className="w-1/2 font-semibold ">
-                            <span className="border-b-4 border-black py-2">Offer Description</span></TabsTrigger>
-                        <TabsTrigger value="password" className="w-1/2 font-semibold">Terms and Condition</TabsTrigger>
-                    </TabsList>
-                    <TabsContent value="account">
-                        {/* <h3 className="pt-8 font-semibold">Buy 2 cups of ice cream for ₦3000 and earn up to ₦300 airtime and other free goodies </h3> */}
-                        <p className="py-4">
-                            {selectedItem?.description}
-
-                        </p>
-                    </TabsContent>
-                    <TabsContent value="password">Change your password here.</TabsContent>
-                </Tabs>
-
-                {/* <div className="flex text-center items-center w-1/2">
-                    <p>kjhkjehjk</p>
-                </div>
-                <div className="w-1/2 items-center">Terms & Conditions</div> */}
-
-            </div>
+         
         </div>
     );
 }

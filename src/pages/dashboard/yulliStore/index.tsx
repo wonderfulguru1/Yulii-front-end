@@ -1,22 +1,21 @@
-// import StatWidget from "@/components/dashboard/stat-widget";
-
 import { Button } from "@/components/ui/button";
 import { ExternalLink} from "lucide-react"
-import { useDispatch, useSelector } from 'react-redux';
 import { fetchStoreItem } from "@/redux/storeItemSlice";
 import { RootState } from "@/redux/store";
 import { useEffect, useState } from "react";
 import YulliCard from "@/components/dashboard/yuli-card";
-
 import { Link } from "react-router-dom";
 import { fetchMerchants } from "@/redux/merchantsSlice";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 
 
 const YulliStorePage = () => {
+  const dispatch = useAppDispatch();
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const dispatch = useDispatch();
+  const storesData = useAppSelector((state: RootState) => state.storeItems.data);
+  const categories = Array.from(new Set(storesData.map((item) => item.category)));
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,23 +30,7 @@ const YulliStorePage = () => {
 
     fetchData();
   }, [dispatch]);
-  const storesData = useSelector((state: RootState) => state.storeItems.data);
-  // const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       dispatch(fetchMerchants());
-  //     } catch (error) {
-  //       console.error('Error fetching users:');
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, [dispatch]);
-
-  
-  const categories = Array.from(new Set(storesData.map((item) => item.category)));
 
   const handleFilterChange = (event: { target: { value: any; }; }) => {
     const newFilter = event.target.value;

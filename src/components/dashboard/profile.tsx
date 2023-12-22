@@ -1,31 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { updateUser, fetchUserById } from '../../redux/usersSlice'
 import Trophy from "../../assets/trophy.png";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import NoImage from "../../assets/no_image.jpeg";
 import { Pen } from 'lucide-react';
 import { Button } from '../ui/button';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 
 interface DataItemProps {
-    item: {
-        id?: string; // Assuming each user has a unique identifier
-        firstname?: string;
-        avatarUrl?: string;
-        photoURL?: string;
-        lastname?: string;
-        gender?: string;
-        account?: string;
-        email?: string;
-        phone?: number;
-        isEmailVerified: boolean
-        // Add more data properties as needed
-    };
+    item: any
 }
 
 const Profile: React.FC<DataItemProps> = ({ item }) => {
-    const dispatch = useDispatch();
-    const selectedUser = useSelector((state) => state.users.selectedUser);
+    const dispatch = useAppDispatch();
+    const selectedUser = useAppSelector((state) => state.users.selectedUser);
     const [isEditing, setIsEditing] = useState(false);
     const [editedUser, setEditedUser] = useState(item);
 

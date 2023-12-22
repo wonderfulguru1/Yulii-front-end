@@ -1,6 +1,4 @@
-// AddItemForm.tsx
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { addEditStoreItem, fetchStoreItem } from '@/redux/storeItemSlice';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -14,24 +12,23 @@ import { RootState } from '@/redux/store';
 import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
 import ImageUpload from '@/components/dashboard/imageUpload';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { collection } from 'firebase/firestore';
-// import { fetchCategories } from '@/redux/categorySlice';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+
 
 const AddStoreItemForm = () => {
-  const dispatch = useDispatch();
-  const merchantsData = useSelector((state: RootState) => state.merchants.data); // Replace 'yourReducer' with your actual reducer name
+  const dispatch = useAppDispatch();
+  const merchantsData = useAppSelector((state: RootState) => state.merchants.data);
   const loggedInUserId = auth?.currentUser?.uid;
   const isUserInData = merchantsData.some(user => user.id === loggedInUserId);
-  // const [imageUrl, setImageUrl] = useState<string>('');
   const foundUser = merchantsData.find(user => user.id === loggedInUserId);
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         dispatch(fetchMerchants());
         dispatch(fetchStoreItem());
-        // dispatch(fetchCategories());
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -41,27 +38,27 @@ const AddStoreItemForm = () => {
   }, [dispatch]);
 
   const [item, setItem] = useState({
-    id: "",
+    id: 0,
     name: "",
     logo: "",
-    phone: "",
+    phone: 0,
     address: "",
     publish_token: "500"
   })
-  const [selectedCategory, setSelectedCategory] = useState<string>('');
+
   const [storeItem, setStoreItem] = useState({
     category: "",
     couponCode: "",
     description: "",
-    discount: "",
-    id: "",
+    discount: 0,
+    id: null,
     image: '',
-    in_stock: '',
-    percentage_discount: '',
-    price: '',
+    in_stock: 0,
+    percentage_discount: 0,
+    price: 0,
     rating: {
-      count: "",
-      rate: ""
+      count: 0,
+      rate: 3.9
     },
     merchant: {
       id: foundUser?.id,
@@ -90,6 +87,7 @@ const AddStoreItemForm = () => {
       const updatedStoreItem = {
         ...storeItem,
         image: imageUrl,
+     
       };
       dispatch(addEditStoreItem({ storeItem: updatedStoreItem }));
       toast.success('Created Successfully');
@@ -124,47 +122,6 @@ const AddStoreItemForm = () => {
     toast("Created Successfully");
   };
 
-  const itemToAdd = {
-    "id": 1,
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "discount":100,
-    "in_stock":7,
-    "percentage_discount":2,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "fashion",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-    "couponCode": "5WM47SAX",
-    "rating": {
-      "rate": 3.9,
-      "count": 120
-    },
-    "merchant": {
-      "id": 1,
-      "name": "Amazon",
-      "logo": "https://img.maximummedia.ie/her_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtaGVyLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE1XFxcLzA4XFxcLzA2MTUzOTM0XFxcL2FtYXpvbi5qcGdcIixcIndpZHRoXCI6NjQwLFwiaGVpZ2h0XCI6MzYwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuaGVyLmllXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvaGVyXFxcL25vLWltYWdlLnBuZz9pZD1iNmY4NGQ2MjdiNDExNGYwMGY1MFwiLFwib3B0aW9uc1wiOltdfSIsImhhc2giOiJiZjViODNhNzFhZGE2MjFlODQxMTU2MWM4YzhkMTc0MzI4ZTZkMGRlIn0=/amazon.jpg"
-    }
-  }
-
-  const addItemToCollection = ( ) => {
-   console.log("item", itemToAdd)
-    dispatch(addItemToCollection( itemToAdd ));
-    // return db.collection(collectionName)
-    //   .add(Object.assign({}, item))
-    //   .then(() => true)
-    //   .catch((e: { message: any; }) => {
-    //     console.error(e.message);
-    //     return false;
-    //   });
-  }
-  
-  // Example usage
-  // const yourFirestoreDatabase: any = /* Your Firestore database instance */;
-  // const collectionName = 'storeItem';
-  
-  
-
-
   const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
 
@@ -180,11 +137,11 @@ const AddStoreItemForm = () => {
     <div className='container mx-auto p-6'>
       <ToastContainer />
       <div className="flex items-center pb-6">
-        <Link to="/merchant/promotions">
-          <h3 className="text-sm">Promotion & Offer </h3>
+        <Link to="/yulli-store">
+          <h3 className="text-sm">Yulli Store  </h3>
         </Link>
         <ChevronRight size={18} />
-        <h3 className="text-sm">Create a new offer </h3>
+        <h3 className="text-sm">Create a new store item </h3>
       </div>
       {!isUserInData ? (
         <>
@@ -205,7 +162,7 @@ const AddStoreItemForm = () => {
                   <Input placeholder="e.g Shoprite"
                     type="number"
                     value={item.phone}
-                    onChange={(e) => setItem({ ...item, phone: e.target.value })} />
+                    onChange={(e) => setItem({ ...item, phone: parseInt(e.target.value) })} />
                 </div>
               </div>
               <div className='flex gap-6 py-4'>
@@ -273,17 +230,19 @@ const AddStoreItemForm = () => {
               <div className='flex gap-6 '>
                 <div className='flex flex-col w-1/3'>
                   <Label htmlFor="price" className='py-4'>Price</Label>
-                  <Input placeholder="$105"
+                  <Input
+                    placeholder="$105"
                     type="number"
                     value={storeItem.price}
-                    onChange={(e) => setStoreItem({ ...storeItem, price: e.target.value })} />
+                    onChange={(e) => setStoreItem({ ...storeItem, price: parseFloat(e.target.value) || 0 })}
+                  />
                 </div>
                 <div className='flex flex-col w-1/3'>
                   <Label htmlFor="discount" className='py-4'>Discount</Label>
                   <Input placeholder="$5"
                     type="number"
                     value={storeItem.discount}
-                    onChange={(e) => setStoreItem({ ...storeItem, discount: e.target.value })} />
+                    onChange={(e) => setStoreItem({ ...storeItem, discount: parseFloat(e.target.value) })} />
                 </div>
                 <div className='flex flex-col w-1/3'>
                   <Label htmlFor="coupon" className='py-4'>Coupon Code</Label>
@@ -337,7 +296,7 @@ const AddStoreItemForm = () => {
               variant="ghost"
               size="lg"
               className="bg-black  text-white rounded-3xl hover:bg-black-100 hover:text-white"
-              onClick={addItemToCollection}
+              onClick={handleAddStoreItem}
             >
               Publish Product
             </Button>

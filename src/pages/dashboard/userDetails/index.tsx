@@ -1,38 +1,19 @@
 import FriendsProfile from "@/components/dashboard/friend-profile";
-import { useParams } from "react-router-dom";
-import { fetchUserById } from "../../../redux/usersSlice"
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-// import { RootState } from "@/redux/store";
+import { useLocation } from "react-router-dom";
 import Profile from "@/components/dashboard/profile";
 
 
 
 const UserDetailsPage = () => {
-    const dispatch = useDispatch();
-    const { userId } = useParams(); 
-    const { selectedUser} = useSelector((state) => state.users);
-    // const usersData = useSelector((state: RootState) => state.users.data);
-    // const [friend, setFriends] = useState([])
-
-    useEffect(() => {    
-        dispatch(fetchUserById(userId));
-    }, [dispatch, userId]);
-
-    // const friendsArray = selectedUser?.friends;
-
-
-
-// console.log("selectedUser", friendsArray)
+    const location = useLocation()
+    const data = location?.state?.data
 
     return (
         <div className="p-6 container ">
             <div></div>
-            <Profile item={selectedUser}/>
+            <Profile item={data} />
             <div>
-                <div>
-
-                </div>
+               
                 <FriendsProfile />
             </div>
         </div>

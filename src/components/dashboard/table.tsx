@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -165,10 +165,11 @@ const Table: React.FC<TableProbs> = ({ data, headers }) => {
                                 <td>
                                 {user.phone}
                                 </td>
+                                <Link to={`/users/user-detail`} state={{data:user}}>
                                 <td onClick={() => handleTableCellClick(user.id)}  className={ "px-5 py-5 underline cursor-pointer"}>
                                     View
                                 </td>
-
+                                </Link>
                             {/* ))} */}
                             {/* {extraTableRow && (
                                 <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">

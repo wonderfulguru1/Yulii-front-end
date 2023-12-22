@@ -1,7 +1,7 @@
 "use client"
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useEffect, useState } from "react";
+
 import { Button } from "../ui/button";
 import {Link} from "react-router-dom";
 import { MoreHorizontal } from "lucide-react"
@@ -12,55 +12,21 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import ProductDetailsImg from "../../assets/productDetail.png"
+import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
-export type Item = {
-  image: string;
-  id: number;
-  name: string;
-  status: string;
-  price: string;
-};
+
 
 interface Props {
-  items: Item[];
+  items: any;
 }
 
 const OfferCard: React.FC<Props> = ({ items }) => {
-  const [filteredData, setFilteredData] = useState<Item[]>([]);
-  const [status, setStatus] = useState<string[]>(['All']);
-  const [selectedStatus, setSelectedStatus] = useState<string>('All');
-
-  useEffect(() => {
-    const uniqueCategories = Array.from(new Set(items.map(item => item.status)));
-    setStatus(['All', ...uniqueCategories]); // Include an "All" option
-
-    setFilteredData(items);
-  }, [items]);
-
-  const handleStatusChange = (selectedStatus: string) => {
-    if (selectedStatus === 'All') {
-      setFilteredData(items); // Show all items
-    } else {
-      const filteredItems = items.filter(item => item.status === selectedStatus);
-      setFilteredData(filteredItems);
-    }
-
-    setSelectedStatus(selectedStatus);
-  };
-
+ 
   return (
     <>
-      {status.map(item => (
-        <Button
-          key={item}
-          onClick={() => handleStatusChange(item)}
-          className={selectedStatus === item ? 'bg-[#f0f0f0] rounded-xl text-black ' : 'text-[#909091] rounded-xl  hover:text-white'}
-        >
-          {item}
-        </Button>
-      ))}
+   
       <div className="grid py-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {filteredData.map(item => (
+        {items.map((item: { id: Key | null | undefined; image: any; name: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Iterable<ReactNode> | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Iterable<ReactNode> | null | undefined; status: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined; }) => (
           <div className="bg-white my-2 rounded-xl shadow-md p-3 " key={item.id}>
             <LazyLoadImage 
             width={300}
@@ -104,7 +70,7 @@ const OfferCard: React.FC<Props> = ({ items }) => {
               </div>
             </div>
             <div className="px-1 pt-3 text-sm" key={item.id}>
-              <Link to={`/deals/${item.id}`} className="underline">
+              <Link to={`/deals/deal-details`} state={{data:item}} className="underline">
                 View details
               </Link>
             </div>

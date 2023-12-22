@@ -1,19 +1,20 @@
 "use client"
 
 
-import { useLocation } from "react-router-dom"
-import { Button } from "../../components/ui/button";
+// import { useLocation } from "react-router-dom"
 import { LogOut } from "lucide-react";
-import {Link} from "react-router-dom";
+import DefaultProfile from "@/assets/defaultprofile.png"
+import { useState } from "react";
 
 export const NavbarRoutes = () => {
-    const location = useLocation();
+    // const location = useLocation();
+    const [proImg, setProImg] = useState(false)
 
-    const isCustomerPage = location.pathname?.startsWith("/customer");
+    
     // const isMerchantPage = location.pathname?.includes("/dashboard");
     return (
-        <div className="flex gap-x-2 ml-auto">
-            <div className="block relative">
+        <div className="flex justify-between w-full">
+            <div className="relative">
                 <span className="h-full absolute inset-y-0 left-0 flex items-center pl-2">
                     <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current text-gray-500">
                         <path
@@ -24,21 +25,15 @@ export const NavbarRoutes = () => {
                 <input placeholder="Search"
                     className="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
             </div>
-            <div></div>
-            {isCustomerPage ? (
-                <Link to="/merchant">
-                    <Button size="sm" variant="ghost">
-                        <LogOut className="h-4 w-4 mr-2" />
-                        Merchant Mode
-                    </Button>
-                </Link>
-            ) : (
-                <Link to="/customer">
-                    <Button size="sm" variant="ghost">
-                        Customer Mode
-                    </Button>
-                </Link>
-            )}
+            <div className="">
+    
+                <img src={DefaultProfile} alt="" className="w-9 h-9 cursor-pointer border-2 rounded-full" onClick={()=> setProImg(!proImg)}/>
+               {proImg && 
+                <div className="absolute h-36 z-1<0 mt-2  w-10  border ">
+                    <LogOut/>
+                </div>
+                }
+            </div>
         </div>
     )
 }

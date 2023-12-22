@@ -5,16 +5,23 @@ import { getDocs, collection, doc, getDoc, updateDoc, setDoc} from 'firebase/fir
 
 interface StoreItem {
   category: any;
-  id: string;
+  id?: number;
   description: string;
-  price: string;
+  price: number;
+  in_stock: number;
   title: string;
-  rating: [];
-  image: string
+  status?: string
+  rating: {
+    count: number,
+      rate: number
+  };
+  image: string;
+  percentage_discount:number;
   merchant: {
     address: string
     name: string
     logo: string
+    id:number
   }
   // other User properties
 }
@@ -23,14 +30,14 @@ interface AddEditItemPayload {
   storeItem: StoreItem;
 }
 
-interface UserState {
+interface StoreItemState {
   data: StoreItem[];
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
   selectedItems: StoreItem | null;
 }
 
-const initialState: UserState = {
+const initialState: StoreItemState = {
   data: [],
   status: 'idle',
   error: null,
@@ -38,39 +45,23 @@ const initialState: UserState = {
 };
 
 export const fetchStoreItem = createAsyncThunk('storeItem/fetchStoreItem', async () => {
-  const collectionRef = collection(firestoreStorage, "storeItem");
+  const collectionRef = collection(firestoreStorage, 'storeItem');
   const snapshot = await getDocs(collectionRef);
 
-  const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as StoreItem));
+  const data = snapshot.docs.map((doc) => ({ id: parseInt(doc.id), ...doc.data() } as StoreItem));
 
   return data;
 });
 
-export const addItemToCollection = async ( item: any): Promise<boolean> => {
-  // const db = firebase.firestore();
-  try {
-      // console.log(`Adding item with id ${item.id}`);
-      const collectionRef = collection(firestoreStorage, "storeItem");
-      // await collectionRef.set(Object.assign({}, item));
-      const newItemRef = await setDoc(doc(collectionRef), {
-        ...item,
-      });
-      console.log(item)
-      return true;
-  } catch (error) {
-      // console.error(error.message);
-      return false;
-  }
-};
 
 export const fetchStoreItemById = createAsyncThunk('storeItem/fetchStoreItemById', async (storeItemId: string) => {
   const userDocRef = doc(firestoreStorage, 'storeItem', storeItemId);
   const userDocSnapshot = await getDoc(userDocRef);
 
   if (userDocSnapshot.exists()) {
-    return { id: userDocSnapshot.id, ...userDocSnapshot.data() } as StoreItem;
+    return { id: parseInt(userDocSnapshot.id), ...userDocSnapshot.data() } as StoreItem;
   } else {
-    throw new Error('User not found');
+    throw new Error('Item not found');
   }
 });
 
@@ -78,28 +69,18 @@ export const fetchStoreItemById = createAsyncThunk('storeItem/fetchStoreItemById
 export const addEditStoreItem = createAsyncThunk(
   'storeItem/addEditStoreItem',
   async ({ storeItem }: AddEditItemPayload) => {
-    const timestampId = new Date().getTime().toString();
+    const timestampId = new Date().getTime(); // Generate a timestamp as a number
+
     if (storeItem.id) {
- 
-      const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id);
+      const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id.toString());
       await updateDoc(itemDocRef, { ...storeItem });
     } else {
-
       const collectionRef = collection(firestoreStorage, 'storeItem');
 
-      //       const newItemRef = await addDoc(collectionRef, {
-      //   ...storeItem,
-      //   id: timestampId, 
-      // });
-
-      const newItemRef = await setDoc(doc(collectionRef, timestampId), {
-          ...storeItem,
-          id: timestampId,
-        });
-
-
-      const newStoreItemId = newItemRef;
-      console.log('New item ID:', newStoreItemId);
+      await setDoc(doc(collectionRef, timestampId.toString()), {
+        ...storeItem,
+        id: timestampId,
+      });
     }
   }
 );
