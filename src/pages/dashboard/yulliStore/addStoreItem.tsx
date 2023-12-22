@@ -13,10 +13,12 @@ import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
 import ImageUpload from '@/components/dashboard/imageUpload';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import {useNavigate} from "react-router-dom"
 
 
 const AddStoreItemForm = () => {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const merchantsData = useAppSelector((state: RootState) => state.merchants.data);
   const loggedInUserId = auth?.currentUser?.uid;
   const isUserInData = merchantsData.some(user => user.id === loggedInUserId);
@@ -24,11 +26,21 @@ const AddStoreItemForm = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
+  
+
+
+
+  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         dispatch(fetchMerchants());
         dispatch(fetchStoreItem());
+        const userId = auth?.currentUser?.uid;
+
+        const me = userId ? parseInt(userId, 10) : null;
+        console.log("xxx", me)
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -51,7 +63,7 @@ const AddStoreItemForm = () => {
     couponCode: "",
     description: "",
     discount: 0,
-    id: null,
+    id: "",
     image: '',
     in_stock: 0,
     percentage_discount: 0,
@@ -61,7 +73,7 @@ const AddStoreItemForm = () => {
       rate: 3.9
     },
     merchant: {
-      id: foundUser?.id,
+      id: foundUser ? parseInt(foundUser.id, 10) : null,
       address: foundUser?.address,
       logo: foundUser?.logo,
       name: foundUser?.name,
@@ -70,7 +82,8 @@ const AddStoreItemForm = () => {
     affiliate_link: ""
   });
 
-  console.log("good", storeItem);
+  
+  // console.log("good", me);
 
 
 
@@ -91,6 +104,7 @@ const AddStoreItemForm = () => {
       };
       dispatch(addEditStoreItem({ storeItem: updatedStoreItem }));
       toast.success('Created Successfully');
+      navigate("/yulli-store")
     } catch (error) {
       console.error('Error adding store item:', error);
     }

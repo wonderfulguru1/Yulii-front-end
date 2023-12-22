@@ -9,18 +9,9 @@ interface Merchant {
   logo: any;
   id: string;
 }
-
-interface MerchantItem {
-    address: any;
-    name: string;
-    id: string;
-    logo: string;
-    phone:string;
-    // other User properties
-  }
   
   interface AddMerchantItemPayload {
-    item: MerchantItem;
+    item: any;
   }
   
 interface MerchantState {

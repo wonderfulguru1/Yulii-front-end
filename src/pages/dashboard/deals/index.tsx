@@ -23,7 +23,7 @@ const PromotionsPage = () => {
     fetchTaskData();
   }, [dispatch]);
 
-  const [items, setItems] = useState(tasksData);
+  const [items] = useState(tasksData);
   const [filteredItems, setFilteredItems] = useState(items);
   const [filterStatus, setFilterStatus] = useState('');
 
