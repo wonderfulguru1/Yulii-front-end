@@ -73,7 +73,8 @@ const AddStoreItemForm = () => {
       rate: 3.9
     },
     merchant: {
-      id: foundUser ? parseInt(foundUser.id, 10) : null,
+      // id: foundUser ? parseInt(foundUser.id, 10) : null,
+      id: foundUser?.id,
       address: foundUser?.address,
       logo: foundUser?.logo,
       name: foundUser?.name,
@@ -104,7 +105,10 @@ const AddStoreItemForm = () => {
       };
       dispatch(addEditStoreItem({ storeItem: updatedStoreItem }));
       toast.success('Created Successfully');
-      navigate("/yulli-store")
+      // navigate("/yulli-store")
+      setTimeout(() => {
+        navigate("/yulli-store")
+      }, 1000)
     } catch (error) {
       console.error('Error adding store item:', error);
     }
