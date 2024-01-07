@@ -3,12 +3,6 @@ import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { auth, firestoreStorage } from "../firebase";
 import { getDocs, collection, doc, getDoc, updateDoc, addDoc, setDoc} from "firebase/firestore";
 
-interface Merchant {
-  name: any;
-  address: any;
-  logo: any;
-  id: string;
-}
 
 interface MerchantItem {
     address: any;
@@ -21,7 +15,7 @@ interface MerchantItem {
   }
   
   interface AddMerchantItemPayload {
-    item: MerchantItem;
+    item: any;
   }
   
 interface MerchantState {

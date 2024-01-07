@@ -13,6 +13,7 @@ import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
 import ImageUpload from '@/components/dashboard/imageUpload';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import {useNavigate} from "react-router-dom"
 
 
 const AddStoreItemForm = () => {
@@ -25,11 +26,21 @@ const AddStoreItemForm = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
+  
+
+
+
+  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         dispatch(fetchMerchants());
         dispatch(fetchStoreItem());
+        const userId = auth?.currentUser?.uid;
+
+        const me = userId ? parseInt(userId, 10) : null;
+        console.log("xxx", me)
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -62,6 +73,7 @@ const AddStoreItemForm = () => {
       rate: 3.9
     },
     merchant: {
+      // id: foundUser ? parseInt(foundUser.id, 10) : null,
       id: foundUser?.id,
       address: foundUser?.address,
       logo: foundUser?.logo,
@@ -71,7 +83,8 @@ const AddStoreItemForm = () => {
     affiliate_link: ""
   });
 
-  console.log("good", storeItem);
+  
+  // console.log("good", me);
 
 
 

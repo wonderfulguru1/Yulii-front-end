@@ -27,7 +27,7 @@ interface StoreItem {
 }
 
 interface AddEditItemPayload {
-  storeItem: StoreItem;
+  storeItem: any;
 }
 
 interface EditItemData {
