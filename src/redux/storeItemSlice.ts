@@ -114,8 +114,6 @@ export const editItem = createAsyncThunk('storeItem/editItem', async (editData: 
   await updateDoc(storeItemRef, {
     title, price, description 
   });
-
-  // Return the updated data after the edit operation
   const updatedSnapshot = await getDoc(storeItemRef);
   return { id, ...updatedSnapshot.data() } as StoreItem;
 });
