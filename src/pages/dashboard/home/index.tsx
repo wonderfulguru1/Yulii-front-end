@@ -35,7 +35,7 @@ const Home: React.FC = () => {
           // key={index}
           icon={Users}
           icon2={ArrowDown }
-          text={"Total Followers"}
+          text={"Total  Signups"}
           color={`bg-[#fef9ff]`}
           percentage={"20"}
           amount={usersData.length}
@@ -61,7 +61,7 @@ const Home: React.FC = () => {
           // key={index}
           icon={ShoppingCart}
           icon2={ArrowUp }
-          text={"Total Products on App"}
+          text={"Total Deals"}
           color={`bg-green-100`}
           percentage={"720"}
           amount={unverifiedUsers.length}
@@ -75,7 +75,7 @@ const Home: React.FC = () => {
           // key={index}
           icon={Wallet}
           icon2={ArrowDown }
-          text={"Token Balance"}
+          text={"Total  Reward"}
           color={`bg-[#fef9ff]`}
           percentage={"400"}
           amount={unverifiedUsers.length}

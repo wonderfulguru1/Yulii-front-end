@@ -13,7 +13,6 @@ import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
 import ImageUpload from '@/components/dashboard/imageUpload';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
-import {useNavigate} from "react-router-dom"
 
 
 const AddStoreItemForm = () => {

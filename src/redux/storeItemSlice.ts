@@ -80,7 +80,7 @@ export const addEditStoreItem = createAsyncThunk(
   async ({ storeItem }: AddEditItemPayload) => {
     const timestampId = new Date().getTime(); // Generate a timestamp as a number
 
-    if (storeItem.id !== undefined) {
+    if (storeItem.id) {
       const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id.toString());
       await updateDoc(itemDocRef, { ...storeItem });
     } else {
