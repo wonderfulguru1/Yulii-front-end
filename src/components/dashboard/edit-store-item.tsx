@@ -25,7 +25,7 @@ import { ChangeEvent, useState } from "react";
     }
     onSave: (editedData: any) => void;
     setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-
+    // isModalOpen:React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 

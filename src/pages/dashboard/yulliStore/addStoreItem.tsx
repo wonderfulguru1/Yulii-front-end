@@ -39,7 +39,7 @@ const AddStoreItemForm = () => {
   }, [dispatch]);
 
   const [item, setItem] = useState({
-    id: 0,
+    id: "",
     name: "",
     logo: "",
     phone: 0,
@@ -52,7 +52,7 @@ const AddStoreItemForm = () => {
     couponCode: "",
     description: "",
     discount: 0,
-    id: null,
+    id: 0,
     image: '',
     in_stock: 0,
     percentage_discount: 0,

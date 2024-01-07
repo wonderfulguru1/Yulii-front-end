@@ -15,7 +15,8 @@ interface MerchantItem {
     name: string;
     id: string;
     logo: string;
-    phone:string;
+    phone: number;
+    publish_token: string
     // other User properties
   }
   

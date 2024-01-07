@@ -46,7 +46,7 @@ const handleDeleteClick = (event: React.MouseEvent<HTMLDivElement>) => {
                        <div className="bg-yellow-300 p-1 rounded-tl-lg cursor-pointer" onClick={handleEditClick}>
                        <FileSignature color="#fff" />
                         {isModalOpen &&
-                        <EditStoreItem item={item} onSave={onSave} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen}/>
+                        <EditStoreItem item={item} onSave={onSave} setIsModalOpen={setIsModalOpen} />
                          }
                       
                        </div>

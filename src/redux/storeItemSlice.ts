@@ -21,7 +21,7 @@ interface StoreItem {
     address: string
     name: string
     logo: string
-    id:number
+    id?:string
   }
   // other User properties
 }
@@ -80,7 +80,7 @@ export const addEditStoreItem = createAsyncThunk(
   async ({ storeItem }: AddEditItemPayload) => {
     const timestampId = new Date().getTime(); // Generate a timestamp as a number
 
-    if (storeItem.id) {
+    if (storeItem.id !== undefined) {
       const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id.toString());
       await updateDoc(itemDocRef, { ...storeItem });
     } else {
@@ -94,7 +94,7 @@ export const addEditStoreItem = createAsyncThunk(
   }
 );
 
-export const deleteItem = createAsyncThunk<void, number>(
+export const deleteItem = createAsyncThunk(
   'storeItem/deleteItem',
   async (itemId: number) => {
     const itemDocRef = doc(firestoreStorage, 'storeItem', itemId.toString());
@@ -161,8 +161,10 @@ const storeItemSlice = createSlice({
         state.status = 'failed';
         state.error = action.error.message ?? 'Failed to add';
       })
-      .addCase(deleteItem.fulfilled, (state, action) => {
-        state.data = state.data.filter((item) => item.id !== action.payload);
+      
+      builder.addCase(deleteItem.fulfilled, (state, action: PayloadAction<number>) => {
+        const deletedItemId = action.payload;
+        state.data = state.data.filter((item) => item.id !== deletedItemId);
       });
       builder.addCase(editItem.pending, (state) => {
         state.status = 'loading';
