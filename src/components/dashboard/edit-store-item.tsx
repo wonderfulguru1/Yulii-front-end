@@ -33,10 +33,13 @@ const EditStoreItem: React.FC<EditModalProps> = ({ item, onSave, setIsModalOpen}
     const [editedData, setEditedData] = useState({ ...item }); // Initialize with the original data
 
     const handleInputChange = (  e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const { name, value } = e.target;
+      const { name, value, type } = e.target;
+
+      // Use a conditional to handle different types
+      const parsedValue = type === 'number' ? parseFloat(value) : value;
       setEditedData((prevData) => ({
         ...prevData,
-        [name]: value,
+        [name]: parsedValue,
       }));
     };
   
@@ -73,11 +76,11 @@ const EditStoreItem: React.FC<EditModalProps> = ({ item, onSave, setIsModalOpen}
                                     <input type="number" name="price" value={editedData.price} onChange={handleInputChange} /> 
                                        
                                     </div>
-                                    <div className=" flex justify-between py-2">
+                                    {/* <div className=" flex justify-between py-2">
                                     <span className="font-semibold">Price:</span>
                                     <input type="number" name="price" value={editedData.price} onChange={handleInputChange} /> 
                                        
-                                    </div>
+                                    </div> */}
                                     <div className=" flex justify-between py-2">
                                         <p className="text-[#a8a9a9] ">Order Fulfilment:</p>
                                         <p className="rounded-lg text-[10px] font-semibold flex items-center text-blue-500 px-2 bg-blue-100">Delivery</p>
