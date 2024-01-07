@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { addEditStoreItem, fetchStoreItem } from '@/redux/storeItemSlice';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ToastContainer, toast } from 'react-toastify';
@@ -18,7 +18,7 @@ import {useNavigate} from "react-router-dom"
 
 const AddStoreItemForm = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const merchantsData = useAppSelector((state: RootState) => state.merchants.data);
   const loggedInUserId = auth?.currentUser?.uid;
   const isUserInData = merchantsData.some(user => user.id === loggedInUserId);
@@ -50,7 +50,7 @@ const AddStoreItemForm = () => {
   }, [dispatch]);
 
   const [item, setItem] = useState({
-    id: 0,
+    id: "",
     name: "",
     logo: "",
     phone: 0,
@@ -63,7 +63,7 @@ const AddStoreItemForm = () => {
     couponCode: "",
     description: "",
     discount: 0,
-    id: "",
+    id: 0,
     image: '',
     in_stock: 0,
     percentage_discount: 0,
@@ -105,10 +105,7 @@ const AddStoreItemForm = () => {
       };
       dispatch(addEditStoreItem({ storeItem: updatedStoreItem }));
       toast.success('Created Successfully');
-      // navigate("/yulli-store")
-      setTimeout(() => {
-        navigate("/yulli-store")
-      }, 1000)
+      navigate("/yulli-store")
     } catch (error) {
       console.error('Error adding store item:', error);
     }

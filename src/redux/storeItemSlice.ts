@@ -1,11 +1,11 @@
 // UserSlice.ts
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { firestoreStorage } from "../firebase";
-import { getDocs, collection, doc, getDoc, updateDoc, setDoc} from 'firebase/firestore';
+import { getDocs, collection, doc, getDoc, updateDoc, setDoc, deleteDoc} from 'firebase/firestore';
 
 interface StoreItem {
   category: any;
-  id?: number;
+  id: number;
   description: string;
   price: number;
   in_stock: number;
@@ -21,13 +21,22 @@ interface StoreItem {
     address: string
     name: string
     logo: string
-    id:number
+    id?:string
   }
   // other User properties
 }
 
 interface AddEditItemPayload {
   storeItem: any;
+}
+
+interface EditItemData {
+  id: number;
+  title: string;
+  category:string;
+  description:string;
+  price:number
+  // other properties
 }
 
 interface StoreItemState {
@@ -71,7 +80,7 @@ export const addEditStoreItem = createAsyncThunk(
   async ({ storeItem }: AddEditItemPayload) => {
     const timestampId = new Date().getTime(); // Generate a timestamp as a number
 
-    if (storeItem.id) {
+    if (storeItem.id !== undefined) {
       const itemDocRef = doc(firestoreStorage, 'storeItem', storeItem.id.toString());
       await updateDoc(itemDocRef, { ...storeItem });
     } else {
@@ -85,10 +94,39 @@ export const addEditStoreItem = createAsyncThunk(
   }
 );
 
+export const deleteItem = createAsyncThunk(
+  'storeItem/deleteItem',
+  async (itemId: number) => {
+    const itemDocRef = doc(firestoreStorage, 'storeItem', itemId.toString());
+    try {
+      await deleteDoc(itemDocRef);
+    } catch (error) {
+      console.error('Error deleting item:', error);
+      throw error;
+    }
+  }
+);
+
+export const editItem = createAsyncThunk('storeItem/editItem', async (editData: EditItemData) => {
+  const { id, title, price, description /* other properties */ } = editData;
+  const storeItemRef = doc(firestoreStorage, 'storeItem', id.toString());
+
+  await updateDoc(storeItemRef, {
+    title, price, description 
+  });
+
+  // Return the updated data after the edit operation
+  const updatedSnapshot = await getDoc(storeItemRef);
+  return { id, ...updatedSnapshot.data() } as StoreItem;
+});
+
+
 const storeItemSlice = createSlice({
   name: 'storeItems',
   initialState,
-  reducers: {},
+  reducers: {
+   
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchStoreItem.pending, (state) => {
@@ -121,9 +159,31 @@ const storeItemSlice = createSlice({
       })
       .addCase(addEditStoreItem.rejected, (state, action) => {
         state.status = 'failed';
-        state.error = action.error.message ?? 'Failed to add/edit store item';
+        state.error = action.error.message ?? 'Failed to add';
       })
+      
+      builder.addCase(deleteItem.fulfilled, (state, action: PayloadAction<number>) => {
+        const deletedItemId = action.payload;
+        state.data = state.data.filter((item) => item.id !== deletedItemId);
+      });
+      builder.addCase(editItem.pending, (state) => {
+        state.status = 'loading';
+      });
+      builder.addCase(editItem.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        const updatedItem = action.payload;
+        state.data = state.data.map((item) =>
+          item.id === updatedItem.id ? { ...item, ...updatedItem } : item
+        );
+      });
+      builder.addCase(editItem.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message ?? "Failed to edit";
+        console.error('Edit item failed:', action.error.message);
+      });
+    
   },
 });
+
 
 export default storeItemSlice.reducer;

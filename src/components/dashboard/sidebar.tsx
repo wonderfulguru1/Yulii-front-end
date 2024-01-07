@@ -18,7 +18,7 @@ export const Sidebar = () => {
         }
       };
     return (
-        <div className="h-full border-r flex flex-col overflow-y-auto bg-[#fffdfd] shadow-sm">
+        <div className="h-full flex flex-col overflow-y-auto bg-[#fffdfd] shadow-sm">
         <div className="flex justify-items-center border-b h-20 p-4">
             <Link to="/">
                  <Logo />
