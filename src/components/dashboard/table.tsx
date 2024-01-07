@@ -34,15 +34,15 @@ const Table: React.FC<TableProbs> = ({ data, headers }) => {
 
      return (
 
-        <div className="inline-block w-full shadow-md  overflow-scroll">
+        <div className="inline-block w-full  overflow-scroll bg-white">
 
-            <table className="min-w-full bg-[#f6f7f6] leading-normal border-b border-gray-200  ">
+            <table className="min-w-full    ">
                 {headers && (
-                    <thead className=''>
+                    <thead className='border-b-2'>
                         <tr>
                             {headers.map((header, index) => (
                                 <th key={index}
-                                    className="px-5 py-3 border-b-2 bg-[#f6f7f6]  border-gray-200  text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                                    className="px-5 py-3 border-b-2  border-gray-200  text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                     {header}
                                 </th>
                             ))}

@@ -23,16 +23,22 @@ const PromotionsPage = () => {
     fetchTaskData();
   }, [dispatch]);
 
-  const [items, setItems] = useState(tasksData);
+  const [items] = useState(tasksData);
   const [filteredItems, setFilteredItems] = useState(items);
-  const [filterStatus, setFilterStatus] = useState('');
+  const [filterStatus, setFilterStatus] = useState('all');
 
   const categories = [...new Set(tasksData.map(item => item.status))];
+
   const handleFilterByStatus = (status: string) => {
     const filteredData = status === 'all' ? tasksData : tasksData.filter(item => item.status === status);
     setFilteredItems(filteredData);
     setFilterStatus(status);
   };
+
+  useEffect(() => {
+    handleFilterByStatus('all');
+  }, []);
+
   console.log("task", filterStatus)
   return (
     <div className="p-6">
