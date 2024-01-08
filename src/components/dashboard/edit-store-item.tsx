@@ -35,7 +35,6 @@ const EditStoreItem: React.FC<EditModalProps> = ({ item, onSave, setIsModalOpen}
     const handleInputChange = (  e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       const { name, value, type } = e.target;
 
-      // Use a conditional to handle different types
       const parsedValue = type === 'number' ? parseFloat(value) : value;
       setEditedData((prevData) => ({
         ...prevData,
