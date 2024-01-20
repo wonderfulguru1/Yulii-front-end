@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { DealItem } from "@/constants/interface";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { RootState } from "@/redux/store";
-import { fetchTasks } from "@/redux/tasksSlice";
+import { deleteTask, fetchTasks } from "@/redux/tasksSlice";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 const PromotionsPage = () => {
   const dispatch = useAppDispatch();
-  const tasksData = useAppSelector((state: RootState) => state.tasks.data);
+  const tasksData = useAppSelector((state: RootState) => state.tasks.tasks);
   useEffect(() => {
     const fetchTaskData = async () => {
       try {
@@ -39,7 +39,9 @@ const PromotionsPage = () => {
   };
 
 
-
+  const handleDelete = (taskId:string) => {
+    dispatch(deleteTask(taskId));
+  };
 
 
   useEffect(() => {
@@ -51,7 +53,7 @@ const PromotionsPage = () => {
     <div className="p-6">
       <div className="flex justify-between py-2">
         <h3 className="font-semibold ">Promotions & Offers</h3>
-        <Link to="/merchant/promotions/create">
+        <Link to="/deals/create">
           <Button
             type="button"
             variant="ghost"
@@ -78,7 +80,7 @@ const PromotionsPage = () => {
       </div>
 
       <div className="">
-        <OfferCard items={filteredItems} />
+        <OfferCard items={filteredItems} onDelete={handleDelete}/>
       </div>
 
           

@@ -13,7 +13,7 @@ import { RootState } from "@/redux/store";
 const ProductDetails = () => {
     const dispatch = useAppDispatch();
  
-    const tasksData = useAppSelector((state: RootState) => state.tasks.data);
+    const tasksData = useAppSelector((state: RootState) => state.tasks.tasks);
     const [editMode, setEditMode] = useState(false);
  
     const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -23,7 +23,7 @@ const ProductDetails = () => {
             setIsLoading(true);
             await dispatch(editTask(editedItem));
             dispatch(fetchTasks());
-            closeChildComponent();
+            closeEdit();
             setIsLoading(false);
             toast("Item Updated");
         } catch (error) {
@@ -32,11 +32,11 @@ const ProductDetails = () => {
     };
 
 
-    const closePopup = () => {
+    const openEdit = () => {
         setEditMode(true);
     };
 
-    const closeChildComponent = () => {
+    const closeEdit = () => {
         setEditMode(false);
     };
 
@@ -63,7 +63,7 @@ const ProductDetails = () => {
                             variant="ghost"
                             size="lg"
                             className="bg-black  text-white rounded-xl hover:bg-black-100 hover:text-white"
-                            onClick={closePopup}
+                            onClick={openEdit}
                         >
                             Edit
                         </Button>
@@ -84,7 +84,7 @@ const ProductDetails = () => {
             </div>
 
             {editMode ?
-                <InlineEdit onClose={closeChildComponent} onEditSave={handleSave} isLoading={isLoading} item={tasksData}/>
+                <InlineEdit onClose={closeEdit} onEditSave={handleSave} isLoading={isLoading} item={tasksData}/>
                 :
                 <ItemDetails item={tasksData} />
 

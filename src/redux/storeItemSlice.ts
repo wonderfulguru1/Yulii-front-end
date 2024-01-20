@@ -26,6 +26,9 @@ interface StoreItem {
   // other User properties
 }
 
+interface DeleteItemFulfilledAction {
+  payload: string | void;
+}
 interface AddEditItemPayload {
   storeItem: StoreItem;
 }
@@ -107,6 +110,7 @@ export const deleteItem = createAsyncThunk(
   }
 );
 
+
 export const editItem = createAsyncThunk('storeItem/editItem', async (editData: EditItemData) => {
   const { id, title, price, description /* other properties */ } = editData;
   const storeItemRef = doc(firestoreStorage, 'storeItem', id.toString());
@@ -159,11 +163,15 @@ const storeItemSlice = createSlice({
         state.status = 'failed';
         state.error = action.error.message ?? 'Failed to add';
       })
-      
-      builder.addCase(deleteItem.fulfilled, (state, action: PayloadAction<number>) => {
-        const deletedItemId = action.payload;
-        state.data = state.data.filter((item) => item.id !== deletedItemId);
+      builder.addCase(deleteItem.fulfilled, (state, action: DeleteItemFulfilledAction) => {
+        // Convert the payload to a number, defaulting to 0 if it's undefined or not a valid number
+        const itemIdToDelete = action.payload !== undefined ? Number(action.payload) || 0 : 0;
+  
+        // Remove the deleted task from the Redux store
+        const filteredData = state.data.filter((data) => data.id !== itemIdToDelete);
+        state.data = filteredData;
       });
+   
       builder.addCase(editItem.pending, (state) => {
         state.status = 'loading';
       });

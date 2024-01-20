@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react"
+import { ArrowLeftSquare, ChevronRight } from "lucide-react"
 import { Link, useLocation, useParams } from "react-router-dom";
 import { fetchStoreItemById } from "@/redux/storeItemSlice";
 import { useEffect } from "react";
@@ -13,22 +13,28 @@ import StoreItemDetails from "@/components/dashboard/store-item-details";
 
 const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
     // const storeItemId  = useParams<{ storeItemId: string }>();
-    const params= useParams(); 
+    const params = useParams();
     const location = useLocation()
     const data = location?.state?.data
-    console.log("nnnn", data)
-    console.log("nnnn", params)
+ 
     const dispatch = useAppDispatch();
     const { status } = useAppSelector((state: RootState) => state.storeItems);
 
     useEffect(() => {
         dispatch(fetchStoreItemById(itemId));
     }, [dispatch, itemId]);
-    console.log("hhhh", itemId)
+  
 
     return (
         <div className="p-6 h-full">
+            <Link to="/yulli-store">
+                <div className="flex items-center gap-2 border w-1/12 rounded-md">
+                    <ArrowLeftSquare />
+                    <h3 className="text-sm font-semibold">Back </h3>
+                </div>
+            </Link>
             <div className="flex justify-between py-2">
+
                 <div className="flex items-center">
 
                     <Link to="/yulli-store">
@@ -68,15 +74,15 @@ const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
                     />
                 ))} */}
             </div>
-           
+
             <React.Suspense fallback={<LoadingFallback />}>
                 {status === 'loading' ? (
                     <LoadingFallback />
                 ) : (
-                    <StoreItemDetails item={data}/>
+                    <StoreItemDetails item={data} />
                 )}
             </React.Suspense>
-         
+
         </div>
     );
 }

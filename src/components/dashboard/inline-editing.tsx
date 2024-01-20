@@ -17,50 +17,45 @@ interface DealProps {
 
 
 
-const InlineEdit: React.FC<DealProps> = ({ onEditSave, isLoading, item }) => {
-  const itemId  = useParams();
-  // const selectedItem = item.find((item) => item.id === (itemId));
-  const [editedItem, setEditedItem] = useState<DealItem>()
+const InlineEdit: React.FC<DealProps> = ({ onEditSave, isLoading, item, onClose }) => {
+  const {itemId}  = useParams();
+  const [editedItem, setEditedItem] = useState<DealItem | undefined>()
+
   useEffect(() => {
-    const fetchItemDetails = async () => {
-      try {
-        // Fetch additional details using itemId
-        const additionalDetails = await fetchTaskById(itemId);
-console.log("additionalDetails", additionalDetails)
-        // Combine additional details with the existing editedItem state
-        setEditedItem((prevItem) => ({ ...prevItem, ...additionalDetails }));
-      } catch (error) {
-        console.error('Error fetching additional item details:', error);
-      }
-    };
-
-    fetchItemDetails();
-  }, [itemId]);
-
-  // console.log("selectedItem", selectedItem)
+    const itemToEdit = item.find(item => item.id === itemId);
+    setEditedItem(itemToEdit);
+  }, [itemId, item]);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if(editedItem){
     const { name, value, type } = e.target;
 
     const parsedValue = type === 'number' ? parseFloat(value) : value;
+    
     setEditedItem((prevData: any) => ({
       ...prevData,
       [name]: parsedValue,
+      
     }));
+  };
   };
 
 
 
   const handleSaveClick = () => {
+    if(editedItem){
     onEditSave(editedItem);
+    }
   };
 
+  
+console.log("editedItem", editedItem)
 
   return (
     <div >
-      <div className="flex w-full" >
+     
         <div className="flex flex-col lg:flex-row py-10 space-x-10 items-center">
-          <div className=''>
+          <div className='w-1/3'>
             <LazyLoadImage
               width={300}
               height={100}
@@ -68,26 +63,22 @@ console.log("additionalDetails", additionalDetails)
               alt="image"
             />
           </div>
-          <div className="flex flex-col space-y-6">
-            <div className="flex items-center bg-[#fff5f5] text-red-500  rounded-md justify-center">
+          <div className="flex w-full flex-col space-y-6">
+            <div className="flex items-center w-1/3 bg-[#fff5f5] text-red-500  rounded-md justify-center">
               <TimerReset
                 size={16}
               />
               <span className="p-2 text-xs">Deal ends in 30 days</span>
             </div>
-            <div className="flex items-center gap-6">
-              <span>Name:</span>
+            <div className='w-full space-y-8'>
+            <div className="flex flex-col w-1/2">
+            <label className=" py-2">Name:</label>
               <input type="text" name="name" value={editedItem?.name} onChange={handleInputChange} className="py-2 px-6 border rounded-md" />
 
             </div>
-            <div className="flex items-center gap-6">
-              <span>Name:</span>
-
-            </div>
-            <div>
+             <div>
               <label className="border-b-4 border-black py-2">Description</label>
               <textarea
-
                   name="description"
                   className='w-full h-28 border p-4'
                   required
@@ -96,12 +87,13 @@ console.log("additionalDetails", additionalDetails)
                   onChange={handleInputChange}
               />
             </div>
+            </div>
           </div>
 
         </div>
        
-      </div>
-      <div className='flex justify-between'>
+    
+      <div className='flex justify-between py-4'>
       <Button
           type="button"
           variant="ghost"
@@ -119,7 +111,7 @@ console.log("additionalDetails", additionalDetails)
           variant="ghost"
           size="lg"
           className="bg-red-500 text-white rounded-xl hover:bg-black-100 hover:text-white"
-      
+        onClick={onClose}
         >
            Cancel
         </Button>
