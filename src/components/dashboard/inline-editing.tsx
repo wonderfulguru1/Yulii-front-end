@@ -1,10 +1,10 @@
 import { DealItem } from '@/constants/interface';
 import { TimerReset } from 'lucide-react';
-import React, { useState, ChangeEvent, KeyboardEvent, useEffect } from 'react';
+import React, { useState, ChangeEvent, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { useLocation, useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { Button } from '../ui/button';
-import { fetchTaskById } from '@/redux/tasksSlice';
+
 
 
 
@@ -48,7 +48,7 @@ const InlineEdit: React.FC<DealProps> = ({ onEditSave, isLoading, item, onClose 
     }
   };
 
-  
+
 console.log("editedItem", editedItem)
 
   return (
@@ -122,10 +122,5 @@ console.log("editedItem", editedItem)
   );
 };
 
-const popupStyles: React.CSSProperties = {
-
-  transform: 'translate(-50%, -50%)',
-
-};
 
 export default InlineEdit;

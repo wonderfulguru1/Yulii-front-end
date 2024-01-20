@@ -1,5 +1,3 @@
-import Table from "@/components/dashboard/table";
-import { StatOverview } from "@/components/dashboard/stat-overview";
 import StatWidget from "@/components/dashboard/stat-widget";
 import { fetchUsers } from "@/redux/usersSlice";
 import { RootState } from "@/redux/store";
@@ -39,9 +37,9 @@ const Home: React.FC = () => {
 
     fetchData();
   }, [dispatch]);
-  console.log("mee", usersData)
+
   const unverifiedUsers = usersData.filter((user) => user.isEmailVerified === false);
-  const tableHeader = ["First Name", "Last Name", "Email", "Gender", "Phone Number"]
+
   return (
     <div className="p-6 flex flex-col ">
       <h2 className="pb-6 font-bold text-xl">Pro User Dashboard</h2>

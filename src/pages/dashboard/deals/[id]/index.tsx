@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react"
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import ItemDetails from "@/components/dashboard/item-details";
 import { useState } from "react";
 import { DealItem } from "@/constants/interface";

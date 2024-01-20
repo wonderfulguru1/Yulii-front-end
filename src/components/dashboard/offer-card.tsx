@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import ProductDetailsImg from "../../assets/productDetail.png"
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
+
 
 export type Item = {
   image: string;

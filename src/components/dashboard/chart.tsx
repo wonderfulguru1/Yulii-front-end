@@ -1,5 +1,5 @@
 // Data retrieved https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 

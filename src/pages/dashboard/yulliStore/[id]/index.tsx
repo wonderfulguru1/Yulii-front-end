@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowLeftSquare, ChevronRight } from "lucide-react"
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import { fetchStoreItemById } from "@/redux/storeItemSlice";
 import { useEffect } from "react";
 import { RootState } from "@/redux/store";
@@ -12,8 +12,6 @@ import StoreItemDetails from "@/components/dashboard/store-item-details";
 
 
 const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
-    // const storeItemId  = useParams<{ storeItemId: string }>();
-    const params = useParams();
     const location = useLocation()
     const data = location?.state?.data
  

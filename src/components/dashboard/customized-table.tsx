@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 interface TableHeader {
   label: string;
@@ -13,12 +12,8 @@ interface ReusableTableProps {
 }
 
 const ReusableTable: React.FC<ReusableTableProps> = ({ data, headers }) => {
-  const [selectedItem, setSelectedItem] = useState<any | null>(null);
+  // const [selectedItem, setSelectedItem] = useState<any | null>(null);
 
-  const handleViewClick = (item: any) => {
-    setSelectedItem(item);
-    // You can show a modal or navigate to a new page to display detailed information
-  };
 
   return (
     <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md ">

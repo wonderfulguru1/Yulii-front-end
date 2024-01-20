@@ -1,7 +1,6 @@
 
 import OfferCard from "@/components/dashboard/offer-card";
 import { Button } from "@/components/ui/button";
-import { DealItem } from "@/constants/interface";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { RootState } from "@/redux/store";
 import { deleteTask, fetchTasks } from "@/redux/tasksSlice";
