@@ -76,7 +76,7 @@ const OfferCard: React.FC<Props> = ({ items }) => {
               </div>
             </div>
             <div className="px-1 pt-3 text-sm" key={item.id}>
-              <Link to={`/deals/deal-details`} state={{data:item}} className="underline">
+              <Link to={`/deals/deal-details/${item.id}`}  className="underline">
                 View details
               </Link>
             </div>

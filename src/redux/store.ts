@@ -4,7 +4,7 @@ import userSlice from './usersSlice';
 import tasksSlice from './tasksSlice';
 import storeItemSlice from './storeItemSlice';
 import merchantsSlice from './merchantsSlice';
-// import categorySlice from './categorySlice';
+import categoriesSlice from './categorySlice';
 
 
 const store = configureStore({
@@ -13,6 +13,7 @@ const store = configureStore({
     tasks: tasksSlice,
     storeItems: storeItemSlice,
     merchants:merchantsSlice,
+    categories: categoriesSlice,
     // categories: categorySlice,
   },
 });

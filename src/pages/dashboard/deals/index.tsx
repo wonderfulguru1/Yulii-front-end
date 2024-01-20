@@ -1,5 +1,7 @@
+
 import OfferCard from "@/components/dashboard/offer-card";
 import { Button } from "@/components/ui/button";
+import { DealItem } from "@/constants/interface";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { RootState } from "@/redux/store";
 import { fetchTasks } from "@/redux/tasksSlice";
@@ -29,11 +31,16 @@ const PromotionsPage = () => {
 
   const categories = [...new Set(tasksData.map(item => item.status))];
 
+ 
   const handleFilterByStatus = (status: string) => {
     const filteredData = status === 'all' ? tasksData : tasksData.filter(item => item.status === status);
     setFilteredItems(filteredData);
     setFilterStatus(status);
   };
+
+
+
+
 
   useEffect(() => {
     handleFilterByStatus('all');
@@ -74,7 +81,10 @@ const PromotionsPage = () => {
         <OfferCard items={filteredItems} />
       </div>
 
-    </div>
+          
+      </div>
+
+  
   );
 }
 

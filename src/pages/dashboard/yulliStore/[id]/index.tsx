@@ -6,8 +6,8 @@ import { useEffect } from "react";
 import { RootState } from "@/redux/store";
 import React from "react";
 import LoadingFallback from "@/components/dashboard/loadingFallback";
-import ItemDetails from "@/components/dashboard/item-details";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import StoreItemDetails from "@/components/dashboard/store-item-details";
 
 
 
@@ -73,7 +73,7 @@ const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
                 {status === 'loading' ? (
                     <LoadingFallback />
                 ) : (
-                    <ItemDetails item={data}/>
+                    <StoreItemDetails item={data}/>
                 )}
             </React.Suspense>
          

@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { auth, storage } from '@/firebase';
 import { RootState } from '@/redux/store';
 import { addEditMerchant, fetchMerchants } from '@/redux/merchantsSlice';
+import { fetchCategories } from '@/redux/categorySlice';
 import ImageUpload from '@/components/dashboard/imageUpload';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
@@ -19,6 +20,7 @@ const AddStoreItemForm = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate()
   const merchantsData = useAppSelector((state: RootState) => state.merchants.data);
+  const categoryData = useAppSelector((state: RootState) => state.categories.data);
   const loggedInUserId = auth?.currentUser?.uid;
   const isUserInData = merchantsData.some(user => user.id === loggedInUserId);
   const foundUser = merchantsData.find(user => user.id === loggedInUserId);
@@ -30,6 +32,7 @@ const AddStoreItemForm = () => {
       try {
         dispatch(fetchMerchants());
         dispatch(fetchStoreItem());
+        dispatch(fetchCategories());
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -71,19 +74,17 @@ const AddStoreItemForm = () => {
     affiliate_link: ""
   });
 
-  console.log("good", storeItem);
-
-
+  
+  const categoryOptions = categoryData[0]?.items || [];
+console.log("good", storeItem);
 
   const handleAddStoreItem = async () => {
     try {
-      // Check if an image is selected
       if (!selectedImage) {
         toast.error('Please select an image');
         return;
       }
       const imageFile = selectedImage;
-      // const imageName = "";
       const imageUrl = await uploadImageToStorage(imageFile);
       const updatedStoreItem = {
         ...storeItem,
@@ -102,7 +103,6 @@ const AddStoreItemForm = () => {
   const handleImageSelect = (file: File) => {
     setSelectedImage(file);
   };
-  const categories = ["appliances", "fashion"]
 
   const uploadImageToStorage = async (file: File): Promise<string> => {
     try {
@@ -220,8 +220,9 @@ const AddStoreItemForm = () => {
                 </div>
                 <div className='flex flex-col w-1/2'>
                   <Label htmlFor="email" className='py-4'>Select Catgory</Label>
-                  <select id="category" value={selectedCategory} onChange={handleCategoryChange}>
-                    {categories.map((category) => (
+                  <select id="category" value={selectedCategory} onChange={handleCategoryChange} className='border rounded-md p-2'>
+                  <option value="" disabled hidden>Select an option</option>
+                    {categoryOptions.map((category) => (
                       <option key={category} value={category}>
                         {category}
                       </option>
@@ -249,7 +250,7 @@ const AddStoreItemForm = () => {
                 <div className='flex flex-col w-1/3'>
                   <Label htmlFor="coupon" className='py-4'>Coupon Code</Label>
                   <Input placeholder="DFTSKHD"
-                    type="string"
+                    type="text"
                     value={storeItem.couponCode}
                     onChange={(e) => setStoreItem({ ...storeItem, couponCode: e.target.value })} />
                 </div>
@@ -258,7 +259,7 @@ const AddStoreItemForm = () => {
                 <div className='flex flex-col w-full '>
                   <Label htmlFor="affiliate_link" className='py-4 '>Affiliate link</Label>
                   <Input placeholder="DFTSKHD"
-                    type="string"
+                    type="text"
                     value={storeItem.affiliate_link}
                     onChange={(e) => setStoreItem({ ...storeItem, affiliate_link: e.target.value })} />
                 </div>

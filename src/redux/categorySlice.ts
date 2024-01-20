@@ -1,46 +1,57 @@
-// // categorySlice.ts
-// import { firestoreStorage } from '@/firebase';
-// import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-// // import { firestoreStorage } from '<your-firebase-config>'; // Import your Firebase configuration
-// import { collection, getDocs } from 'firebase/firestore';
+// CategorySlice.ts
+import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
+import { firestoreStorage } from "../firebase";
+import { getDocs, collection} from "firebase/firestore";
 
-// // Async thunk to fetch categories
-// export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
-//   const querySnapshot = await getDocs(collection(firestoreStorage, 'categories'));
-  
-//   const categories = [];
-//   querySnapshot.forEach((doc) => {
-//     categories.push(doc.data());
-//   });
+interface Category {
+  items: never[];
+  isEmailVerified: boolean;
+  id: string;
+  firstname:string
+}
 
-//   return categories;
-// });
+interface CategoryState {
+  data: Category[];
+  status: 'idle' | 'loading' | 'succeeded' | 'failed';
+  error: string | null;
+}
 
-// // Create a slice for categories
-// const categorySlice = createSlice({
-//   name: 'categories',
-//   initialState: {
-//     data: [],
-//     status: 'idle',
-//     error: null,
-//   },
-//   reducers: {},
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(fetchCategories.pending, (state) => {
-//         state.status = 'loading';
-//       })
-//       .addCase(fetchCategories.fulfilled, (state, action) => {
-//         state.status = 'succeeded';
-//         state.data = action.payload;
-//       })
-//       .addCase(fetchCategories.rejected, (state, action) => {
-//         state.status = 'failed';
-//         state.error = action.error.message;
-//       });
-//   },
-// });
+const initialState: CategoryState = {
+  data: [],
+  status: 'idle',
+  error: null,
+};
 
-// export const selectCategories = (state: { categories: { data: any; }; }) => state.categories.data;
+export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
+  const collectionRef = collection(firestoreStorage, "categories");
+  const snapshot = await getDocs(collectionRef);
 
-// export default categorySlice.reducer;
+  const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Category));
+
+  return data;
+});
+
+
+
+const categoriesSlice = createSlice({
+  name: 'categories',
+  initialState,
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchCategories.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchCategories.fulfilled, (state, action: PayloadAction<Category[]>) => {
+        state.status = 'succeeded';
+        state.data = action.payload;
+      })
+      .addCase(fetchCategories.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message ?? 'Failed to fetch Category data';
+      })
+     
+  },
+});
+
+export default categoriesSlice.reducer;
