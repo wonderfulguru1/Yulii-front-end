@@ -5,6 +5,7 @@ import Contact from "../../pages/external/contact";
 import HomePage from "../../pages/external/home";
 import TermsAndCondition from "@/pages/external/terms-and-condition";
 import PrivacyPolicy from "@/pages/external/privacy-policy";
+import Referral from "@/pages/external/authForm/referral";
 
 
 const externalRoute = [
@@ -35,6 +36,10 @@ const externalRoute = [
     {
         element: <PrivacyPolicy/>,
         path: 'privacy-policy',
+    },
+    {
+        element: <Referral/>,
+        path: 'join/:id',
     },
 ]
 

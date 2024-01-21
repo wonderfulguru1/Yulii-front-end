@@ -30,7 +30,7 @@ interface DeleteItemFulfilledAction {
   payload: string | void;
 }
 interface AddEditItemPayload {
-  storeItem: StoreItem;
+  storeItem: any;
 }
 
 interface EditItemData {

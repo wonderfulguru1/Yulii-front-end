@@ -3,21 +3,6 @@ import { Link } from "react-router-dom";
 import YuliLogo from "../../assets/yulilogo.svg"
 import { footerLinks } from "../../constants/index";
 
-// type ColumnProps = {
-//     title: string;
-//     links: Array<string>;
-// };
-
-// const FooterColumn = ({ title, links }: ColumnProps) => (
-//     <div className="footer_column ">
-//         <h4 className="font-semibold text-xl">{title}</h4>
-//         <ul className="flex flex-col gap-2 font-normal text-lg">
-//             {links.map((link) => <Link to="/" key={link}>{link}</Link>)}
-//         </ul>
-//     </div>
-// );
-
-
 const Footer = () => (
     <>
         <section className="md:w-full footer mt-10 bg-secondary">

@@ -47,8 +47,8 @@ const Home: React.FC = () => {
 
         <StatWidget
           icon={Users}
-          icon2={ArrowDown}
-          text={"Total Followers"}
+          icon2={ArrowDown }
+          text={"Total  Signups"}
           color={`bg-[#fef9ff]`}
           percentage={"20"}
           amount={usersData.length}
@@ -73,8 +73,8 @@ const Home: React.FC = () => {
         <StatWidget
           // key={index}
           icon={ShoppingCart}
-          icon2={ArrowUp}
-          text={"Total Products on App"}
+          icon2={ArrowUp }
+          text={"Total Deals"}
           color={`bg-green-100`}
           percentage={"720"}
           amount={unverifiedUsers.length}
@@ -87,8 +87,8 @@ const Home: React.FC = () => {
         <StatWidget
           // key={index}
           icon={Wallet}
-          icon2={ArrowDown}
-          text={"Token Balance"}
+          icon2={ArrowDown }
+          text={"Total  Reward"}
           color={`bg-[#fef9ff]`}
           percentage={"400"}
           amount={unverifiedUsers.length}

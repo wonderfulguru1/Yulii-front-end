@@ -27,6 +27,12 @@ const AddStoreItemForm = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
 
+  
+
+
+
+  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -65,6 +71,7 @@ const AddStoreItemForm = () => {
       rate: 3.9
     },
     merchant: {
+      // id: foundUser ? parseInt(foundUser.id, 10) : null,
       id: foundUser?.id,
       address: foundUser?.address,
       logo: foundUser?.logo,
