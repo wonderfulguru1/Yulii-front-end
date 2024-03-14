@@ -15,12 +15,12 @@
 //   onDelete: (id:number) => void;
 // }
 
-// const YulliCard: React.FC<Props> = ({ items, onDelete }) => {
+// const YuliiCard: React.FC<Props> = ({ items, onDelete }) => {
 
 //   return (
 //     <div className="grid py-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 //       {items.map((item: { id: Key | null | undefined; image: string | undefined; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Iterable<ReactNode> | null | undefined; price: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Iterable<ReactNode> | null | undefined; }) => (
-//         // <Link to={`/yulli-store/item-detail`} state={{data:item}}>
+//         // <Link to={`/Yulii-store/item-detail`} state={{data:item}}>
 
 //           <div className=" p-4 w-full border rounded-lg" key={item.id}>
 //             <a className="block relative h-48 rounded overflow-hidden">
@@ -40,7 +40,7 @@
 //                 >
 //                   delete
 //                 </Button>
-//               <Link to={`/yulli-store/item-detail`} state={{data:item}}>
+//               <Link to={`/Yulii-store/item-detail`} state={{data:item}}>
 //                 <Button
 //                   type="button"
 //                   variant="ghost"
@@ -62,4 +62,4 @@
 //   );
 // }
 
-// export default YulliCard;
+// export default YuliiCard;

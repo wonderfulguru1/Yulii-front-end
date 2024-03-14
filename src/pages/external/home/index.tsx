@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
         />
       </div>
 
-      <div className='flex flex-col container mx-auto px-4 md:px-0 md:w-1/3 items-center'>
+      <div className='flex flex-col container mx-auto px-4 md:px-0 md:w-1/2 items-center'>
         
       <Faq />
       </div> 

@@ -13,7 +13,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 
 
-const YulliStorePage = () => {
+const YuliiStorePage = () => {
   const dispatch = useAppDispatch();
   const [selectedFilter, setSelectedFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -86,8 +86,8 @@ const YulliStorePage = () => {
       <ToastContainer />
       <div className=" flex justify-between items-center">
 
-        <h3 className="font-semibold">Yulli Store</h3>
-        <Link to={`/yulli-store/add`} >
+        <h3 className="font-semibold">Yulii Store</h3>
+        <Link to={`/Yulii-store/add`} >
           <Button
             type="button"
             variant="ghost"
@@ -146,7 +146,7 @@ const YulliStorePage = () => {
       </div>
 
       {/* <div className="py-6"> */}
-      {/* <YulliCard items={filteredItems}  onDelete={handleDeleteItem} /> */}
+      {/* <YuliiCard items={filteredItems}  onDelete={handleDeleteItem} /> */}
       <div className="md:px-4 md:grid md:grid-cols-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 space-y-4 md:space-y-0 py-6">
         {filteredItems.map(item => (
 
@@ -169,4 +169,4 @@ const YulliStorePage = () => {
   );
 }
 
-export default YulliStorePage;
+export default YuliiStorePage;

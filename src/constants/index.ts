@@ -64,63 +64,63 @@ export const section1 = {
 export const section2 = {
   label: "Reward friends and family with exciting rewards",
   title: "Reward your friends for the very useful things they do for you on a daily basis.",
-  subtext: "Experience the flexibility of Yulli Credit. Shop now and pay later with our convenient Yulli Credit feature. No more waiting – enjoy your purchases while managing your budget. ",
+  subtext: "Experience the flexibility of Yulii Credit. Shop now and pay later with our convenient Yulii Credit feature. No more waiting – enjoy your purchases while managing your budget. ",
   btnText: "Join for free",
   Image: Section2
 }
 
 export const section3 = {
   label: "Post  your events and  status as a pro user",
-  title: "Yulli helps you sharing photos and videos about your events, stories and shows",
+  title: "Yulii helps you sharing photos and videos about your events, stories and shows",
   subtext: "Connect with friends, family, and other users by following their accounts and engaging with their content. Share Phone and images of your shows and events",
   btnText: "Join for free",
   Image: Section3
 }
 
 export const section4 = {
-  label: "Purchase discounted items from our the Yullistore",
+  label: "Purchase discounted items from our the Yuliistore",
   title: "Get gifts  & vouchers from your favorite stores ",
-  subtext: "Purchase discounted  items from the yulli store and give as gifts to friends and family",
+  subtext: "Purchase discounted  items from the Yulii store and give as gifts to friends and family",
   btnText: "Join for free",
   Image: Section4
 }
 
 export const faqHeroSection = 
   {
-    text: "Frequently asked question on Yulli",
-    title: "How do I get started with yulli.com?",
-    subtext: "To get started with yulli.com, simply download the app from the App Store or Google Play Store, create an account, and start exploring! You can search for users who share your interests, join groups related to your hobbies, and start chatting with other members.",
+    text: "Frequently asked question on Yulii",
+    title: "How do I get started with Yulii.com?",
+    subtext: "To get started with Yulii.com, simply download the app from the App Store or Google Play Store, create an account, and start exploring! You can search for users who share your interests, join groups related to your hobbies, and start chatting with other members.",
     Image: faq
   }
 
 export const faqSection = [
   {
-    text: "Frequently asked question about Yulli",
-    title: "How do I get started with yulli.com?",
-    subtext: "To get started with yulli.com, simply download the app from the App Store or Google Play Store, create an account, and start exploring! You can search for users who share your interests, join groups related to your hobbies, and start chatting with other members.",
+    text: "Frequently asked question about Yulii",
+    title: "How do I get started with Yulii.com?",
+    subtext: "To get started with Yulii.com, simply download the app from the App Store or Google Play Store, create an account, and start exploring! You can search for users who share your interests, join groups related to your hobbies, and start chatting with other members.",
   },
   {
-    text: "Frequently asked question about Yulli",
-    title: "Is yulli.com free to use?",
-    subtext: "Yes, yulli.com is completely free to use. There are no hidden fees or charges.",
+    text: "Frequently asked question about Yulii",
+    title: "Is Yulii.com free to use?",
+    subtext: "Yes, Yulii.com is completely frsee to use. There are no hidden fees or charges.",
     Image: faq
   },
   {
-    text: "Frequently asked question about Yulli",
+    text: "Frequently asked question about Yulii",
     title: "How do I find other users who share my interests?",
     subtext: "To find other users who share your interests, simply use the search function in the app to search for keywords related to your hobbies. You can also browse groups related to your interests and join them to connect with other members.",
     Image: faq
   },
   {
-    text: "Frequently asked question about Yulli",
-    title: "Can I create my own group on yulli.com?",
-    subtext: "Yes, you can create your own group on yulli.com. Simply click on the Create Group button in the app and follow the prompts to set up your group.",
+    text: "Frequently asked question about Yulii",
+    title: "Can I create my own group on Yulii.com?",
+    subtext: "Yes, you can create your own group on Yulii.com. Simply click on the Create Group button in the app and follow the prompts to set up your group.",
     Image: faq
   }
 ] 
 
 export const aboutUs = {
-  text: "Yulli has transformed my shopping routine. The deals are unbeatable, and I've been able to save a substantial amount on every purchase. Plus, the loyalty points add an extra layer of value. Highly recommended! - Sarah W."
+  text: "Yulii has transformed my shopping routine. The deals are unbeatable, and I've been able to save a substantial amount on every purchase. Plus, the loyalty points add an extra layer of value. Highly recommended! - Sarah W."
 }
 
 
@@ -137,8 +137,8 @@ export const dealSection = {
 }
 
 export const FaqLinks = [
-  { name: "Deals on Yulli ", href: "/" },
-  { name: "How to become a Yulli Merchant", href: "/" },
+  { name: "Deals on Yulii ", href: "/" },
+  { name: "How to become a Yulii Merchant", href: "/" },
   { name: "General Questions", href: "/" },
   { name: "Referral Program", href: "/" },
   { name: "Security and Privacy", href: "/" },
@@ -221,13 +221,13 @@ export const productsData = [
 //     link: "View offer available"
 // }
 //   export const comment = [{
-//     comments: "Yulli has transformed my shopping routine. The deals are unbeatable, and I've been able to save a substantial amount on every purchase. Plus, the loyalty points add an extra layer of value. Highly recommended! - Sarah W."
+//     comments: "Yulii has transformed my shopping routine. The deals are unbeatable, and I've been able to save a substantial amount on every purchase. Plus, the loyalty points add an extra layer of value. Highly recommended! - Sarah W."
 //   }]
 
 //   export const accountandregistration = {
 //     items: [
-//       { name: "Deals on Yulli ", href: "/" },
-//       { name: "How to become a Yulli Merchant", href: "/" },
+//       { name: "Deals on Yulii ", href: "/" },
+//       { name: "How to become a Yulii Merchant", href: "/" },
 //       { name: "General Questions", href: "/" },
 //       { name: "Referral Program", href: "/" },
 //       { name: "Security and Privacy", href: "/" },
@@ -235,8 +235,8 @@ export const productsData = [
 //     ],
 //     faq: [
 //       {
-//         title: 'What is Yulli ?',
-//         text: "Yulli is a marketplace and reward platform that offers great deals, exclusive rewards, and a range of services from your favorite stores. We're dedicated to making your shopping experience enjoyable and rewarding."
+//         title: 'What is Yulii ?',
+//         text: "Yulii is a marketplace and reward platform that offers great deals, exclusive rewards, and a range of services from your favorite stores. We're dedicated to making your shopping experience enjoyable and rewarding."
 //       },
 //     ]
 //   }
@@ -260,7 +260,7 @@ export const contact = {
       id: 3,
       icon: sms,
       caption: 'Chat with Us',
-      text: "Have a question or need assistance? We're just an email away. Drop us a message, and our dedicated support team will get back to you promptly help.yulligames.com"
+      text: "Have a question or need assistance? We're just an email away. Drop us a message, and our dedicated support team will get back to you promptly help.Yuliigames.com"
     },
   ]
 };
@@ -273,29 +273,29 @@ export const moreWays = {
       id: 1,
       icon: airtime,
       "backgroundColor": "bg-section2Label",
-      caption: 'Publish production yulii store',
-      text: "Everytime you pay your bills using Yulli you earn Yulli points that can convert to cash"
+      caption: 'Publish production Yulii store',
+      text: "Everytime you pay your bills using Yulii you earn Yulii points that can convert to cash"
     },
     {
       id: 2,
       icon: voucher,
       "backgroundColor": 'bg-secondary',
       caption: 'Post event , shows and stories on Yulii socials',
-      text: "Everytime you pay your bills using Yulli you earn Yulli points that can convert to cash"
+      text: "Everytime you pay your bills using Yulii you earn Yulii points that can convert to cash"
     },
     {
       id: 3,
       icon: refer,
       "backgroundColor": "bg-[#efefff]",
       caption: 'Refer your buddies and get points and rewards',
-      text: "Everytime you pay your bills using Yulli you earn Yulli points that can convert to cash"
+      text: "Everytime you pay your bills using Yulii you earn Yulii points that can convert to cash"
     },
     {
       id: 4,
       icon: credit,
       "backgroundColor": "bg-[#effef0]",
-      caption: 'Become a pro account and get lots more from yulli',
-      text: "Everytime you pay your bills using Yulli you earn Yulli points that can convert to cash"
+      caption: 'Become a pro account and get lots more from Yulii',
+      text: "Everytime you pay your bills using Yulii you earn Yulii points that can convert to cash"
     },
   ]
 };
@@ -303,7 +303,7 @@ export const moreWays = {
 export const howItWorks = [
   {
     title: "Sign up and get rewarded every time you shop.",
-    text: "you're new here, sign up for a Yulli account. If you're an existing user, simply log in to access your account to start earning when you shop at your favorites store.",
+    text: "you're new here, sign up for a Yulii account. If you're an existing user, simply log in to access your account to start earning when you shop at your favorites store.",
     Image: dealsImg
   },
   {
@@ -326,15 +326,15 @@ export const howItWorks = [
 export const merchantItems = {
   heroSection : {
     title:"The ultimate marketplace and reward platform designed to elevate your business to new heights",
-    text:"With Yulli, you're in control of reaching more customers, offering enticing promotions, and delivering exceptional experiences.",
+    text:"With Yulii, you're in control of reaching more customers, offering enticing promotions, and delivering exceptional experiences.",
     heading1: "Effortless Order History",
     subText1:"Simplify your order management process. Our intuitive platform allows you to keep track of your order history, manage deliveries & pickups, and enhance the shopping experience for your customers.",
     heading2: "The ultimate marketplace and reward platform designed to elevate your business to new heights",
-    subText2: "With Yulli, you're in control of reaching more customers, offering enticing promotions, and delivering exceptional experiences.",
+    subText2: "With Yulii, you're in control of reaching more customers, offering enticing promotions, and delivering exceptional experiences.",
   },
   testimony: {
     title: "Sisyphus",
-    text: "At TechHub Electronics, we were searching for ways to connect with tech enthusiasts who share our passion. Yulli's platform not only allowed us to showcase our latest gadgets but also empowered us to create promotions that resonated with our customers. The result? A loyal customer base that eagerly anticipates our new releases and special deals. - David Chen, CEO of TechHub Electronics",
+    text: "At TechHub Electronics, we were searching for ways to connect with tech enthusiasts who share our passion. Yulii's platform not only allowed us to showcase our latest gadgets but also empowered us to create promotions that resonated with our customers. The result? A loyal customer base that eagerly anticipates our new releases and special deals. - David Chen, CEO of TechHub Electronics",
     name:"Candice Wu",
     designation: "Store Manager, Sisyphus"
   },
@@ -343,19 +343,19 @@ export const merchantItems = {
       id: 1,
       icon: msg,
       title: 'Reach an Expansive Audience',
-      text: "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulli's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
+      text: "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulii's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
     },
     {
       id: 2,
       icon: msg,
       title: 'Streamlined Business Management',
-      text: "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulli's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
+      text: "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulii's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
     },
     {
       id: 3,
       icon: msg,
       title: 'Comprehensive Analytics:',
-      text: "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulli's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
+      text: "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulii's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
     },
   ]
 }

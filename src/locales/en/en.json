@@ -16,21 +16,21 @@
             "section2": {
                 "label": "Reward friends and family with exciting rewards",
                 "title": "Reward your friends for the very useful things they do for you on a daily basis.",
-                "subtext": "Experience the flexibility of Yulli Credit. Shop now and pay later with our convenient Yulli Credit feature. No more waiting – enjoy your purchases while managing your budget. ",
+                "subtext": "Experience the flexibility of Yulii Credit. Shop now and pay later with our convenient Yulii Credit feature. No more waiting – enjoy your purchases while managing your budget. ",
                 "btnText": "Join for free",
                 "image": "../src/assets/loan.svg"
             },
             "section3": {
                 "label": "Post  your events and  status as a pro user",
-                "title": "Yulli helps you sharing photos and videos about your events, stories and shows",
+                "title": "Yulii helps you sharing photos and videos about your events, stories and shows",
                 "subtext": "Connect with friends, family, and other users by following their accounts and engaging with their content. Share Phone and images of your shows and events",
                 "btnText": "Join for free",
                 "image": "../src/assets/section3.svg"
             },
             "section4": {
-                "label": "Purchase discounted items from our the Yullistore",
+                "label": "Purchase discounted items from our the Yuliistore",
                 "title": "Get gifts  & vouchers from your favorite stores ",
-                "subtext": "Purchase discounted  items from the yulli store and give as gifts to friends and family",
+                "subtext": "Purchase discounted  items from the Yulii store and give as gifts to friends and family",
                 "btnText": "Join for free",
                 "image": "../src/assets/section4.svg"
             }
@@ -76,7 +76,7 @@
                 "icon": "../src/assets/voucher.png"
             },
             {
-                "title": "Become a pro account and get lots more from yulli",
+                "title": "Become a pro account and get lots more from Yulii",
                 "text": "Ready to take your Yulii journey to the next level? Upgrade to Yulii Pro and open the door to a wealth of exclusive benefits and features that redefine your user experience.",
                 "color": "bg-[#efefff]",
                 "icon": "../src/assets/refer.png"
@@ -91,7 +91,7 @@
     },
     "faq": {
         "faqTitle": "Frequently Asked Questions",
-        "question": "What is Yulli",
+        "question": "What is Yulii",
         "questions": [
             {
                 "question": "What is Yulii?",
@@ -108,7 +108,7 @@
             {
                 "question": "What’s the difference between a gift and a pro gift?",
                 "answer": "To claim a gift, you must have the required number of points set by the person assigning it to you. To claim a pro gift, you must complete and validate all the deals linked to it.",
-                "answer2": "Experience the flexibility of Yulli Credit. Shop now and pay later with our convenient Yulli Credit feature. No more waiting – enjoy your purchases while managing your budget:"
+                "answer2": "Experience the flexibility of Yulii Credit. Shop now and pay later with our convenient Yulii Credit feature. No more waiting – enjoy your purchases while managing your budget:"
             },
             {
                 "question": "How to validate a deal?",
@@ -144,7 +144,7 @@
                 "id": 3,
                 "icon": "../src/assets/messages.png",
                 "caption": "Chat with Us",
-                "text": "Have a question or need assistance? We're just an email away. Drop us a message, and our dedicated support team will get back to you promptly help.yulligames.com"
+                "text": "Have a question or need assistance? We're just an email away. Drop us a message, and our dedicated support team will get back to you promptly help.Yuliigames.com"
             }
         ]
     },
@@ -330,8 +330,8 @@
         ]
     },
     "contact": {
-        "title": "Frequently asked question on Yulli",
-        "text": "To get started with yulli.com, simply download the app from the App Store or Google Play Store, create an account, and start exploring! You can search for users who share your interests, join groups related to your hobbies, and start chatting with other members.",
+        "title": "Frequently asked question on Yulii",
+        "text": "To get started with Yulii.com, simply download the app from the App Store or Google Play Store, create an account, and start exploring! You can search for users who share your interests, join groups related to your hobbies, and start chatting with other members.",
         "subheading": "We're here to help! Contact us for any inquiries or assistance.",
         "subtext": "Got a question, need more information, or require assistance? We're just a click or call away. Our dedicated support team is ready to assist you and ensure your experience with us is smooth and satisfying."
     },
@@ -343,7 +343,7 @@
     "socials": {
         "heading": "Socials",
         "title": "Welcome to Yulii Socials, the vibrant hub where our community comes to life! Join the conversation, stay informed, and be inspired by the latest happenings in the world of Yulii.",
-        "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
+        "text": "Pour commencer avec Yulii.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
         "section" : [
             {
               "name": "david",
@@ -375,23 +375,23 @@
     },
     "prousers": {
         "title": "The ultimate platform for enjoyable activities",
-        "text": "With Yulli you're in control of reaching more fans, friends and family by offering enticing promotions and delivering exceptional experiences",
+        "text": "With Yulii you're in control of reaching more fans, friends and family by offering enticing promotions and delivering exceptional experiences",
         "subtitle": "Effortless Order History",
         "subtext": "Simplify your order management process. Our intuitive platform allows you to keep track of your order history, manage deliveries & pickups, and enhance the shopping experience for your customers.",
-        "prosectiontitle": "With the Yulli proaccount you'll be able to reach celebrity status within the app. The benefits of getting a pro account are",
+        "prosectiontitle": "With the Yulii proaccount you'll be able to reach celebrity status within the app. The benefits of getting a pro account are",
         "prosectionlabel": "Become a celebrity on Yulii and enjoy all benefits",
         "section" : [
             {
                 "title": "Reach an Expansive Audience",
-                "text": "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulli's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
+                "text": "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulii's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
             },
             {
                 "title": "Streamlined Business Management",
-                "text": "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulli's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
+                "text": "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulii's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
             },
             {
                 "title": "Comprehensive Analytics:",
-                "text": "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulli's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
+                "text": "Why juggle multiple profiles when you can manage all your businesses seamlessly in one place? Yulii's intuitive interface allows you to oversee different ventures OR effortlessly, streamlining your operations and saving you valuable time."
             }
         ],
         "goprosection" : [
@@ -409,7 +409,7 @@
                 
             },
             {
-                "title": "Get a golden Yulli tree that never dies"
+                "title": "Get a golden Yulii tree that never dies"
                 
             },
             {

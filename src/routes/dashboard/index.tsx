@@ -6,9 +6,9 @@ import PromotionsPage from "@/pages/dashboard/deals"
 import ProductDetails from "@/pages/dashboard/deals/[id]"
 import CreatePromotion from "@/pages/dashboard/deals/create"
 import UserDetailsPage from "@/pages/dashboard/userDetails"
-import YulliStorePage from "@/pages/dashboard/yulliStore"
-import StoreItem from "@/pages/dashboard/yulliStore/[id]"
-import AddStoreItemForm from "@/pages/dashboard/yulliStore/addStoreItem"
+import YuliiStorePage from "@/pages/dashboard/YuliiStore"
+import StoreItem from "@/pages/dashboard/YuliiStore/[id]"
+import AddStoreItemForm from "@/pages/dashboard/YuliiStore/addStoreItem"
 import UserProfile from "@/pages/dashboard/settings"
 
 const dashboardRoute = [
@@ -17,8 +17,8 @@ const dashboardRoute = [
         path: 'overview',
     },
     {
-        element: <YulliStorePage/>,
-        path: 'yulli-store',
+        element: <YuliiStorePage/>,
+        path: 'Yulii-store',
     },
     {
         element: <OrdersPage/>,
@@ -48,15 +48,15 @@ const dashboardRoute = [
     },
     {
         element: <StoreItem itemId={""}/>,
-        path: 'yulli-store/:itemId',
+        path: 'Yulii-store/:itemId',
     },
     {
         element: <StoreItem itemId={""}/>,
-        path: 'yulli-store/item-details',
+        path: 'Yulii-store/item-details',
     },
     {
         element: <AddStoreItemForm/>,
-        path: 'yulli-store/add',
+        path: 'Yulii-store/add',
     },
     {
         element: <CreatePromotion/>,

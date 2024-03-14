@@ -59,7 +59,7 @@ const HowItWorks: React.FC<WorksProps> = () => {
           </div>
         </div>
       </section>
-      <div className='flex container mx-auto items-center px-6 lg:px-0 lg:w-1/3 flex-col py-12'>
+      <div className='flex container mx-auto items-center px-6 lg:px-0 lg:w-1/2 flex-col py-12'>
           <Faq/>
       </div>
     </div>

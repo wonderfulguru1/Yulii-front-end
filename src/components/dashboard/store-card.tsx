@@ -61,7 +61,7 @@ const handleDeleteClick = (event: React.MouseEvent<HTMLDivElement>) => {
                         <p className="absolute  bg-yellow-300 text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">meeeee</p> */}
                         </div>
                     </div>
-                    <Link to={`/yulli-store/item-detail`} state={{data:item}}>
+                    <Link to={`/Yulii-store/item-detail`} state={{data:item}}>
                     <h1 className="mt-4 text-gray-800 text-2xl font-bold cursor-pointer">{title}</h1>
                     <div className="my-4">
                         <div className="flex space-x-1 items-center gap-6">

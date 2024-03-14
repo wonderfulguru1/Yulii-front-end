@@ -25,8 +25,8 @@ const merchantRoutes = [
     },
     {
         icon: Compass,
-        label: "Yulli Store",
-        href: "/yulli-store"
+        label: "Yulii Store",
+        href: "/Yulii-store"
     },
     {
         icon: Compass,

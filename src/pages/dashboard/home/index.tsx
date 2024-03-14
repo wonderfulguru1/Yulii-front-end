@@ -96,7 +96,7 @@ const Home: React.FC = () => {
           <h5 className="text-md font-semibold text-gray-400 dark:text-white ">
             Recent signups
           </h5>
-          {/* <Link to={`/yulli-store/`} > */}
+          {/* <Link to={`/Yulii-store/`} > */}
           <button
             className="linear rounded-[20px] text-gray-400 bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-black hover:text-white active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 dark:active:bg-white/20"
           >

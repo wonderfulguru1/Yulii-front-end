@@ -15,21 +15,21 @@
       "section2": {
         "label": "Récompensez vos amis et votre famille avec des récompenses passionnantes",
         "title": "Récompensez vos amis pour les choses très utiles qu’ils font pour vous au quotidien.",
-        "subtext": "Faites l’expérience de la flexibilité de Yulli Credit. Achetez maintenant et payez plus tard avec notre fonction pratique de crédit Yulli. Plus d’attente - profitez de vos achats tout en gérant votre budget ",
+        "subtext": "Faites l’expérience de la flexibilité de Yulii Credit. Achetez maintenant et payez plus tard avec notre fonction pratique de crédit Yulii. Plus d’attente - profitez de vos achats tout en gérant votre budget ",
         "btnText": "Join for free",
         "image": "../src/assets/loan.svg"
       },
       "section3": {
         "label": "Publiez vos événements et votre statut en tant qu’utilisateur professionnel",
-        "title": "Yulli vous aide à partager des photos et des vidéos sur vos événements, histoires et spectacles",
+        "title": "Yulii vous aide à partager des photos et des vidéos sur vos événements, histoires et spectacles",
         "subtext": "Connectez-vous avec vos amis, votre famille et d’autres utilisateurs en suivant leurs comptes et en vous engageant avec leur contenu. Partagez les images de vos émissions et événements",
         "btnText": "Join for free",
         "image": "../src/assets/section3.svg"
       },
       "section4": {
-        "label": "Achetez des articles à prix réduit dans notre magasin Yullistore",
+        "label": "Achetez des articles à prix réduit dans notre magasin Yuliistore",
         "title": "Obtenez des cadeaux et des bons d’achat dans vos magasins préférés",
-        "subtext": "Achetez des articles à prix réduit dans le magasin yulli et offrez-les en cadeau à vos amis et à votre famille",
+        "subtext": "Achetez des articles à prix réduit dans le magasin Yulii et offrez-les en cadeau à vos amis et à votre famille",
         "btnText": "Join for free",
         "image": "../src/assets/section4.svg"
       }
@@ -76,7 +76,7 @@
           "icon": "../src/assets/voucher.png"
       },
       {
-          "title": "Devenez un compte pro et obtenez beaucoup plus de yulli",
+          "title": "Devenez un compte pro et obtenez beaucoup plus de Yulii",
           "text": "Prêt à passer à l'étape suivante de votre voyage sur Yulii ? Passez à Yulii Pro et ouvrez la porte à une multitude d'avantages et de fonctionnalités exclusives qui redéfinissent votre expérience d'utilisateur.",
           "color": "bg-[#efefff]",
           "icon": "../src/assets/refer.png"
@@ -108,7 +108,7 @@
       {
         "question": "C’est quoi la différence entre une récompense et une récompense pro ?",
         "answer": "Pour réclamer une récompense, tu dois avoir le nombre de points total requis.Pour réclamer une récompense pro, tu dois obligatoirement avoir fini et validé les deals qui sont liés à cette récompense.",
-        "answer2": "Faites l’expérience de la flexibilité de Yulli Credit. Achetez maintenant et payez plus tard avec notre fonction pratique de crédit Yulli. Plus d’attente - profitez de vos achats tout en gérant votre budget"
+        "answer2": "Faites l’expérience de la flexibilité de Yulii Credit. Achetez maintenant et payez plus tard avec notre fonction pratique de crédit Yulii. Plus d’attente - profitez de vos achats tout en gérant votre budget"
       },
       {
         "question": "Comment puis- je valider un deal que j’ai fini ?",
@@ -145,7 +145,7 @@
         "id": 3,
         "icon": "../src/assets/messages.png",
         "caption": "Discutez avec nous",
-        "text": "Vous avez une question ou vous avez besoin d’aide ? Nous ne sommes qu’à un e-mail. Envoyez-nous un message, et notre équipe d’assistance dédiée vous répondra rapidement help.yulligames.com"
+        "text": "Vous avez une question ou vous avez besoin d’aide ? Nous ne sommes qu’à un e-mail. Envoyez-nous un message, et notre équipe d’assistance dédiée vous répondra rapidement help.Yuliigames.com"
       }
     ]
   },
@@ -331,15 +331,15 @@
     ]
   },
   "contact": {
-    "title": "Questions Fréquemment Posées on Yulli",
-    "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
+    "title": "Questions Fréquemment Posées on Yulii",
+    "text": "Pour commencer avec Yulii.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
     "subheading": "Nous sommes là pour vous aider ! Contactez-nous pour toute question ou assistance",
     "subtext": "Avez-vous une question, avez-vous besoin de plus d'informations ou nécessitez-vous de l'aide ? Nous sommes à un clic ou un appel de distance. Notre équipe de support dédiée est prête à vous aider et à garantir que votre expérience avec nous soit fluide et satisfaisante"
   },
   "socials": {
     "heading": "Sociales",
     "title": "Bienvenue sur Yulii Socials, le centre vibrant où notre communauté prend vie ! Rejoignez la conversation, restez informé et soyez inspiré par les derniers événements dans le monde de Yulii.",
-    "text": "Pour commencer avec yulli.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
+    "text": "Pour commencer avec Yulii.com, il vous suffit de télécharger l'application depuis l'App Store ou Google Play Store, de créer un compte, et de commencer à explorer ! Vous pouvez rechercher des utilisateurs partageant vos centres d'intérêt, rejoindre des groupes liés à vos hobbies et commencer à discuter avec d'autres membres.",
     "section" : [
       {
         "name": "david",
@@ -379,20 +379,20 @@
     "text": "Avec yulii, vous avez le contrôle d’atteindre plus de fans, d’amis et de famille en offrant des promotions hors du commun et en offrant des expériences exceptionnelles.",
     "subtitle": "Historique des commandes sans effort",
     "subtext": "Simplifiez votre processus de gestion des commandes. Notre plateforme intuitive vous permet de suivre l'historique de vos commandes, de gérer les livraisons et les retraits, et d'améliorer l'expérience d'achat pour vos clients.",
-   "prosectiontitle": "Avec le compte Yulli Pro, vous pourrez atteindre le statut de célébrité au sein de l'application. Les avantages d'obtenir un compte Pro sont les suivants",
+   "prosectiontitle": "Avec le compte Yulii Pro, vous pourrez atteindre le statut de célébrité au sein de l'application. Les avantages d'obtenir un compte Pro sont les suivants",
    "prosectionlabel": "Devenez une célébrité sur Yulii et profitez de tous les avantages",
    "section" : [
       {
           "title": "Atteindre un public vaste",
-          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulli vous permet de superviser différents projets OU de manière transparente, rationalisant ainsi vos opérations et vous faisant gagner un temps précieux"
+          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulii vous permet de superviser différents projets OU de manière transparente, rationalisant ainsi vos opérations et vous faisant gagner un temps précieux"
       },
       {
           "title": "Gestion d'entreprise rationalisée",
-          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulli vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
+          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulii vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
       },
       {
           "title": "Analyses complètes",
-          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulli vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
+          "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulii vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
       }
   ],
   "goprosection" : [

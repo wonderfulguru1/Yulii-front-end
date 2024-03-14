@@ -104,7 +104,7 @@ const AddStoreItemForm = () => {
       };
       dispatch(addEditStoreItem({ storeItem: updatedStoreItem }));
       toast.success('Created Successfully');
-      navigate("/yulli-store")
+      navigate("/Yulii-store")
     } catch (error) {
       console.error('Error adding store item:', error);
     }
@@ -151,8 +151,8 @@ const AddStoreItemForm = () => {
     <div className='container mx-auto p-6'>
       <ToastContainer />
       <div className="flex items-center pb-6">
-        <Link to="/yulli-store">
-          <h3 className="text-sm">Yulli Store  </h3>
+        <Link to="/Yulii-store">
+          <h3 className="text-sm">Yulii Store  </h3>
         </Link>
         <ChevronRight size={18} />
         <h3 className="text-sm">Create a new store item </h3>

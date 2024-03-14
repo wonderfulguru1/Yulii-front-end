@@ -102,8 +102,7 @@ const Merchant: React.FC<ProUserProps> = () => {
           <small>{testimony.designation}</small>
         </div>
       </div>
-      <div className='flex container mx-auto items-center lg:w-1/3 px-6 lg:px-0 flex-col'>
-
+      <div className='flex container mx-auto items-center lg:w-1/2 px-6 lg:px-0 flex-col'>
         <Faq />
       </div>
 

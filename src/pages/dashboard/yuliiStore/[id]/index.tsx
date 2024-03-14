@@ -31,15 +31,15 @@ const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
             <div className="flex justify-between py-2">
                 <div className="flex items-center">
 
-                    <Link to="/yulli-store">
-                        <h3 className="text-sm font-semibold">Yulli Store </h3>
+                    <Link to="/Yulii-store">
+                        <h3 className="text-sm font-semibold">Yulii Store </h3>
                     </Link>
                     <ChevronRight size={18} />
                     <h3 className="text-sm">Item description </h3>
                 </div>
 
 
-                <Link to="/yulli-store/add">
+                <Link to="/Yulii-store/add">
                     <Button
                         type="button"
                         variant="ghost"
