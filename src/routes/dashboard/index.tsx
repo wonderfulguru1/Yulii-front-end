@@ -6,9 +6,9 @@ import PromotionsPage from "@/pages/dashboard/deals"
 import ProductDetails from "@/pages/dashboard/deals/[id]"
 import CreatePromotion from "@/pages/dashboard/deals/create"
 import UserDetailsPage from "@/pages/dashboard/userDetails"
-import YuliiStorePage from "@/pages/dashboard/YuliiStore"
-import StoreItem from "@/pages/dashboard/YuliiStore/[id]"
-import AddStoreItemForm from "@/pages/dashboard/YuliiStore/addStoreItem"
+import YuliiStorePage from "@/pages/dashboard/yuliiStore"
+import StoreItem from "@/pages/dashboard/yuliiStore/[id]"
+import AddStoreItemForm from "@/pages/dashboard/yuliiStore/addStoreItem"
 import UserProfile from "@/pages/dashboard/settings"
 
 const dashboardRoute = [

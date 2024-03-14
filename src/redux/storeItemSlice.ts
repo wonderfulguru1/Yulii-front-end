@@ -160,10 +160,10 @@ const storeItemSlice = createSlice({
         state.error = action.error.message ?? 'Failed to add';
       })
       
-      builder.addCase(deleteItem.fulfilled, (state, action: PayloadAction<number>) => {
+  /*     builder.addCase(deleteItem.fulfilled, (state, action: PayloadAction<number>) => {
         const deletedItemId = action.payload;
         state.data = state.data.filter((item) => item.id !== deletedItemId);
-      });
+      }); */
       builder.addCase(editItem.pending, (state) => {
         state.status = 'loading';
       });

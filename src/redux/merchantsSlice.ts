@@ -19,10 +19,10 @@ interface MerchantItem {
   }
   
 interface MerchantState {
-  data: Merchant[];
+  data: MerchantItem[];
   status: 'idle' | 'loading' | 'succeeded' | 'failed';
   error: string | null;
-  selectedMerchant: Merchant | null;
+  selectedMerchant: MerchantItem | null;
 }
 
 const initialState: MerchantState = {
@@ -36,7 +36,7 @@ export const fetchMerchants = createAsyncThunk('merchants/fetchMerchants', async
   const collectionRef = collection(firestoreStorage, "merchants");
   const snapshot = await getDocs(collectionRef);
 
-  const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Merchant));
+  const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as MerchantItem));
 
   return data;
 });
@@ -47,13 +47,13 @@ export const fetchMerchantById = createAsyncThunk('merchants/fetchMerchantById',
   const userDocSnapshot = await getDoc(userDocRef);
 
   if (userDocSnapshot.exists()) {
-    return { id: userDocSnapshot.id, ...userDocSnapshot.data() } as Merchant;
+    return { id: userDocSnapshot.id, ...userDocSnapshot.data() } as MerchantItem;
   } else {
     throw new Error('Merchant not found');
   }
 });
 
-export const updateMerchant = createAsyncThunk('merchants/updateMerchant', async (updatedMerchant: Merchant) => {
+export const updateMerchant = createAsyncThunk('merchants/updateMerchant', async (updatedMerchant: MerchantItem) => {
   const { id, ...userData } = updatedMerchant;
   const userDocRef = doc(firestoreStorage, 'merchants', id);
 
@@ -101,7 +101,7 @@ const merchantsSlice = createSlice({
       .addCase(fetchMerchants.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchMerchants.fulfilled, (state, action: PayloadAction<Merchant[]>) => {
+      .addCase(fetchMerchants.fulfilled, (state, action: PayloadAction<MerchantItem[]>) => {
         state.status = 'succeeded';
         state.data = action.payload;
       })
@@ -112,7 +112,7 @@ const merchantsSlice = createSlice({
       .addCase(fetchMerchantById.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchMerchantById.fulfilled, (state, action: PayloadAction<Merchant>) => {
+      .addCase(fetchMerchantById.fulfilled, (state, action: PayloadAction<MerchantItem>) => {
         state.status = 'succeeded';
         state.selectedMerchant = action.payload;
       })
