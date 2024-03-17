@@ -108,7 +108,7 @@ const Home: React.FC = () => {
       <div>
         <div className="flex justify-between">
           <h5 className="text-md font-semibold text-gray-400 dark:text-white ">
-            Recent signups
+            Recently Added Product
           </h5>
           {/* <Link to={`/Yulii-store/`} > */}
           <button
