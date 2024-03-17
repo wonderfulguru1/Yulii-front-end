@@ -83,11 +83,11 @@ const Navbar: React.FC<NavigationProps> = () => {
 
         <div className=" gap-6 hidden lg:flex">
         <LanguageSwitcher lngs={dropdownItems}/>
-          <Link to="/login">
+          {/* <Link to="/login">
             <Button title="Login" bgColor="bg-button1"  />
-          </Link>
+          </Link> */}
           <Link to="/register">
-            <Button title="Get Started" bgColor='bg-secondary2' />
+            <Button title="Sell on Yulii" bgColor='bg-secondary2' />
           </Link>
         </div>
         <div className='lg:hidden '>

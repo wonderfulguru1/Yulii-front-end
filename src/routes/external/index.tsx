@@ -8,6 +8,7 @@ import PrivacyPolicy from "@/pages/external/privacy-policy";
 import Referral from "@/pages/external/authForm/referral";
 
 
+
 const externalRoute = [
     {
         element: <HomePage/>,
@@ -41,6 +42,7 @@ const externalRoute = [
         element: <Referral/>,
         path: 'join/:id',
     },
+    
 ]
 
 export default externalRoute;

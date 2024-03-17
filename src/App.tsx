@@ -12,6 +12,7 @@ import LoginLayout from './layouts/login-layout';
 import Register from './pages/external/authForm/register';
 
 import AuthRoute from './pages/external/authForm/ProtectedRoute';
+import Download from './pages/external/download';
 
 function App() {
   Aos.init({
@@ -49,7 +50,7 @@ function App() {
         <Route element={<LoginLayout />}>
           <Route path={`/login`} element={<Login />} />
           <Route path={`/register`} element={<Register />} />
-
+          <Route path={`/download`} element={<Download />} />
         </Route>
         {/* <ProtectedRoute path="/home" component={Home } /> */}
       </Routes>
