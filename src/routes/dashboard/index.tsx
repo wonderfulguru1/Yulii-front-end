@@ -40,7 +40,7 @@ const dashboardRoute = [
 
     {
         element: <ProductDetails/>,
-        path: 'deals/deal-details',
+        path: 'deals/deal-details/:itemId',
     },
     {
         element: <UserDetailsPage/>,

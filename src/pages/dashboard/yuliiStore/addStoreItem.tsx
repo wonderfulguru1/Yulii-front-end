@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Link, useNavigate } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { fetchCategories } from '@/redux/categorySlice';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { auth, storage } from '@/firebase';
@@ -19,6 +20,7 @@ const AddStoreItemForm = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate()
   const merchantsData = useAppSelector((state: RootState) => state.merchants.data);
+  const categoryData = useAppSelector((state: RootState) => state.categories.data);
   const loggedInUserId = auth?.currentUser?.uid;
   const isUserInData = merchantsData.some(user => user.id === loggedInUserId);
   const foundUser = merchantsData.find(user => user.id === loggedInUserId);
@@ -36,10 +38,7 @@ const AddStoreItemForm = () => {
       try {
         dispatch(fetchMerchants());
         dispatch(fetchStoreItem());
-        const userId = auth?.currentUser?.uid;
-
-        const me = userId ? parseInt(userId, 10) : null;
-        console.log("xxx", me)
+        dispatch(fetchCategories());
       } catch (error) {
         console.error('Error fetching users:', error);
       }
@@ -85,7 +84,7 @@ const AddStoreItemForm = () => {
   
   // console.log("good", me);
 
-
+  const categoryOptions = categoryData[0]?.items || [];
 
   const handleAddStoreItem = async () => {
     try {
@@ -114,7 +113,7 @@ const AddStoreItemForm = () => {
   const handleImageSelect = (file: File) => {
     setSelectedImage(file);
   };
-  const categories = ["appliances", "fashion"]
+
 
   const uploadImageToStorage = async (file: File): Promise<string> => {
     try {
@@ -232,8 +231,9 @@ const AddStoreItemForm = () => {
                 </div>
                 <div className='flex flex-col w-1/2'>
                   <Label htmlFor="email" className='py-4'>Select Catgory</Label>
-                  <select id="category" value={selectedCategory} onChange={handleCategoryChange}>
-                    {categories.map((category) => (
+                  <select id="category" value={selectedCategory} onChange={handleCategoryChange} className='border rounded-md p-2'>
+                  <option value="" disabled hidden>Select an option</option>
+                    {categoryOptions.map((category) => (
                       <option key={category} value={category}>
                         {category}
                       </option>
@@ -261,7 +261,7 @@ const AddStoreItemForm = () => {
                 <div className='flex flex-col w-1/3'>
                   <Label htmlFor="coupon" className='py-4'>Coupon Code</Label>
                   <Input placeholder="DFTSKHD"
-                    type="string"
+                    type="text"
                     value={storeItem.couponCode}
                     onChange={(e) => setStoreItem({ ...storeItem, couponCode: e.target.value })} />
                 </div>
@@ -270,7 +270,7 @@ const AddStoreItemForm = () => {
                 <div className='flex flex-col w-full '>
                   <Label htmlFor="affiliate_link" className='py-4 '>Affiliate link</Label>
                   <Input placeholder="DFTSKHD"
-                    type="string"
+                    type="text"
                     value={storeItem.affiliate_link}
                     onChange={(e) => setStoreItem({ ...storeItem, affiliate_link: e.target.value })} />
                 </div>
