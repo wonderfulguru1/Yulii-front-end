@@ -6,7 +6,6 @@ import { useEffect } from "react";
 import { RootState } from "@/redux/store";
 import React from "react";
 import LoadingFallback from "@/components/dashboard/loadingFallback";
-import ItemDetails from "@/components/dashboard/item-details";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import StoreItemDetails from "@/components/dashboard/store-item-details";
 
