@@ -1,39 +1,39 @@
 import { Button } from "@/components/ui/button";
-import { ChevronRight } from "lucide-react"
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
+import { ArrowLeftSquare, ChevronRight } from "lucide-react"
 import { fetchStoreItemById } from "@/redux/storeItemSlice";
 import { useEffect } from "react";
 import { RootState } from "@/redux/store";
 import React from "react";
 import LoadingFallback from "@/components/dashboard/loadingFallback";
-import ItemDetails from "@/components/dashboard/item-details";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import StoreItemDetails from "@/components/dashboard/store-item-details";
 
 
 
 const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
     // const storeItemId  = useParams<{ storeItemId: string }>();
-    const params= useParams(); 
-    const location = useLocation()
-    const data = location?.state?.data
-    console.log("nnnn", data)
-    console.log("nnnn", params)
+
     const dispatch = useAppDispatch();
     const { status } = useAppSelector((state: RootState) => state.storeItems);
-
+    const location = useLocation()
+    const data = location?.state?.data
     useEffect(() => {
         dispatch(fetchStoreItemById(itemId));
     }, [dispatch, itemId]);
-    console.log("hhhh", itemId)
+
 
     return (
         <div className="p-6 h-full">
             <div className="flex justify-between py-2">
                 <div className="flex items-center">
 
-                    <Link to="/Yulii-store">
-                        <h3 className="text-sm font-semibold">Yulii Store </h3>
-                    </Link>
+                <Link to="/yulli-store">
+                <div className="flex items-center gap-2 border w-1/12 rounded-md">
+                    <ArrowLeftSquare />
+                    <h3 className="text-sm font-semibold">Back </h3>
+                </div>
+            </Link>
                     <ChevronRight size={18} />
                     <h3 className="text-sm">Item description </h3>
                 </div>
@@ -73,7 +73,7 @@ const StoreItem: React.FC<{ itemId: string }> = ({ itemId }) => {
                 {status === 'loading' ? (
                     <LoadingFallback />
                 ) : (
-                    <ItemDetails item={data}/>
+                    <StoreItemDetails item={data}/>
                 )}
             </React.Suspense>
          

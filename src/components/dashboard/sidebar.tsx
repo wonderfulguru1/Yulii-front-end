@@ -12,7 +12,7 @@ export const Sidebar = () => {
     const logout = async () => {
         try {
           await signOut(auth);
-          navigate("/login")
+          navigate("/home")
         } catch (error) {
           console.error("error");
         }

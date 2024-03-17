@@ -39,7 +39,9 @@
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "use-url-search-params": "^2.5.1",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "highcharts": "^11.3.0",
+    "highcharts-react-official": "^3.2.1"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

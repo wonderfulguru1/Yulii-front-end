@@ -5,7 +5,7 @@ import tasksSlice from './tasksSlice';
 import storeItemSlice from './storeItemSlice';
 import merchantsSlice from './merchantsSlice';
 import invitationSlice from './invitationSlice';
-// import categorySlice from './categorySlice';
+import categoriesSlice from './categorySlice';
 
 
 const store = configureStore({
@@ -15,7 +15,7 @@ const store = configureStore({
     storeItems: storeItemSlice,
     merchants:merchantsSlice,
     invitations:invitationSlice,
-    // categories: categorySlice,
+    categories: categoriesSlice,
   },
 });
 
