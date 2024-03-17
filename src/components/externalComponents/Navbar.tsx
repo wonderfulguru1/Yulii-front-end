@@ -86,7 +86,7 @@ const Navbar: React.FC<NavigationProps> = () => {
           {/* <Link to="/login">
             <Button title="Login" bgColor="bg-button1"  />
           </Link> */}
-          <Link to="/register">
+          <Link to="/download">
             <Button title="Sell on Yulii" bgColor='bg-secondary2' />
           </Link>
         </div>
