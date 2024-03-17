@@ -35,7 +35,6 @@ const GenericSection: React.FC<SectionProps> = ({ sectionName, bgColor, labelCol
                 </div>
                 <h2 className='text-3xl lg:mt-20 font-semibold'>{t(`homepage.sections.${sectionName}.title`)}</h2>
                 <p className='my-10'>{t(`homepage.sections.${sectionName}.subtext`)}</p>
-                <Button title='Join for free' bgColor={bgColor} />
             </div>
         </div>
     )

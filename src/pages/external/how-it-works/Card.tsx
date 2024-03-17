@@ -8,11 +8,12 @@ interface SectionProps {
   sectionName: keyof Translations['howitworks']['sections'];
   order: string;
   order2: string;
+  number: string;
 }
 
 
 
-const Card: React.FC<SectionProps> = ({ sectionName, order, order2 }) => {
+const Card: React.FC<SectionProps> = ({ sectionName, order, order2 , number}) => {
     const { t } = useTranslation();
     const imagePath = t(`howitworks.sections.${sectionName}.Image`)
     return (
@@ -21,7 +22,7 @@ const Card: React.FC<SectionProps> = ({ sectionName, order, order2 }) => {
             <div className='container mx-auto flex w-5/6 gap-10 flex-col lg:flex-row items-center justify-between py-10' data-aos="fade-up-right">
 
                 <div className= {` lg:w-2/3 ${order}`} >
-                    <div className='h-12 w-12 border-dashed border-[#78b8ed] text-[#78b8ed] border-b-4 py-2 item-center text-center rounded-full font-semibold '>1</div>
+                    <div className='h-12 w-12 border-dashed border-[#78b8ed] text-[#78b8ed] border-b-4 py-2 item-center text-center rounded-full font-semibold '>{number}</div>
                     <div className='px-4 border-l-4 border-b-4 border-[#fef5f0] border-dashed mt-4'>
                         <h3 className='font-semibold'>{t(`howitworks.sections.${sectionName}.title`)}</h3>
                         <p className='py-8'>

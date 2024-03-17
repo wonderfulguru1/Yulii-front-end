@@ -86,9 +86,9 @@ const Navbar: React.FC<NavigationProps> = () => {
           <Link to="/login">
             <Button title="Login" bgColor="bg-button1"  />
           </Link>
-          <Link to="/register">
+     {/*      <Link to="/register">
             <Button title="Get Started" bgColor='bg-secondary2' />
-          </Link>
+          </Link> */}
         </div>
         <div className='lg:hidden '>
           <button className="lg:hidden" onClick={() => setMobileNav(!mobileNav)}>

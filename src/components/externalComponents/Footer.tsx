@@ -44,7 +44,7 @@ const Footer = () => (
         <div className="flex justify-items-center footer_copyright py-6 bg-[#555555]">
 
 
-            <p className="text-white text-center container mx-auto">@ 2023 Flexibble. All rights reserved</p>
+            <p className="text-white text-center container mx-auto">@ 2023 Yuliigames.</p>
 
 
         </div>

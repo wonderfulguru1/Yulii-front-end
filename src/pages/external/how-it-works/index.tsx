@@ -30,10 +30,10 @@ const HowItWorks: React.FC<WorksProps> = () => {
         </svg>
       </div>
       <div className='container mx-auto'>
-        <Card sectionName='section1' order={'order-first'} order2={'order-last'}/>
-        <Card sectionName='section2'    order2='order-first' order='order-last'/>
-        <Card sectionName='section3' order={'order-first'} order2={'order-last'}/>
-        <Card sectionName='section4'    order2='order-first' order='order-last'/>
+        <Card sectionName='section1' order={'order-first'} order2={'order-last'}  number={'1'}/>
+        <Card sectionName='section2'    order2='order-first' order='order-last'  number={'2'}/>
+        <Card sectionName='section3' order={'order-first'} order2={'order-last'}  number={'3'}/>
+        <Card sectionName='section4'    order2='order-first' order='order-last'  number={'4'}/>
       </div>
       <section className='container mx-auto px-4 lg:px-0 flex flex-col py-4'>
         <div className='flex justify-center md:py-6 '>

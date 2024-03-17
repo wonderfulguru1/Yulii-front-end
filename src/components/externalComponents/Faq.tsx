@@ -23,9 +23,7 @@ const Faq: React.FC<FAQProps> = () => {
   return (
     <div className='container mx-auto  space-y-4'>
         <h2 className='text-center font-semibold text-3xl w-2/3 py-8 mx-auto'>{t(`faq.faqTitle`)}</h2>
-        <div className='bg-secondary rounded-md p-4'>
-            <h3 className='font-semibold'>Q:{t(`faq.question`)}</h3>
-        </div>
+      
         {faqData?.map((item, index) => (
         <div className='border rounded-md p-6' key={index}>
            <div className='flex justify-between'>

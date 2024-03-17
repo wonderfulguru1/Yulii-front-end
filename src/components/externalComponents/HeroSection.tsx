@@ -76,7 +76,7 @@ const HeroSection: React.FC<HeroProps> = () => {
                     </div>
                 </div>
 
-                <iframe width="80%" height="400"
+                <iframe width="80%" height="400" style={{borderRadius: '10px'}}
                  src="https://www.youtube.com/embed/Mpw1quautoc?si=5TuiqjRB6c1OSnBz&autoplay=1;modestbranding=1&rel=0;controls=0;showinfo=0"
                   title="YouTube video player" frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
