@@ -26,6 +26,10 @@ interface StoreItem {
   // other User properties
 }
 
+interface DeleteItemFulfilledAction {
+  payload: string | void;
+}
+
 interface AddEditItemPayload {
   storeItem: any;
 }
@@ -160,10 +164,11 @@ const storeItemSlice = createSlice({
         state.error = action.error.message ?? 'Failed to add';
       })
       
-  /*     builder.addCase(deleteItem.fulfilled, (state, action: PayloadAction<number>) => {
-        const deletedItemId = action.payload;
-        state.data = state.data.filter((item) => item.id !== deletedItemId);
-      }); */
+      builder.addCase(deleteItem.fulfilled, (state, action: DeleteItemFulfilledAction) => {
+        const itemIdToDelete = action.payload !== undefined ? Number(action.payload) || 0 : 0;
+        const filteredData = state.data.filter((data) => data.id !== itemIdToDelete);
+        state.data = filteredData;
+      });
       builder.addCase(editItem.pending, (state) => {
         state.status = 'loading';
       });

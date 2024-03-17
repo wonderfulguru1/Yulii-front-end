@@ -10,6 +10,8 @@ import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import StoreCard from "@/components/dashboard/store-card";
 import { deleteItem, editItem } from "@/redux/storeItemSlice"
 import { ToastContainer, toast } from "react-toastify";
+import {Item} from "@/interface";
+import PopupComponent from "@/components/dashboard/edit-popup";
 
 
 
@@ -19,16 +21,8 @@ const YuliiStorePage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const storesData = useAppSelector((state: RootState) => state.storeItems.data);
   const categories = Array.from(new Set(storesData.map((item) => item.category)));
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const openModal = () => {
-  //   setIsModalOpen(true);
-  // };
-
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  // };
-
+  const [selectedItem, setSelectedItem] = useState<Item | null>(null);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -64,12 +58,21 @@ const YuliiStorePage = () => {
     }
   };
 
-  const handleSave = async(editedData: any) => {
+  const handleItemClick = (item: Item) => {
+    setSelectedItem(item);
+    setIsPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  };
+
+  const handleSave = async(editedData: Item) => {
     try {
-      await  dispatch(editItem(editedData));
+      await dispatch(editItem(editedData));
       dispatch(fetchStoreItem());
       toast("Item Updated");
-      setIsModalOpen(false)
+      setIsPopupOpen(false)
     } catch (error) {
       console.error('Error deleting item:', error);
     }
@@ -148,21 +151,19 @@ const YuliiStorePage = () => {
       {/* <div className="py-6"> */}
       {/* <YuliiCard items={filteredItems}  onDelete={handleDeleteItem} /> */}
       <div className="md:px-4 md:grid md:grid-cols-2 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 space-y-4 md:space-y-0 py-6">
-        {filteredItems.map(item => (
+        {filteredItems?.map(item => (
 
           <StoreCard key={item.id}
-
-            title={item.title}
-            image={item.image}
-
-            onDelete={handleDeleteItem}
-            id={item.id} status={""} price={item.price} description={item.description} discount={item.percentage_discount} 
-            onSave={handleSave}
-            isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}
+          item={item}
+          onDeleteClick={() => handleDeleteItem(item.id)}
+          onItemClick={() => handleItemClick(item)}
             />
 
         ))}
       </div>
+      {isPopupOpen && selectedItem && (
+        <PopupComponent item={selectedItem} onClose={closePopup} onEditSave={handleSave} />
+      )}
     </div>
 
     // </div>
