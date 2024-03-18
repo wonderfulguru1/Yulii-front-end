@@ -71,9 +71,6 @@ const Merchant: React.FC<ProUserProps> = () => {
               </ul>
 
             </div>
-            <div className='flex justify-center pt-6'>
-            <Button title='Go Pro' bgColor='bg-[#555555]' />
-            </div>
 
           </div>
           <div className={`flex  `}
