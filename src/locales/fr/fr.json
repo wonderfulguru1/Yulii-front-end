@@ -136,12 +136,6 @@
         "text": "Recherchez l’icône de la bulle de chat dans le coin inférieur droit de votre écran. Il vous suffit de cliquer dessus pour lancer une session de chat avec nous. Alternativement, vous pouvez avoir un système de tickets d’assistance dédié ici"
       },
       {
-        "id": 2,
-        "icon": "../src/assets/call.png",
-        "caption": "Appelez-nous",
-        "text": "Appelez-nous ou envoyez-nous un message WhatsApp. Nous ne sommes qu’à un coup de fil, prêts à vous fournir le soutien dont vous avez besoin (+234-234-567-90)."
-      },
-      {
         "id": 3,
         "icon": "../src/assets/messages.png",
         "caption": "Discutez avec nous",
