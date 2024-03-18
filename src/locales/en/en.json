@@ -7,9 +7,9 @@
         "subtitle": "Yulii is the mobile application that allows you to organizedaily activities with your loved ones. With a point awarded task allocation system, you can motivate your family and friends to deserve your attention, and greet them with gifts and vice versa",
         "sections": {
             "section1": {
-                "label": "Motivate  friends and family with deals and task",
-                "title": "Your children to do basic daily tasks and reward them with points.",
-                "subtext": "With thepoints they accumulate from helping at home, they can obtain a gift, from a large list of items of their choice. This way, they learn the sense of responsabilities and associate them with fun, and the notion of being rewarded when they listen and do what you asked them to.",
+                "label": "Motivate friends and family with deals and task",
+                "title": "Motivate your children to do basic daily tasks and reward them with points.",
+                "subtext": "With the points they accumulate from helping at home, they can obtain a gift, from a large list of items of their choice. This way, they learn the sense of responsibilities and associate them with fun, and the notion of being rewarded when they listen and do what you asked them too.",
                 "btnText": "Join for free",
                 "image": "../../assets/section1.svg"
             },
@@ -23,14 +23,14 @@
             "section3": {
                 "label": "Post  your events and  status as a pro user",
                 "title": "Yulii helps you sharing photos and videos about your events, stories and shows",
-                "subtext": "Connect with friends, family, and other users by following their accounts and engaging with their content. Share Phone and images of your shows and events",
+                "subtext": "Connect with friends, family, and other users by following their accounts and engaging with their content. Share images of your shows and events",
                 "btnText": "Join for free",
                 "image": "../src/assets/section3.svg"
             },
             "section4": {
-                "label": "Purchase discounted items from our the Yuliistore",
+                "label": "Purchase discounted items from our Yulii store",
                 "title": "Get gifts  & vouchers from your favorite stores ",
-                "subtext": "Purchase discounted  items from the Yulii store and give as gifts to friends and family",
+                "subtext": "Purchase discounted items from the Yulii store and give as gifts to friends and family",
                 "btnText": "Join for free",
                 "image": "../src/assets/section4.svg"
             }
@@ -52,7 +52,7 @@
                 "Image": "../src/assets/image22.png"
             },
             "section3": {
-                "title": "Create a deal and attach to a friend family or group of person",
+                "title": "Create a deal and attach to a friend, family or group of person",
                 "text": "🔍 See all deals from your group of friends. Each deal is associated with the picture of your friend or even yours, which represents the assignee of the deal. That way you can keep track of what everybody has going on. Remember ! Always keep track of what your friends and family are doing, that way you know you can complete your tasks before them !",
                 "Image": "../src/assets/image33.png"
             },
@@ -103,7 +103,7 @@
             },
             {
                 "question": "What is a reward?",
-                "answer": "A reward is a gift. Just like deals, you can create gifts to assign to your friends and family, or see yourself be assigned one by a member of your group. You can also suggest gifts to someone and see if they agree on giving it to you.Your friends and family will be able to offer you those gifts under certain conditions:"
+                "answer": "A reward is a gift. Just like deals, you can create gifts to assign to your friends and family, or see yourself been assigned one by a member of your group. You can also suggest gifts to someone and see if they agree on giving it to you.Your friends and family will be able to offer you those gifts under certain conditions:"
             },
             {
                 "question": "What’s the difference between a gift and a pro gift?",
@@ -331,7 +331,7 @@
     },
     "banner": {
         "title": "Elevate your shopping experience with Yulii",
-        "text": "Your gateway to unbeatable deals, rewards, and convenience right at your fingertips",
+        "text": "Your gateway to unbeatable deals, rewards, at the convenience of your fingertips",
        "image": "../src/assets/footer.png"
     },
     "download":{
@@ -376,7 +376,7 @@
         "text": "With Yulii you're in control of reaching more fans, friends and family by offering enticing promotions and delivering exceptional experiences",
         "subtitle": "Effortless Order History",
         "subtext": "Simplify your order management process. Our intuitive platform allows you to keep track of your order history, manage deliveries & pickups, and enhance the shopping experience for your customers.",
-        "prosectiontitle": "With the Yulii proaccount you'll be able to reach celebrity status within the app. The benefits of getting a pro account are",
+        "prosectiontitle": "With the Yulii pro account you'll be able to reach celebrity status within the app. The benefits of getting a pro account are",
         "prosectionlabel": "Become a celebrity on Yulii and enjoy all benefits",
         "testimonal": "As people in the tech industry, we are always on the lookout for innovative solutions that not only enhance operational efficiency but also foster a positive and engaging work culture. Our discovery of Yulii has been a game-changer in how we approach task management and employee motivation. Yulii’s unique platform has revolutionized our internal processes, allowing for a seamless exchange of tasks and rewards within our teams. The flexibility to customize deals and rewards has significantly boosted our employees' productivity and satisfaction.",
          "testimonal_name":"SuevooTech, Inc",
@@ -411,11 +411,8 @@
             {
                 "title": "Get a golden Yulii tree that never dies"
                 
-            },
-            {
-                "title": "Publishing your upcoming events in the 'events category' to let your audience know what you have in store for them"
-                
             }
+            
         ]
     
     },
