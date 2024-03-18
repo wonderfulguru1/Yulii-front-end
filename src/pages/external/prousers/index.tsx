@@ -88,18 +88,11 @@ const Merchant: React.FC<ProUserProps> = () => {
       </div>
       <div className='bg-secondary my-6'>
         <div className='lg:w-1/3 px-6 lg:px-0 text-lg text-center py-24 container mx-auto items-center flex flex-col'>
-          <h4 className='text2xl font-semibold'>{testimony.title}</h4>
-          <p className='py-10'>{testimony.text}</p>
-          <LazyLoadImage
-            src="/merchant3.png"
-            width={80}
-            height={10}
-            alt="logo"
-            className='rounded-full'
-            data-aos="zoom-out-left"
-          />
-          <h5>{testimony.name}</h5>
-          <small>{testimony.designation}</small>
+          <h4 className='text2xl font-semibold'>{t(`prousers.testimonal_name`)}</h4>
+          <p className='py-10'>{t(`prousers.testimonal`)}</p>
+          
+         {/*  <h5>{t(`prousers.testimonal_name`)}</h5> */}
+          {/* <small>{testimony.designation}</small> */}
         </div>
       </div>
       <div className='flex container mx-auto items-center lg:w-1/2 px-6 lg:px-0 flex-col'>

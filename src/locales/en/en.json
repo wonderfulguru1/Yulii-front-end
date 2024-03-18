@@ -340,6 +340,10 @@
         "text": "Your gateway to unbeatable deals, rewards, and convenience right at your fingertips",
        "image": "../src/assets/footer.png"
     },
+    "download":{
+        "title":"Ready to start selling? We can help!",
+        "text":"Discover the ultimate convenience! Our app is super user-friendly and makes showcasing your goods and products a breeze. Join us now and effortlessly reach a wider audience. Download the app today and get started in just minutes!"
+      },
     "socials": {
         "heading": "Socials",
         "title": "Welcome to Yulii Socials, the vibrant hub where our community comes to life! Join the conversation, stay informed, and be inspired by the latest happenings in the world of Yulii.",
@@ -380,6 +384,8 @@
         "subtext": "Simplify your order management process. Our intuitive platform allows you to keep track of your order history, manage deliveries & pickups, and enhance the shopping experience for your customers.",
         "prosectiontitle": "With the Yulii proaccount you'll be able to reach celebrity status within the app. The benefits of getting a pro account are",
         "prosectionlabel": "Become a celebrity on Yulii and enjoy all benefits",
+        "testimonal": "As people in the tech industry, we are always on the lookout for innovative solutions that not only enhance operational efficiency but also foster a positive and engaging work culture. Our discovery of Yulii has been a game-changer in how we approach task management and employee motivation. Yulii’s unique platform has revolutionized our internal processes, allowing for a seamless exchange of tasks and rewards within our teams. The flexibility to customize deals and rewards has significantly boosted our employees' productivity and satisfaction.",
+         "testimonal_name":"SuevooTech, Inc",
         "section" : [
             {
                 "title": "Reach an Expansive Audience",
@@ -483,4 +489,5 @@
           "href": "/contact"
         }
       ]
+     
 }

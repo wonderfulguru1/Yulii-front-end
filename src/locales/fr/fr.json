@@ -374,6 +374,10 @@
     "text": "Votre porte d'accès à des offres imbattables, des récompenses et une commodité à portée de main.",
     "image": "../src/assets/footer.png"
   },
+  "download":{
+    "title":"Prêt à commencer à vendre ? Nous pouvons vous aider !",
+    "text":"Découvrez la convivialité ultime ! Notre application est très facile à utiliser et facilite la présentation de vos biens et produits. Rejoignez-nous dès maintenant et atteignez facilement un public plus large. Téléchargez l'application aujourd'hui et commencez en quelques minutes seulement !"
+  },
   "prousers": {
     "title": "La plate-forme ultime pour des activités agréables",
     "text": "Avec yulii, vous avez le contrôle d’atteindre plus de fans, d’amis et de famille en offrant des promotions hors du commun et en offrant des expériences exceptionnelles.",
@@ -395,6 +399,8 @@
           "text": "Pourquoi jongler avec plusieurs profils lorsque vous pouvez gérer toutes vos entreprises de manière transparente en un seul endroit ? L'interface intuitive de Yulii vous permet de superviser différentes entreprises sans effort, rationalisant vos opérations et vous faisant gagner un temps précieux."
       }
   ],
+  "testimonal": "En tant que personnes dans l'industrie technologique, nous sommes constamment à la recherche de solutions innovantes qui non seulement améliorent l'efficacité opérationnelle, mais favorisent également une culture de travail positive et engageante. Notre découverte de Yulii a révolutionné notre approche de la gestion des tâches et de la motivation des employés. La plateforme unique de Yulii a transformé nos processus internes, permettant un échange fluide de tâches et de récompenses au sein de nos équipes. La flexibilité de personnaliser les accords et les récompenses a considérablement augmenté la productivité et la satisfaction de nos employés",
+  "testimonal_name":"SuevooTech, Inc",
   "goprosection" : [
      
       {
@@ -484,5 +490,4 @@
       "href": "/contact"
     }
   ]
- 
 }
