@@ -1,6 +1,6 @@
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import Button from './Button';
+//import Button from './Button';
 import { Translations } from '@/interface';
 import { useTranslation } from 'react-i18next';
 
@@ -13,7 +13,7 @@ interface SectionProps {
     labelColor: string;
 }
 
-const GenericSection: React.FC<SectionProps> = ({ sectionName, bgColor, labelColor, order, order2 }) => {
+const GenericSection: React.FC<SectionProps> = ({ sectionName, labelColor, order, order2 }) => {
     const { t } = useTranslation();
     const imagePath = t(`homepage.sections.${sectionName}.image`)
 

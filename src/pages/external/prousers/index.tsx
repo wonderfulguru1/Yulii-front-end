@@ -1,7 +1,7 @@
 import HeroSection from './HeroSection'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Faq from '../../../components/externalComponents/Faq';
-import { merchantItems } from "../../../constants/index"
+//import { merchantItems } from "../../../constants/index"
 import Button from '@/components/externalComponents/Button';
 import Image1 from "../../../assets/section1.svg"
 import { PiCirclesThreePlusFill } from "react-icons/pi"
@@ -17,7 +17,7 @@ interface ProUserProps {
 }
 
 const Merchant: React.FC<ProUserProps> = () => {
-  const { testimony} = merchantItems
+  //const { testimony} = merchantItems
   const { t } = useTranslation();
   const proUserData = t('prousers.section', { returnObjects: true }) as { title: string; text: string }[];
   const proUserItem = t('prousers.goprosection', { returnObjects: true }) as { title: string }[];
