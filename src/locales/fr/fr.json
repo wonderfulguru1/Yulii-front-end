@@ -8,8 +8,8 @@
     "sections": {
       "section1": {
         "label": "Découvrez des offres, gagnez des points et soyez récompensé.",
-        "title": "Vos enfants peuvent effectuer des tâches quotidiennes de base et les récompenser avec des points",
-        "subtext": "Vos enfants peuvent effectuer des tâches quotidiennes de base et les récompenser avec des points. Avec les points qu'ils accumulent en aidant à la maison, ils peuvent obtenir un cadeau, parmi une large liste d'articles de leur choix.",
+        "title": "motivez vos enfants à accomplir des tâches quotidiennes et récompensez-les avec des points.",
+        "subtext": "Avec les points qu'ils accumulent en aidant à la maison, ils peuvent obtenir un cadeau, parmi une large liste d'articles de leur choix. De cette façon, ils apprennent le sens des responsabilités et les associent au plaisir, ainsi que la notion d'être récompensé lorsqu'ils écoutent et font ce que vous leur demandez.",
         "image": "../src/assets/section1.svg"
       },
       "section2": {
@@ -22,12 +22,12 @@
       "section3": {
         "label": "Publiez vos événements et votre statut en tant qu’utilisateur professionnel",
         "title": "Yulii vous aide à partager des photos et des vidéos sur vos événements, histoires et spectacles",
-        "subtext": "Connectez-vous avec vos amis, votre famille et d’autres utilisateurs en suivant leurs comptes et en vous engageant avec leur contenu. Partagez les images de vos émissions et événements",
+        "subtext": "Connectez-vous avec vos amis, votre famille et d'autres utilisateurs en suivant leurs comptes et en interagissant avec leur contenu. Partagez des images de votre vie ainsi que des événements",
         "btnText": "Join for free",
         "image": "../src/assets/section3.svg"
       },
       "section4": {
-        "label": "Achetez des articles à prix réduit dans notre magasin Yuliistore",
+        "label": "Achetez des articles à prix réduit dans notre boutique Yulii",
         "title": "Obtenez des cadeaux et des bons d’achat dans vos magasins préférés",
         "subtext": "Achetez des articles à prix réduit dans le magasin Yulii et offrez-les en cadeau à vos amis et à votre famille",
         "btnText": "Join for free",
@@ -51,7 +51,7 @@
         "Image": "../src/assets/image22.png"
       },
       "section3": {
-        "title": "Créez un accord et attachez-le à un ami, une famille ou un groupe de personnes",
+        "title": "Créez une offre et attachez-la à un ami, un membre de votre famille ou un groupe de personnes",
         "text": "Consultez toutes les offres de votre groupe d'amis. Chaque transaction est associée à la photo de votre ami ou même de la vôtre, qui représente le cessionnaire de la transaction. De cette façon, vous pouvez suivre ce qui se passe chez tout le monde. Souviens-toi ! Gardez toujours une trace de ce que font vos amis et votre famille, de cette façon vous savez que vous pouvez accomplir vos tâches avant eux !",
         "Image": "../src/assets/33.png"
       },
@@ -103,7 +103,7 @@
       },
       {
         "question": "C’est quoi une récompense ?",
-        "answer": "Une récompense est un cadeau qu’un de tes amis ou un membre de famille devra t’offrir si tu réponds à certaines conditions :"
+        "answer": "Une récompense est un cadeau. Tout comme les offres, vous pouvez créer des cadeaux à attribuer à vos amis et à votre famille, ou vous voir attribuer un cadeau par un membre de votre groupe. Vous pouvez également suggérer des cadeaux à quelqu'un et voir s'il est d'accord pour vous l'offrir. Vos amis et votre famille pourront vous offrir ces cadeaux sous certaines conditions :"
       },
       {
         "question": "C’est quoi la différence entre une récompense et une récompense pro ?",
@@ -365,7 +365,7 @@
   },
   "banner": {
     "title": "Rehaussez votre expérience d'achat avec Yulii.",
-    "text": "Votre porte d'accès à des offres imbattables, des récompenses et une commodité à portée de main.",
+    "text": "Votre passerelle vers des offres et des récompenses, à portée de main",
     "image": "../src/assets/footer.png"
   },
   "download":{
@@ -377,7 +377,7 @@
     "text": "Avec yulii, vous avez le contrôle d’atteindre plus de fans, d’amis et de famille en offrant des promotions hors du commun et en offrant des expériences exceptionnelles.",
     "subtitle": "Historique des commandes sans effort",
     "subtext": "Simplifiez votre processus de gestion des commandes. Notre plateforme intuitive vous permet de suivre l'historique de vos commandes, de gérer les livraisons et les retraits, et d'améliorer l'expérience d'achat pour vos clients.",
-   "prosectiontitle": "Avec le compte Yulii Pro, vous pourrez atteindre le statut de célébrité au sein de l'application. Les avantages d'obtenir un compte Pro sont les suivants",
+   "prosectiontitle": "Avec le compte Yulii pro, vous pourrez atteindre le statut de célébrité au sein de l'application. Les avantages d'obtenir un compte pro sont",
    "prosectionlabel": "Devenez une célébrité sur Yulii et profitez de tous les avantages",
    "section" : [
       {
