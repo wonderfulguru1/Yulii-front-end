@@ -33,7 +33,7 @@ const Footer = () => (
                 <div className="footer_column ">
                     <h4 className="font-semibold text-xl">Company</h4>
                     <span className="flex flex-col gap-2 font-normal text-lg">
-                    25 RUE DE PONTHIEU 75008 PARIS 8
+                    25 RUE DE PONTHIEU 75008 PARIS 
                     </span>
                 </div>
                
