@@ -25,6 +25,7 @@ interface NavigationProps {
 const Navbar: React.FC<NavigationProps> = () => {
   const { t } = useTranslation();
   const navigationItems = t('navigationItems', { returnObjects: true }) as { key: string; text: string, href: string }[];
+  const buttonText = t('sellButton', { returnObjects: true }) as { text: string }[];
   const [mobileNav, setMobileNav] = useState(false);
   const location = useLocation();
 
@@ -87,7 +88,7 @@ const Navbar: React.FC<NavigationProps> = () => {
             <Button title="Login" bgColor="bg-button1"  />=
           </Link> */}
           <Link to="/download">
-            <Button title="Sell on Yulii" bgColor='bg-secondary2' />
+            <Button title={t(`${buttonText}`)} bgColor='bg-secondary2' />
           </Link>
         </div>
         <div className='lg:hidden '>

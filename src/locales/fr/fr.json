@@ -90,7 +90,7 @@
   ]
   },
   "faq": {
-    "faqTitle": "Questions Fréquemment Posées Sur",
+    "faqTitle": "Questions fréquemment posées",
     "question": "C’est quoi Yulii ?",
     "questions": [
       {
@@ -132,7 +132,7 @@
       {
         "id": 1,
         "icon": "../src/assets/sms.png",
-        "caption": "Discutez avec nous",
+        "caption": "Envoyez nous un e-mail",
         "text": "Recherchez l’icône de la bulle de chat dans le coin inférieur droit de votre écran. Il vous suffit de cliquer dessus pour lancer une session de chat avec nous. Alternativement, vous pouvez avoir un système de tickets d’assistance dédié ici"
       },
       {
@@ -480,5 +480,7 @@
       "text": "Privacy Policy",
       "href": "/contact"
     }
-  ]
+  ],
+
+  "sellButton" : "Vendre sur Yulli"
 }
