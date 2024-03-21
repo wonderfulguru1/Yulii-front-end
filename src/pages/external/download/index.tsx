@@ -7,9 +7,9 @@ const Download = () => {
 
     return (
         <div className="container items-center   ">
-            <div className="flex h-screen items-center">
+            <div className="flex lg:h-screen items-center">
 
-                <div className="w-1/2 flex justify-center items-center ">
+                <div className="w-1/2 hidden lg:flex justify-center items-center ">
                     <LazyLoadImage
                         src={StoreImg}
                         width={300}
@@ -17,8 +17,8 @@ const Download = () => {
                         alt="store image"
                         className='' />
                 </div>
-                <div className="w-1/2 ">
-                    <h1 className="text-6xl py-8 font-semi-bold">{t(`download.title`)}</h1>
+                <div className="lg:w-1/2 px-10 lg:px-0 py-24 lg:py-0">
+                    <h1 className="lg:text-6xl text-4xl py-8 font-semi-bold">{t(`download.title`)}</h1>
                     <p className="text-xl"> {t(`download.text`)}</p>
                     <div className='flex  space-x-6 py-8'>
                         <div
