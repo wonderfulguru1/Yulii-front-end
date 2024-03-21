@@ -58,16 +58,16 @@ const HeroSection: React.FC<HeroProps> = () => {
 
             <div className='flex text-center  container mx-auto items-center flex-col lg:py-12'>
 
-                <div className='flex md:flex-row flex-col justify-between lg:px-28'>
+                <div className='flex md:flex-row flex-col justify-between lg:px-28 '>
                     <div className='hidden lg:block'>
                         <Shape />
                     </div>
 
                     <div>
-                        <h1 className='intro-text lg:text-4xl text-xl font-semibold' data-aos="fade-right" 
-                        style={{fontSize: '4.25rem', lineHeight: '4.5rem'}}
+                        <h1 className='intro-text lg:text-7xl text-5xl font-semibold leading-normal' data-aos="zoom-in" 
+                        // style={{ lineHeight: '3.5rem'}}
                         > {t(`homepage.title1`)} <span className='text-[#67c7c0]'>{t(`homepage.title2`)} </span>{t(`homepage.title3`)} <span className='text-[#67c7c0]'>{t(`homepage.title4`)}</span></h1>
-                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-left" style={{paddingLeft: '0rem', paddingRight: '0rem'}}>{t(`homepage.subtitle`)}
+                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-bottom" style={{paddingLeft: '0rem', paddingRight: '0rem'}}>{t(`homepage.subtitle`)}
                         </p>
                     </div>
 

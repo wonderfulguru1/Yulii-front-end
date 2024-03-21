@@ -54,32 +54,9 @@ const Navbar: React.FC<NavigationProps> = () => {
             <Link to={t(`${item.href}`)} className={location.pathname === `${t(`${item.href}`)}` ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>{t(`${item.text}`)}</Link>
           </li>
         ))}
-        {/* <li>
-          <Link to="/" className={location.pathname === '/' ? 'active-link' : ''}></Link>
-        </li>
-        <li>
-          <Link to="/pro-users" className={location.pathname === '/pro-users' ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>Pro-Users</Link>
-        </li>
-        <li>
-          <Link to="/socials" className={location.pathname === `{t(navigationItems.href)}` ? 'border-b-4 border-b-[#4A9BDD] py-2  ' : ''}>Socials</Link> 
-        </li> 
-        <li>
-          <Link to="/how-it-works" className={location.pathname === '/how-it-works' ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>How it Works</Link>
-        </li>
-        <li>
-          <Link to="/contact" className={location.pathname === '/contact' ? 'border-b-4 border-b-[#4A9BDD] py-2 ' : ''}>Contact</Link>
-        </li> */}
-        {/* Add more navigation links as needed */}
+       
       </ul>
-          {/* {NavLinks.map((link) => (
-            <Link to={link.href} key={link.text} 
-            className={`text-gray-800 hover:text-gray-500 ${activeLink === link.text ? 'border-b-2 border-b-[#4A9BDD]  '
-            : 'bg-white text-gray-800'} px-4 py-2 `}
-            onClick={() => handleLinkClick(link.key)}
-            >
-              {link.text}
-            </Link>
-          ))} */}
+          
         </div>
 
         <div className=" gap-6 hidden lg:flex">

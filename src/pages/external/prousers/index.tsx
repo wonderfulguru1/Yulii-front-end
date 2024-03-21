@@ -28,7 +28,7 @@ const Merchant: React.FC<ProUserProps> = () => {
       <div className='bg-white'>
         <div className='container  md:px-10 justify-center lg:px-0 flex lg:flex-row gap-32 items-center flex-col-reverse  md:flex-row   mx-auto pb-10 pt-20 '>
           <div className={`lg:flex hidden `}
-            data-aos="fade-right">
+            data-aos="zoom-in-up">
             <LazyLoadImage
               src={Image1}
               alt="logo"
@@ -36,7 +36,7 @@ const Merchant: React.FC<ProUserProps> = () => {
             />
           </div>
 
-          <div className={` flex-col px-4 md:px-0 lg:w-1/2 `} data-aos="fade-left">
+          <div className={` flex-col px-4 md:px-0 lg:w-1/2 `} data-aos="zoom-in-down">
             {proUserData.map((item) => (
               <div className='py-4'>
                 <h2 className='text-xl my-2 font-semibold flex items-center gap-6 '><span><PiCirclesThreePlusFill /></span>{t(`${item.title}`)}</h2>
@@ -56,7 +56,7 @@ const Merchant: React.FC<ProUserProps> = () => {
       <div className='bg-[#f3fffe]'>
         <div className='container  md:px-10 justify-center lg:px-0 flex lg:flex-row gap-32 items-center flex-col-reverse  md:flex-row   mx-auto pb-10 pt-20 '>
 
-          <div className={` flex-col px-4 md:px-0 lg:w-1/2 `} data-aos="fade-left"
+          <div className={` flex-col px-4 md:px-0 lg:w-1/2 `} data-aos="zoom-in-up"
           >
             <div className='lg:flex hidden'>
             <span className={`lg:px-14 py-4 rounded-md text-sm  lg:text-lg font-bold md:text-base bg-[#a4eee9] `}>{t(`prousers.prosectionlabel`)}</span>
@@ -74,7 +74,7 @@ const Merchant: React.FC<ProUserProps> = () => {
 
           </div>
           <div className={`flex  `}
-            data-aos="fade-right">
+            data-aos="zoom-in-down">
             <LazyLoadImage
               src={Image1}
               alt="logo"

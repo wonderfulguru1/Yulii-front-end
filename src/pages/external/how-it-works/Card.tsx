@@ -19,7 +19,7 @@ const Card: React.FC<SectionProps> = ({ sectionName, order, order2 , number}) =>
     return (
         <div className=''>
 
-            <div className='container mx-auto flex w-5/6 gap-10 flex-col lg:flex-row items-center justify-between py-10' data-aos="fade-up-right">
+            <div className='container mx-auto flex w-5/6 gap-10 flex-col lg:flex-row items-center justify-between py-10' data-aos="zoom-in-down">
 
                 <div className= {` lg:w-2/3 ${order}`} >
                     <div className='h-12 w-12 border-dashed border-[#78b8ed] text-[#78b8ed] border-b-4 py-2 item-center text-center rounded-full font-semibold '>{number}</div>
@@ -35,7 +35,7 @@ const Card: React.FC<SectionProps> = ({ sectionName, order, order2 , number}) =>
                     src={imagePath}
                     alt="logo"
                     className=''
-                    data-aos="fade-up-left"
+                    data-aos="zoom-in-up"
                 />
                 </div>
             </div>
