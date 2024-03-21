@@ -2,7 +2,6 @@ import HeroSection from './HeroSection'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import Faq from '../../../components/externalComponents/Faq';
 //import { merchantItems } from "../../../constants/index"
-import Button from '@/components/externalComponents/Button';
 import Image1 from "../../../assets/section1.svg"
 import { PiCirclesThreePlusFill } from "react-icons/pi"
 import { useTranslation } from 'react-i18next';
