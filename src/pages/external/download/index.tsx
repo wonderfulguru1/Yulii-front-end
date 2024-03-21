@@ -17,12 +17,13 @@ const Download = () => {
                         alt="store image"
                         className='' />
                 </div>
-                <div className="lg:w-1/2 px-10 lg:px-0 py-24 lg:py-0">
-                    <h1 className="lg:text-6xl text-4xl py-8 font-semi-bold">{t(`download.title`)}</h1>
+            
+                <div className="lg:w-1/2  px-10 lg:px-0 py-24 lg:py-0">
+                    <h1 className="lg:text-6xl text-4xl py-8 lg:font-semi-bold font-bold">{t(`download.title`)}</h1>
                     <p className="text-xl"> {t(`download.text`)}</p>
-                    <div className='flex  space-x-6 py-8'>
+                    <div className='flex  space-x-6 py-8 items-center'>
                         <div
-                            className="w-full sm:w-auto cursor-pointer bg-black hover:bg-[#122f46] hover:text-white focus:ring-4 focus:ring-gray-300 text-white rounded-full inline-flex items-center justify-center px-4 py-2.5 ">
+                            className="w-full sm:w-auto cursor-pointer bg-black hover:bg-[#122f46] hover:text-white focus:ring-4 focus:ring-gray-300 text-white rounded-full inline-flex items-center justify-center py-1.5 px-2 lg:px-4 lg:py-2.5 ">
                             <svg className="mr-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple"
                                 role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                 <path fill="currentColor"
@@ -30,11 +31,11 @@ const Download = () => {
                                 </path>
                             </svg>
                             <div className="text-left">
-                                <div className="mb-1 text-xs">Download on the</div>
-                                <div className="-mt-1 font-sans text-sm font-semibold">Mac App Store</div>
+                                <div className="mb-1 lg:text-xs text-[8px]">Download on the</div>
+                                <div className="-mt-1 font-sans lg:text-sm text-[10px] font-semibold">App Store</div>
                             </div>
                         </div>
-                        <div className="w-full sm:w-auto cursor-pointer flex bg-black hover:bg-[#122f46] hover:text-white focus:ring-4 focus:ring-gray-300 text-white rounded-full inline-flex items-center justify-center px-4 py-2.5 ">
+                        <div className="w-full sm:w-auto cursor-pointer bg-black hover:bg-[#122f46] hover:text-white focus:ring-4 focus:ring-gray-300 text-white rounded-full inline-flex items-center justify-center px-2 lg:px-4 py-1.5 lg:py-2.5 ">
                             <svg className="mr-3 w-7 h-7" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.0638 12.4522L18.4327 9.77734L13.6914 14.5186L18.4323 19.2595L23.0796 16.5758C23.8042 16.1355 24.2367 15.3663 24.2367 14.5186C24.2367 13.6708 23.8039 12.9017 23.0638 12.4522Z" fill="#FFCE00" />
                                 <path d="M13.6918 14.5189L0.777619 1.51172C0.328448 1.96089 0.0556641 2.57038 0.0556641 3.24414V25.754C0.0556641 26.4277 0.328448 27.0372 0.777619 27.4867L13.6918 14.5189Z" fill="url(#paint0_linear_2264_1656)" />
@@ -49,8 +50,8 @@ const Download = () => {
                             </svg>
 
                             <div className="text-left">
-                                <div className="mb-1 text-xs">Download on the</div>
-                                <div className="-mt-1 font-sans text-sm font-semibold">Google Play</div>
+                                <div className="mb-1 lg:text-xs text-[8px]">Download on the</div>
+                                <div className="-mt-1 font-sans lg:text-sm text-[9px] font-semibold">Google Play</div>
                             </div>
                         </div>
 
