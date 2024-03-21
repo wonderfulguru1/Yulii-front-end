@@ -20,15 +20,15 @@ const GenericSection: React.FC<SectionProps> = ({ sectionName, labelColor, order
     return (
         <div className='container md:px-10 justify-center lg:px-0 flex lg:flex-row gap-32 items-center flex-col-reverse  md:flex-row   mx-auto pb-10 pt-20 '>
             <div className={`flex  ${order}`}
-                data-aos="fade-right">
+                data-aos="zoom-in-down">
                 <LazyLoadImage
                     src={imagePath}
                     alt="logo"
-                    className='md:py-10'
+                    className='md:py-10 px-6 lg:px-0'
                 />
             </div>
 
-            <div className={` flex-col px-4 md:px-0 lg:w-1/2 ${order2}`}  data-aos="fade-left"
+            <div className={` flex-col px-4 md:px-0 lg:w-1/2 ${order2}`}  data-aos="zoom-in-up"
                >
                 <div className='lg:flex hidden'>
                 <span className={`p-4 rounded-md  text-sm md:text-base ${labelColor}`}>{t(`homepage.sections.${sectionName}.label`)}</span>

@@ -20,7 +20,7 @@ const HeroSection: React.FC<SectionProps> = () => {
           {/* <Shape /> */}
         </div>
 
-        <div className='text-center  flex  md:flex-row flex-col justify-between ' data-aos="fade-up-right">
+        <div className='text-center  flex  md:flex-row flex-col justify-between ' data-aos="zoom-in-up">
           <div className='hidden lg:block'>
             <Shape />
           </div>

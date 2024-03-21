@@ -83,14 +83,14 @@
       },
       {
           "title": "Parrainez vos amis et obtenez des points et des récompenses",
-          "text": "Appel à tous les passionnés de Yulii ! Répandez la joie en recommandant à vos amis l'expérience ultime de l'application mobile. Tout le monde y gagne !Bientôt, vous pourrez gagner des points chaque fois que vous partagerez Yulii avec un membre de votre cercle.",
+          "text": "Appel à tous les passionnés de Yulii ! Répandez la joie en recommandant à vos amis l'expérience ultime de l'application mobile. Tout le monde y gagne ! Bientôt, vous pourrez gagner des points chaque fois que vous partagerez Yulii avec un membre de votre cercle.",
           "color": "bg-[#effef0]",
           "icon": "../src/assets/credit.png"
       }
   ]
   },
   "faq": {
-    "faqTitle": "Questions Fréquemment Posées Sur",
+    "faqTitle": "Questions fréquemment posées",
     "question": "C’est quoi Yulii ?",
     "questions": [
       {
@@ -132,7 +132,7 @@
       {
         "id": 1,
         "icon": "../src/assets/sms.png",
-        "caption": "Discutez avec nous",
+        "caption": "Envoyez nous un e-mail",
         "text": "Recherchez l’icône de la bulle de chat dans le coin inférieur droit de votre écran. Il vous suffit de cliquer dessus pour lancer une session de chat avec nous. Alternativement, vous pouvez avoir un système de tickets d’assistance dédié ici"
       },
       {
@@ -480,5 +480,10 @@
       "text": "Privacy Policy",
       "href": "/contact"
     }
-  ]
+  ],
+
+  "sellButton" : "Vendre sur Yulli",
+
+  "downlaodPage" : {"title": "Prêt à vendre ? Nous pouvons vous aider !", "content":"Découvrez la commodité ultime ! Notre application est super conviviale et facilite la présentation de vos produits. Rejoignez-nous maintenant et atteignez sans effort un public plus large. Téléchargez l’application dès aujourd’hui et commencez en quelques minutes !"}
+     
 }
