@@ -479,6 +479,8 @@
           "text": "Privacy Policy",
           "href": "/contact"
         }
-      ]
+      ],
+      "sellButton" : "Sell on Yulii",
+      "downlaodPage" : {"title": "Ready to start selling? We can help!", "content":"Discover the ultimate convenience! Our app is super user-friendly and makes showcasing your goods and products a breeze. Join us now and effortlessly reach a wider audience. Download the app today and get started in just minutes!"}
      
 }

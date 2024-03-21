@@ -16,7 +16,7 @@ const ScrollToTop = () => {
 const ExternalLayout = () => {
     const outlet = useOutlet();
     return ( 
-        <div>  
+        <>  
              <ScrollToTop />        
             <Navbar/>
                 <main>
@@ -24,7 +24,7 @@ const ExternalLayout = () => {
                 </main>
                 <Banner/>
             <Footer/>
-        </div>
+        </>
      );
 }
  
