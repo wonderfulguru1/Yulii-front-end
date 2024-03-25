@@ -8,6 +8,7 @@ import Shape2 from './Shape2';
 /* import HeroImg from "../../assets/hero1.png"
  */import { Translations } from '@/interface';
 import { useTranslation } from 'react-i18next';
+import ReactPlayer from 'react-player'
 
 interface HeroProps {
     sectionName: keyof Translations['homepage'];
@@ -31,6 +32,8 @@ interface HeroProps {
 // const coloredSentence = splitAndColorSentence(sentence);
 const HeroSection: React.FC<HeroProps> = () => {
     const { t } = useTranslation();
+    // const text = t('homepage.homepageVideo') ;
+    const text = t('homepage.homepageVideo', { returnObjects: true }) as { text: string }[];
 
     //   const coloredSentence = splitAndColorSentence(sentence);
     // const imagePath = t(`homepage.sections.${sectionNa`)
@@ -64,10 +67,10 @@ const HeroSection: React.FC<HeroProps> = () => {
                     </div>
 
                     <div>
-                        <h1 className='intro-text lg:text-7xl text-5xl font-semibold leading-normal' data-aos="zoom-in" 
+                        <h1 className='intro-text lg:text-7xl text-5xl font-semibold leading-normal' data-aos="zoom-in"
                         // style={{ lineHeight: '3.5rem'}}
                         > {t(`homepage.title1`)} <span className='text-[#67c7c0]'>{t(`homepage.title2`)} </span>{t(`homepage.title3`)} <span className='text-[#67c7c0]'>{t(`homepage.title4`)}</span></h1>
-                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-bottom" style={{paddingLeft: '0rem', paddingRight: '0rem'}}>{t(`homepage.subtitle`)}
+                        <p className='py-10 text-center text-xl lg:px-64' data-aos="fade-bottom" style={{ paddingLeft: '0rem', paddingRight: '0rem' }}>{t(`homepage.subtitle`)}
                         </p>
                     </div>
 
@@ -76,10 +79,19 @@ const HeroSection: React.FC<HeroProps> = () => {
                     </div>
                 </div>
 
-                <iframe width="80%" height="400" style={{borderRadius: '10px'}}
+                <div className='flex justify-center w-[80%] h-[400px]'>
+                    <ReactPlayer
+                        className='react-player'
+                        url={t(`homepage.homepageVideo`)}
+                        width='80%'
+                        height='100%'
+                      
+                    />
+                </div>
+                {/* <iframe width="80%" height="400" style={{borderRadius: '10px'}}
                  src="https://www.youtube.com/embed/Mpw1quautoc?si=5TuiqjRB6c1OSnBz&autoplay=1;modestbranding=1&rel=0;controls=0;showinfo=0"
                   title="YouTube video player" frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe> */}
 
             </div>
         </div>
